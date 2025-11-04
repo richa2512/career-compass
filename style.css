@@ -2426,3 +2426,681 @@ body {
     font-size: 2.5rem;
   }
 }
+
+/* ============================= */
+/* Courses Details Page */
+/* ============================= */
+
+/* ============================= */
+/* BT HERO SECTION */
+/* ============================= */
+
+.bt-hero-section {
+  position: relative;
+  background: url("./assets/images/hero/bg.png") center/cover no-repeat;
+  padding: 120px 0 140px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bt-hero-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.bt-hero-container {
+  position: relative;
+  max-width: 1120px;
+  padding: 0 100px;
+}
+
+/* Breadcrumb */
+.bt-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 22px;
+  color: #f1f1f1;
+  opacity: 0.9;
+}
+
+.bt-breadcrumb a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bt-breadcrumb span {
+  margin: 0 6px;
+  opacity: 0.7;
+}
+
+.bt-breadcrumb .active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Title */
+.bt-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.25;
+}
+
+/* Subtitle */
+.bt-subtext {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 28px;
+}
+
+/* Stats row */
+.bt-stats-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.bt-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.bt-stat img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Stars */
+.bt-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.bt-rating img {
+  width: 18px;
+  height: 18px;
+}
+
+.bt-rating span {
+  margin-left: 8px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bt-title {
+    font-size: 30px;
+  }
+  .bt-subtext {
+    font-size: 15px;
+  }
+  .bt-stats-wrapper {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .bt-hero-section {
+    padding: 80px 0 100px;
+  }
+}
+
+/* --- Responsive Fixes for BT Hero Section --- */
+
+@media (max-width: 1024px) {
+  .bt-hero-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bt-hero-container {
+    padding: 0 20px;
+  }
+
+  .bt-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .bt-subtext {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+
+  .bt-stats-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bt-stat {
+    font-size: 14px;
+  }
+
+  .bt-rating span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bt-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .bt-stat img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ============= Main Grid Section ================ */
+
+.main-grid-header-section {
+  display: flex;
+  position: sticky;
+  background-color: #f8fafc;
+}
+
+.main-grid-header-section .header-container {
+  max-width: 90rem;
+  margin: 0;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+  padding: 0 100px;
+}
+
+.main-grid-header-section .header-container .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ------------ Instructor Section ------------- */
+.instructor-section {
+  background: #f8fafc;
+  margin: 0;
+}
+
+.instructor-section .container {
+  padding: 0 24px;
+}
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #3f8ccf;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.instructor-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Instructor Left */
+.instructor-left {
+  width: 230px;
+  text-align: center;
+}
+
+.teacher-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.teacher-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.teacher-role {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.teacher-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.teacher-rating img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Instructor Right */
+.instructor-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-text {
+  color: #4a4a4a;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-bottom: 28px;
+}
+
+/* Stats */
+.instructor-stats {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.inst-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.inst-column p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.inst-column img {
+  width: 16px;
+  height: 16px;
+}
+
+.inst-column span {
+  color: #777;
+  font-size: 13px;
+}
+
+.experience-column {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.experience-item span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.experience-heading {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.experience-heading img {
+  width: 20px;
+  height: 20px;
+}
+
+.experience-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5e5e5e;
+  font-family: "Montserrat";
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .instructor-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .instructor-right {
+    text-align: center;
+  }
+
+  .instructor-stats {
+    justify-content: center;
+  }
+}
+
+/* ============================= */
+/* Course Content Section  */
+/* ============================= */
+
+.course-detail-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.left-section {
+  order: 1;
+}
+
+.right-section {
+  order: 2;
+  border: 1px solid #e5e5e5;
+  height: fit-content;
+  position: sticky;
+  border-radius: 8px;
+}
+
+.video-img {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;         /* hide overflow when object-fit:cover crops */
+  display: block;
+  background: #f6f7f9;      /* fallback BG while SVG loads */
+  /* default height for small screens (mobile-first) */
+  height: 260px;
+}
+
+/* make the image fill the parent box */
+.video-img img {
+  display: block;           /* remove inline-gap */
+  width: 100%;              /* fill horizontally */
+  height: 100%;             /* fill vertically */
+  object-fit: cover;        /* cover fills and crops if needed — use 'contain' to avoid cropping */
+  object-position: center;  /* center the image */
+  max-width: 100%;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.course-prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.course-price {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.discounted-price {
+  color: #1d587a;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.actual-price {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: line-through;
+  color: #5e5e5e;
+}
+
+.save-percentage {
+  font-size: 15px;
+  font-weight: 600;
+  color: #00b67a;
+  background-color: #00b67a1a;
+  padding: 12px;
+  border-radius: 82px;
+}
+
+.course-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.course-desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+
+.course-video-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-includes {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  background-color: #1d587a;
+  border-radius: 82px;
+  padding: 16px 26px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  justify-content: center;
+}
+
+.package-features {
+  list-style: none;
+}
+
+.package-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #5e5e5e;
+  font-weight: 500;
+}
+
+.divider {
+  border: 1px solid #e5e5e5;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-section h4 {
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.course-rating span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.course-rating img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================
+   ✅ Mobile First (Default uses your existing CSS)
+=============================*/
+
+/* ============================
+   >= 640px (Large Mobile / Small Tablets)
+=============================*/
+@media (min-width: 640px) {
+  .video-img {
+    height: 180px;
+  }
+  .course-detail-container {
+    padding: 0 24px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-section {
+    width: 100%;
+    position: static;
+  }
+
+  .course-video-info {
+    padding: 18px;
+  }
+
+  .discounted-price {
+    font-size: 24px;
+  }
+
+  .course-rating img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .course-rating span {
+    font-size: 15px;
+  }
+}
+
+/* ============================
+   >= 768px (Tablets & Laptop screens)
+=============================*/
+@media (min-width: 768px) {
+  .video-img {
+    height: 200px;
+  }
+  .course-detail-container {
+    flex-direction: row;
+    padding: 0 40px;
+    gap: 32px;
+  }
+
+  .left-section {
+    flex: 1;
+  }
+
+  .right-section {
+    width: 35%;
+    position: sticky;
+    top: 90px;
+  }
+
+  .discounted-price {
+    font-size: 26px;
+  }
+
+  .actual-price {
+    font-size: 15px;
+  }
+
+  .save-percentage {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .add-to-cart {
+    padding: 14px 24px;
+  }
+}
+
+/* ============================
+   >= 1280px (Large Desktops)
+=============================*/
+@media (min-width: 1280px) {
+  .video-img {
+    height: 220px;   /* larger hero thumb on big screens */
+  }
+  .course-detail-container {
+    padding: 0 60px;
+  }
+
+  .right-section {
+    width: 32%;
+  }
+
+  .discounted-price {
+    font-size: 28px;
+  }
+
+  .actual-price {
+    font-size: 16px;
+  }
+
+  .add-to-cart {
+    padding: 16px 26px;
+  }
+
+  .course-rating img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .course-rating span {
+    font-size: 16px;
+  }
+}
