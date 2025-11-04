@@ -1924,3 +1924,505 @@ a {
   fill: currentColor;
 }
 /* footer end */
+
+/* 
+Combos Css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url("./assets/images/comboHero.png") center 20% / cover no-repeat;
+  background-size: cover;
+  min-height: 397px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  font-size: clamp(0.85rem, 1.5vw, 1.125rem);
+  color: #ffffff;
+}
+
+.info i {
+  margin-right: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  line-height: 1;
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars i {
+  color: #f5b301;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Header Section */
+.header-section {
+  margin-bottom: 40px;
+}
+
+.label {
+  color: #1e5a7d;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.label::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #1e5a7d;
+}
+
+.main-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.filter-wrapper {
+  justify-items: flex-end;
+}
+
+.showing-text {
+  color: #6b7280;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}
+
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
+
+.sort-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Cards Grid - Responsive */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Mobile: 1 column */
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Course Card */
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  position: relative;
+  height: 260px;
+  background: url("./assets/images/comboThumbnail.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* aspect-ratio: 16 / 9; */
+}
+
+.professional-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e5a7d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-icon {
+  width: 12px;
+  height: 12px;
+  background: #1e5a7d;
+  border-radius: 50%;
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  font-weight: 700;
+  color: black;
+  margin-bottom: 16px;
+  min-height: 48px;
+  line-height: 1.4;
+}
+
+.card-stats {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  color: #5e5e5e;
+  border: #e5e5e5 solid 1px;
+  border-radius: 25px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.stat-icon {
+  width: 14px;
+  height: 14px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.current-price {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  color: #1d587a;
+}
+
+.original-price {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  color: #5e5e5e;
+  text-decoration: line-through;
+}
+
+.instructor-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.instructor-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  flex-shrink: 0;
+}
+
+.instructor-name {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: black;
+  font-weight: 600;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-to-cart-btn {
+  background: #1e5a7d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 81px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+  background: #164a63;
+}
+
+/* Load More Button */
+.load-more-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.load-more-btn {
+  background: #1e5a7d;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 81px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.load-more-btn:hover {
+  background: #164a63;
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .hero {
+    padding: 20px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  .info {
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 250px;
+  }
+  .hero {
+    padding: 20px 15px;
+  }
+
+  .content {
+    padding: 0 15px;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+  .container {
+    padding: 30px 15px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 20px 20px;
+  }
+
+  .main-title {
+    font-size: 1.75rem;
+  }
+  .hero {
+    padding: 20px 15px;
+  }
+}
+
+/* Large Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 40px 30px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+  .hero {
+    padding: 20px 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
