@@ -2151,10 +2151,8 @@ body {
 
 .card-image {
   position: relative;
-  height: 260px;
-  background: url("./assets/images/comboThumbnail.png");
-  background-size: cover;
-  background-position: center;
+  height: 200px;
+  background: url("./assets/images/comboThumbnail.png") center 10%/cover ;
   background-repeat: no-repeat;
   overflow: hidden;
   /* aspect-ratio: 16 / 9; */
