@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an account | Career Compass</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <!-- LEFT SIDE QUOTE PANEL -->
+      <div class="left-panel">
+        <div class="logo">
+          <img
+            src="./assets/images/asset.svg"
+            width="151"
+            height="42"
+            alt="Career Compass"
+          />
+        </div>
+
+        <p class="loginFooter">©2025 CareerCompass</p>
+      </div>
+
+      <!-- RIGHT REGISTER PANEL -->
+      <div class="right-panel">
+        <form class="login-box">
+          <h2>Let’s create an account</h2>
+
+          <div class="name-row">
+            <div class="input-options">
+              <label>First name</label>
+              <input type="text" placeholder="John" />
+            </div>
+            <div class="input-options">
+              <label>Last name</label>
+              <input type="text" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="name-row">
+            <div class="input-options">
+              <label>Student email</label>
+              <input type="email" placeholder="johndoe@example.com" />
+            </div>
+            <div class="phone-group input-options">
+              <label>Phone number</label>
+
+              <div class="phone-wrapper">
+                <div class="phone-select" id="countrySelect">
+                  <img
+                    id="selectedFlag"
+                    src="./assets/images/flags/in.svg"
+                    class="flag"
+                  />
+                  <span id="selectedCode" class="country-code">+91</span>
+                  <img
+                    src="./assets/images/down-arrow.svg"
+                    class="arrow"
+                    height="14"
+                    width="14"
+                  />
+                </div>
+
+                <input
+                  type="text"
+                  class="phone-input"
+                  placeholder="1234567890"
+                />
+              </div>
+
+              <!-- Dropdown -->
+              <div class="country-dropdown hidden" id="countryDropdown">
+                <input
+                  type="text"
+                  id="countrySearch"
+                  class="country-search"
+                  placeholder="Search country..."
+                />
+                <ul id="countryList" class="country-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <label class="password-title">Password</label>
+          <div class="password-field">
+            <input type="password" id="regPass" placeholder="Create Password" />
+            <img
+              class="eye-icon"
+              id="toggleRegPass"
+              src="./assets/images/eye.svg"
+            />
+          </div>
+
+          <button type="submit" class="btn-login">Create account</button>
+
+          <p class="register-text">
+            Already have an account?
+            <a href="login.html">Log in!</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ✅ SHOW/HIDE PASSWORD -->
+    <script>
+      const passField = document.getElementById("regPass");
+      const togglePass = document.getElementById("toggleRegPass");
+
+      togglePass.addEventListener("click", () => {
+        if (passField.type === "password") {
+          passField.type = "text";
+          togglePass.src = "./assets/images/eye-off.svg";
+        } else {
+          passField.type = "password";
+          togglePass.src = "./assets/images/eye.svg";
+        }
+      });
+    </script>
+    <script>
+      const countries = [
+        { name: "India", code: "+91", flag: "./assets/images/flags/in.svg" },
+        {
+          name: "United States",
+          code: "+1",
+          flag: "./assets/images/flags/us.svg",
+        },
+        {
+          name: "United Kingdom",
+          code: "+44",
+          flag: "./assets/images/flags/uk.svg",
+        },
+        {
+          name: "United Arab Emirates",
+          code: "+971",
+          flag: "./assets/images/flags/ae.svg",
+        },
+        {
+          name: "Australia",
+          code: "+61",
+          flag: "./assets/images/flags/au.svg",
+        },
+        { name: "Canada", code: "+1", flag: "./assets/images/flags/ca.svg" },
+      ];
+
+      const selectBtn = document.getElementById("countrySelect");
+      const dropdown = document.getElementById("countryDropdown");
+      const countryList = document.getElementById("countryList");
+      const searchInput = document.getElementById("countrySearch");
+      const selectedFlag = document.getElementById("selectedFlag");
+      const selectedCode = document.getElementById("selectedCode");
+
+      function renderList(list) {
+        countryList.innerHTML = "";
+        list.forEach((c) => {
+          const li = document.createElement("li");
+          li.classList.add("country-item");
+          li.innerHTML = `
+      <img src="${c.flag}" class="country-flag" />
+      <span>${c.name}</span>
+      <span style="margin-left:auto;">${c.code}</span>
+    `;
+          li.onclick = () => {
+            selectedFlag.src = c.flag;
+            selectedCode.textContent = c.code;
+            dropdown.classList.add("hidden");
+          };
+          countryList.appendChild(li);
+        });
+      }
+
+      renderList(countries);
+
+      selectBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+        const rect = selectBtn.getBoundingClientRect();
+        dropdown.style.top = rect.bottom + "px";
+        dropdown.style.left = rect.left + "px";
+      });
+
+      searchInput.addEventListener("input", () => {
+        const text = searchInput.value.toLowerCase();
+        const filtered = countries.filter((c) =>
+          c.name.toLowerCase().includes(text)
+        );
+        renderList(filtered);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!selectBtn.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.classList.add("hidden");
+        }
+      });
+    </script>
+    <script>
+      const registerForm = document.querySelector(".login-box");
+
+      registerForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop actual submit
+        window.location.href = "onboarding.html"; // redirect
+      });
+    </script>
+  </body>
+</html>
