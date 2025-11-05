@@ -10,26 +10,32 @@ if (menuToggle && mobileMenu) {
 }
 
 // Course sections navigation - active link on scroll
+// Only runs if section links exist on the page
 const sectionLinks = document.querySelectorAll('.section-link');
-const sections = document.querySelectorAll('[id^="about"], [id^="what-learn"], [id^="curriculum"], [id^="fees"], [id^="reviews"], [id^="demo"], [id^="faqs"]');
+if (sectionLinks.length > 0) {
+  const sections = document.querySelectorAll('[id^="about"], [id^="what-learn"], [id^="curriculum"], [id^="fees"], [id^="reviews"], [id^="demo"], [id^="faqs"]');
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute('id');
-    }
-  });
-  
-  sectionLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-});
+  if (sections.length > 0) {
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      sectionLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
+}
+
 
 // Section link click handling
 sectionLinks.forEach(link => {
@@ -132,13 +138,57 @@ if (seeAllLessonsBtn) {
   });
 }
 
-// ... existing code ...
-const learnHeader = document.querySelector('.learn-header');
-if (learnHeader) {
-  learnHeader.addEventListener('click', () => {
-    const learnSection = document.querySelector('.course-what-learn');
-    learnSection.classList.toggle('collapsed');
-  });
+const track = document.querySelector(".alumni-track");
+const prevBtn = document.querySelector(".alumni-nav.left");
+const nextBtn = document.querySelector(".alumni-nav.right");
+const cards = document.querySelectorAll(".alumni-card");
+
+let index = 0;
+const total = cards.length;
+
+
+function visibleCards() {
+  const containerWidth = track.parentElement.offsetWidth;
+  const cardWidth = cards[0].offsetWidth + 20; 
+  return Math.floor(containerWidth / cardWidth);
 }
 
-// ... existing code ...
+function updateCarousel() {
+  const containerWidth = track.parentElement.offsetWidth;
+  const cardWidth = cards[0].offsetWidth + 20;
+  const visible = visibleCards();
+
+  
+  const maxTranslate = (cardWidth * total) - containerWidth;
+  const maxIndex = Math.floor(maxTranslate / cardWidth);
+
+  if (index > maxIndex) index = maxIndex;
+  if (index < 0) index = 0;
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index >= maxIndex;
+}
+nextBtn.addEventListener("click", () => {
+  const containerWidth = track.parentElement.offsetWidth;
+  const cardWidth = cards[0].offsetWidth + 20;
+  const maxTranslate = (cardWidth * total) - containerWidth;
+  const maxIndex = Math.floor(maxTranslate / cardWidth);
+
+  if (index < maxIndex) {
+    index++;
+    updateCarousel();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener("resize", () => {
+  updateCarousel();
+});
+
+updateCarousel();

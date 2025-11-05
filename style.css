@@ -271,6 +271,84 @@ a {
     margin-top: 1rem;
   }
 }
+
+/* ===== Mission Section ===== */
+.mission-container {
+  width: 100%;
+}
+
+.mission-header {
+  margin-top: 1.5rem;
+}
+
+.mission-description {
+  color: #5e5e5e;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .mission-description {
+    font-size: 18px;
+  }
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .mission-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.mission-card {
+  background-color:#F8FAFC;
+  border:#E5E5E5;
+  border-width: 1px;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  background-color: #1D587A1A;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-card h3 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.mission-card p {
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== End Mission Section ===== */
 /* ===== Common Section End ===== */
 
 /* ============================= */
@@ -1211,31 +1289,45 @@ a {
 
 .app-section {
   width: 100%;
-  height: 430px;
+  min-height: 430px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #d9e8ec;
   border-radius: 16px;
-  gap: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
   flex-wrap: wrap;
 }
 
+/* Left side - image */
 .app-image {
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .app-image img {
-  height: 430px;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
 }
 
+/* Right side - content */
 .app-content {
-  flex: 1;
-  min-width: 250px;
-  padding-right: 60px;
+  width: 50%;
+  min-width: 300px;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .app-content h2 {
@@ -1247,23 +1339,23 @@ a {
 
 .app-content p {
   font-size: 20px;
-  font-weight: 400;
   color: #000000;
   margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .app-features {
   list-style: none;
   margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 .app-features li {
   font-size: 1rem;
-  font-weight: 400;
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .app-buttons {
@@ -1281,26 +1373,99 @@ a {
   transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .app-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+  .app-content {
+    padding: 30px 40px;
   }
 
-  .app-content h1 {
-    font-size: 2rem;
+  .app-content h2 {
+    font-size: 38px;
+  }
+
+  .app-content p {
+    font-size: 18px;
+  }
+}
+
+/* Mobiles (768px and below) */
+@media (max-width: 768px) {
+  .app-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    border-radius: 0;
+    padding: 0; /* 🟢 Remove all padding on mobile */
+    gap: 0; /* 🟢 Remove extra space between image and text */
+  }
+
+  .app-image,
+  .app-content {
+    width: 100%;
+  }
+
+  .app-image {
+    padding: 0; /* 🟢 Ensure image touches edges */
+    margin: 0;
+  }
+
+  .app-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .app-content {
+    padding: 30px 20px; /* only content has spacing */
+  }
+
+  .app-content h2 {
+    font-size: 32px;
+  }
+
+  .app-content p {
+    font-size: 16px;
   }
 
   .app-buttons {
     justify-content: center;
   }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+  .app-content {
+    padding: 25px 15px;
+  }
+
+  .app-content h2 {
+    font-size: 26px;
+  }
+
+  .app-content p {
+    font-size: 15px;
+  }
+
+  .store-btn img {
+    height: 45px;
+  }
+
+  .app-features li {
+    font-size: 0.9rem;
+  }
 
   .app-image img {
-    max-width: 300px;
+    max-width: 100%;
   }
 }
+
+
 
 /* ============================= */
 /* FAQ Section  */
@@ -2026,7 +2191,7 @@ Combos Css */
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px;
 }
 
 .breadcrumb {
@@ -5787,3 +5952,100 @@ input {
     font-size: 14px;
   }
 }
+
+ /* ===== Alumni Carousel Styles ===== */
+    .alumni-carousel {
+      position: relative;
+      margin-top: 40px;
+      
+    }
+
+    .alumni-track-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .alumni-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .alumni-card {
+      width:274px;
+      background: #fff;
+      border-radius: 8px;
+      border :#E5E5E5 1px solid;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .alumni-card img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #66b2b2;
+      margin-bottom: 16px;
+    }
+
+    .alumni-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .alumni-card p {
+      font-size: 14px;
+      color: #5e5e5e;
+      margin-bottom: 4px;
+    }
+
+    .alumni-card .company {
+      font-weight: bold;
+      color: #000;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+
+    .alumni-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #66b2b2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.alumni-nav:hover {
+  background-color: #3b9090;
+}
+
+.alumni-nav.left {
+  left: -20px;
+}
+
+.alumni-nav.right {
+  right: -20px;
+}
+
+  
+
+    @media (max-width: 1024px) {
+      .alumni-card {
+        flex: 0 0 calc(30% - 20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .alumni-card {
+        flex: 0 0 100%;
+      }
+    }
