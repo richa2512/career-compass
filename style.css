@@ -4013,6 +4013,8 @@ input {
 
 
 .course-sections-nav {
+  position:sticky;
+  top:1px;
   background-color: #ffffff;
   z-index: 99;
   padding: 0;
@@ -4868,7 +4870,7 @@ input {
 }
 
 .left-section {
-  flex: 1;
+  width: 70%;
 }
 
 .right-section {
@@ -4877,6 +4879,7 @@ input {
   height: fit-content;
   position: relative;
   border-radius: 8px;
+  width:30%;
 }
 
 @media (min-width: 640px) {
@@ -4907,7 +4910,7 @@ input {
   }
   
   .right-section {
-    flex: 1;
+    
     order: 2;
     position: sticky;
     top: 100px;
