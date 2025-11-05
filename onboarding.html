@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On boarding Questions | Career Compass</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="login-wrapper onboarding-wrapper">
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="logo">
+          <img
+            src="./assets/images/asset.svg"
+            width="151"
+            height="42"
+            alt="Career Compass"
+          />
+        </div>
+
+        <p class="loginFooter">©2025 CareerCompass</p>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="question-container">
+          <p class="question-heading">
+            Answer a few questions to improve your content recommendations
+          </p>
+
+          <form id="questionForm">
+            <div class="question-block">
+              <label class="question-title"
+                >What field are you learning for?</label
+              >
+
+              <label class="option"
+                ><input type="radio" name="field" /> ACCA (Association of
+                Chartered Certified Accountants)</label
+              >
+              <label class="option"
+                ><input type="radio" name="field" /> ACCA (Association of
+                Chartered Certified Accountants)</label
+              >
+              <label class="option"
+                ><input type="radio" name="field" /> ACCA (Association of
+                Chartered Certified Accountants)</label
+              >
+            </div>
+
+            <div class="question-block">
+              <label class="question-title">Is ACCA Registered</label>
+
+              <div class="radio-block">
+                <label class="option"
+                  ><input type="radio" name="registered" /> Yes</label
+                >
+
+                <label class="option"
+                  ><input type="radio" name="registered" /> No</label
+                >
+              </div>
+            </div>
+
+            <div class="question-block">
+              <label class="question-title">Interested Mode of Study:</label>
+              <div class="radio-block">
+                <label class="option"
+                  ><input type="radio" name="mode" /> Online</label
+                >
+                <label class="option"
+                  ><input type="radio" name="mode" /> Offline</label
+                >
+              </div>
+            </div>
+
+            <div class="learning-btn">
+              <button type="submit" class="btn-login start-btn">
+                Start Learning →
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("questionForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.location.href = "dashboard.html"; // Next page
+        });
+    </script>
+  </body>
+</html>

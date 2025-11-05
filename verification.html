@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification Code | Career Compass</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <!-- LEFT QUOTE PANEL -->
+      <div class="left-panel">
+        <div class="logo">
+          <img
+            src="./assets/images/asset.svg"
+            width="151"
+            height="42"
+            alt="Career Compass"
+          />
+        </div>
+
+        <p class="loginFooter">©2025 CareerCompass</p>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <form class="login-box verify-box">
+          <h2>Verification Code</h2>
+          <div class="verify-subtext">
+            Please enter the code we have sent to<br />
+            <div class="user-info">
+              <strong>dipak@gmail.com</strong>
+              <img src="./assets/images/svg/pencil.svg" width="14" />
+            </div>
+          </div>
+
+          <div class="otp-container">
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+          </div>
+
+          <p class="resend-text">
+            Didn't get verification code? <a href="#">Resend code in 24s</a>
+          </p>
+
+          <button class="btn-login verify-btn">Verify</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Auto jump input
+      const inputs = document.querySelectorAll(".otp-input");
+      inputs.forEach((input, index) => {
+        input.addEventListener("keyup", () => {
+          if (input.value && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+      });
+    </script>
+    <script>
+const otpInputs = document.querySelectorAll(".otp-input");
+const verifyBtn = document.querySelector(".btn-login"); // your verify button
+
+// Initially disable button
+verifyBtn.disabled = true;
+verifyBtn.style.opacity = "0.6";
+verifyBtn.style.cursor = "not-allowed";
+
+otpInputs.forEach((input, index) => {
+  
+  input.addEventListener("input", () => {
+    // Move to next box if a number is typed
+    if (input.value.length === 1 && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus();
+    }
+
+    checkOTPStatus();
+  });
+
+  input.addEventListener("keydown", (e) => {
+    // Backspace move to previous box
+    if (e.key === "Backspace" && !input.value && index > 0) {
+      otpInputs[index - 1].focus();
+    }
+  });
+});
+
+function checkOTPStatus() {
+  // Check if all inputs have values
+  const allFilled = [...otpInputs].every(inp => inp.value.trim() !== "");
+
+  if (allFilled) {
+    verifyBtn.disabled = false;
+    verifyBtn.style.opacity = "1";
+    verifyBtn.style.cursor = "pointer";
+  } else {
+    verifyBtn.disabled = true;
+    verifyBtn.style.opacity = "0.6";
+    verifyBtn.style.cursor = "not-allowed";
+  }
+}
+</script>
+
+  </body>
+</html>
