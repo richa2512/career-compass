@@ -6,6 +6,12 @@ body {
   padding: 0px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -3251,9 +3257,9 @@ input {
     border-radius: 0;
   }
 
-  .login-box {
+  /* .login-box {
     max-width: 100%;
-  }
+  } */
 
   .login-box h2 {
     font-size: 20px;
@@ -3264,6 +3270,10 @@ input {
   .name-row {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .name-row .input-options {
+    width: 100%;
   }
 
   .phone-wrapper {
