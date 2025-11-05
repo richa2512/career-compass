@@ -27,6 +27,71 @@ a {
   text-decoration: none;
 }
 
+
+/* Reveal Animation Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade from Left */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.fade-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade from Right */
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.fade-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale Reveal */
+.scale-up {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.scale-up.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Delay helpers */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+
 .btn-primary {
   height: 48px;
   display: flex;
@@ -1928,17 +1993,6 @@ a {
 /* 
 Combos Css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f9f9f9;
-}
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -2205,7 +2259,7 @@ body {
   flex-wrap: wrap;
 }
 
-.stat-item {
+.stats-item {
   display: flex;
   align-items: center;
   gap: 6px;
