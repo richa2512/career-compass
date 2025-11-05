@@ -32,9 +32,7 @@
 
         <nav id="navMenu" class="nav-menu" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="courses.html" class="nav-link nav-link-active"
-            >ACCA Courses</a
-          >
+          <a href="courses.html" class="nav-link">ACCA Courses</a>
           <a href="combos.html" class="nav-link">Courses & Combos</a>
           <a href="about.html" class="nav-link">About Us</a>
           <a href="contact.html" class="nav-link">Contact Us</a>
@@ -94,134 +92,83 @@
     <!-- ✅ COURSE SECTION -->
 
     <!-- hero section -->
-    <section class="hero">
+    <section class="hero cart-hero">
       <div class="overlay"></div>
       <div class="content">
-        <h1>Master Your ACCA Journey</h1>
+        <h1>My Cart</h1>
         <p class="subtitle">
-          Professional accounting courses designed by industry experts.<br />
-          From knowledge level to professional certification.
+          Review your selected courses and complete your purchase to start your
+          learning journey
         </p>
-
-        <div class="info">
-          <div class="info-item">
-            <img
-              src="./assets/images/svg/clock.svg"
-              alt=""
-              width="24"
-              height="24"
-            />
-            6-12 Months
-          </div>
-
-          <div class="info-item">
-            <img
-              src="./assets/images/svg/video.svg"
-              alt=""
-              width="24"
-              height="24"
-            />
-            560+ Video Lectures
-          </div>
-
-          <div class="info-item">
-            <img
-              src="./assets/images/svg/book.svg"
-              alt=""
-              width="24"
-              height="24"
-            />
-            13 Courses
-          </div>
-
-          <div class="info-item">
-            <img
-              src="./assets/images/svg/users.svg"
-              alt=""
-              width="24"
-              height="24"
-            />
-            5,000+ Students
-          </div>
-        </div>
-
-        <div class="rating">
-          <span class="stars">
-            <img src="assets/images/star.svg" alt="" />
-            <img src="assets/images/star.svg" alt="" />
-            <img src="assets/images/star.svg" alt="" />
-            <img src="assets/images/star.svg" alt="" />
-            <img src="assets/images/star.svg" alt="" />
-          </span>
-          <span style="color: white">4.9 (1,234 reviews)</span>
-        </div>
       </div>
     </section>
 
     <!-- Main Container -->
-    <div class="container">
+    <section class="section-wrapper">
       <!-- Header Section -->
-      <div class="header-section">
-        <div class="label">our courses</div>
-        <h1 class="main-title">Explore Our Courses</h1>
-        <p class="description">
-          Explore 500+ hours of expert-led courses and learn at your own pace.
-          Browse now and start your journey!
-        </p>
-      </div>
-
-      <!-- filters section -->
-      <div class="filters-row">
-        <div class="filter-box">
-          <button class="filter-btn active">
-            All Courses <span class="count-circle">15</span>
-          </button>
-          <button class="filter-btn">
-            Knowledge Level <span class="count-circle">5</span>
-          </button>
-          <button class="filter-btn">
-            Skill Level <span class="count-circle">5</span>
-          </button>
-          <button class="filter-btn">
-            Professional Level <span class="count-circle">5</span>
-          </button>
+      <!-- Cart Section -->
+      <h2 class="cart-title">Your Cart (3 courses)</h2>
+      <section class="cart-wrapper">
+        <!-- Left: Cart Items -->
+        <div class="cart-left" id="cartsGrid">
+          <!-- Cart cards will be generated here -->
         </div>
 
-        <div class="filter-controls">
-          <div class="showing">Showing <strong>15</strong> Courses</div>
+        <!-- Right: Order Summary -->
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
 
-          <div class="sort-select">
-            <svg
-              class="sort-icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-              />
-            </svg>
-            <select aria-label="Sort by" class="sort-dropdown">
-              <option value="latest">Latest</option>
-              <option value="popular">Most Popular</option>
-              <option value="low">Price: Low to High</option>
-            </select>
+          <div class="cart-summary-details">
+            <div class="summary-row">
+              <span class="summary-title">Subtotal (3 items)</span>
+              <span class="summary-price">₹15,000</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-title">Discount (0.00%)</span>
+              <span class="summary-price">₹00</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-title">Tax</span>
+              <span class="summary-price">₹00</span>
+            </div>
+
+            <div class="summary-total">
+              <span>Total</span>
+              <span class="total-amount">₹15,000</span>
+            </div>
           </div>
+
+          <div class="coupon-box">
+            <label class="coupon-label">Coupon Code</label>
+            <div class="coupon-apply-btn">
+              <input type="text" placeholder="Enter Coupon Code" />
+              <button class="apply-btn">Apply</button>
+            </div>
+          </div>
+
+          <button class="checkout-btn">Proceed to checkout →</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Youtube -->
+    <section class="section-wrapper">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle">YOUTUBE</h4>
+        <span class="subtitle-line"></span>
+      </div>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Explore New Courses</h2>
+        </div>
+        <div>
+          <a href="#" class="btn-primary">Explore More →</a>
         </div>
       </div>
-
-      <!-- Cards Grid -->
-      <div class="cards-grid" id="coursesGrid">
+      <div class="cart-grid cards-grid" id="coursesGrid">
         <!-- Course cards will be generated here -->
       </div>
-      <!-- Load more button fixed near footer -->
-      <div class="load-more-section">
-        <button class="load-more-btn">Load more</button>
-      </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -354,7 +301,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
@@ -368,7 +314,7 @@
           1024: { slidesPerView: 3.5 },
         },
       });
-      const coursesData = [
+      const cartsData = [
         {
           title: "BT- Business Technology (knowledge level)",
           discount: "₹18,000",
@@ -385,66 +331,6 @@
           lessons: "24+",
           duration: "24 Months",
           students: "100",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
-          instructor: "Dipan sir",
-          currentPrice: "₹15,000",
-          originalPrice: "18,000",
-        },
-        {
-          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-          discount: "₹18,000",
-          lessons: "24+",
-          duration: "24 Months",
-          students: "120",
           instructor: "Dipan sir",
           currentPrice: "₹15,000",
           originalPrice: "18,000",
@@ -488,15 +374,15 @@
                     <div class="card-content">
                         <h3 class="card-title">${course.title}</h3>
                         <div class="card-stats">
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.lesson}
                                 ${course.lessons} Lesson
                             </div>
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.clock}
                                 ${course.duration}
                             </div>
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.users}
                                 ${course.students} Students
                             </div>
@@ -525,6 +411,105 @@
         const grid = document.getElementById("coursesGrid");
         grid.innerHTML = coursesData
           .map((course) => createCourseCard(course))
+          .join("");
+      }
+
+      // Initialize on page load
+      document.addEventListener("DOMContentLoaded", renderCourses);
+    </script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: { delay: 3000 },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3.5 },
+        },
+      });
+      const coursesData = [
+        {
+          title: "BT- Business Technology (knowledge level)",
+          discount: "₹18,000",
+          lessons: "24+",
+          duration: "24 Months",
+          students: "120",
+          instructor: "Dipan sir",
+          currentPrice: "₹15,000",
+          originalPrice: "18,000",
+        },
+        {
+          title: "Knowledge Level Combo (3 Papers - BT, MA, FA)",
+          discount: "₹18,000",
+          lessons: "24+",
+          duration: "24 Months",
+          students: "100",
+          instructor: "Dipan sir",
+          currentPrice: "₹15,000",
+          originalPrice: "18,000",
+        },
+        {
+          title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
+          discount: "₹18,000",
+          lessons: "24+",
+          duration: "24 Months",
+          students: "120",
+          instructor: "Dipan sir",
+          currentPrice: "₹15,000",
+          originalPrice: "18,000",
+        },
+      ];
+      // Function to create a course card
+      function createCartCard(course) {
+        return `
+                <div class="cart-item">
+            <img
+              src="./assets/images/comboThumbnail.png"
+              class="cart-thumb"
+            />
+            <div class="cart-info">
+              <h3 class="cart-course-name">
+                Knowledge Level Combo (3 Papers - BT, MA, FA)
+              </h3>
+              <p class="cart-instructor">by Dipan Sir</p>
+
+              <div class="card-stats">
+                 <div class="cart-ratings-info">
+                    <div class="cart-rating">4.8</div>
+                     <img src="./assets/images/star.svg"/ width="20" height="20">
+                </div>
+                <div class="stats-item">
+                     ${ICONS.lesson}
+                    ${course.lessons} Lesson
+                </div>
+                <div class="stats-item">
+                    ${ICONS.clock}
+                    ${course.duration}
+                </div>
+                <div class="stats-item">
+                    ${ICONS.users}
+                    ${course.students} Students
+                </div>            
+                </div>
+
+              <div class="cart-price-box">
+                <span class="cart-price">₹15,000</span>
+                <span class="cart-old-price">₹18,000</span>
+                <span class="cart-discount">Save 17%</span>
+              </div>
+            </div>
+            <button class="cart-delete"><img src="./assets/images/dustbin.svg" width="20" height="20" /></button>
+          </div>
+            `;
+      }
+      // Render all courses
+      function renderCourses() {
+        const grid = document.getElementById("cartsGrid");
+        grid.innerHTML = cartsData
+          .map((carts) => createCartCard(carts))
           .join("");
       }
 
