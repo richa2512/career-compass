@@ -217,9 +217,9 @@
       <div class="cards-grid" id="coursesGrid">
         <!-- Course cards will be generated here -->
       </div>
-      <!-- Load more button fixed near footer -->
-      <div class="load-more-section">
-        <button class="load-more-btn">Load more</button>
+      <!--Pagination-->
+      <div class="page-wrapper">
+        <div class="pagination" id="pagination"></div>
       </div>
     </div>
 
@@ -531,6 +531,7 @@
       // Initialize on page load
       document.addEventListener("DOMContentLoaded", renderCourses);
     </script>
+    <script src="./assets/js/main.js"></script>
 
     <script>
       const items = document.querySelectorAll(".faq-item");
