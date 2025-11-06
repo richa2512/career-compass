@@ -36,6 +36,7 @@ let currentPage = 1;
 
 function renderPagination() {
   const container = document.getElementById("pagination");
+  if (!container) return;
   container.innerHTML = "";
 
   const addBtn = (label, goTo, disabled = false, active = false) => {
@@ -75,7 +76,65 @@ function renderPagination() {
   addBtn("≫", totalPages, currentPage === totalPages);
 }
 
-renderPagination();
+if (document.getElementById("pagination")) {
+  renderPagination();
+}
 
 
 
+const track = document.querySelector(".alumni-track");
+const prevBtn = document.querySelector(".alumni-nav.left");
+const nextBtn = document.querySelector(".alumni-nav.right");
+const cards = document.querySelectorAll(".alumni-card");
+
+// Only initialize carousel if elements exist
+if (track && prevBtn && nextBtn && cards.length > 0) {
+  let index = 0;
+  const total = cards.length;
+
+  function visibleCards() {
+    const containerWidth = track.parentElement.offsetWidth;
+    const cardWidth = cards[0].offsetWidth + 20; 
+    return Math.floor(containerWidth / cardWidth);
+  }
+
+  function updateCarousel() {
+    const containerWidth = track.parentElement.offsetWidth;
+    const cardWidth = cards[0].offsetWidth + 20;
+    const visible = visibleCards();
+
+    const maxTranslate = (cardWidth * total) - containerWidth;
+    const maxIndex = Math.floor(maxTranslate / cardWidth);
+
+    if (index > maxIndex) index = maxIndex;
+    if (index < 0) index = 0;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= maxIndex;
+  }
+  
+  nextBtn.addEventListener("click", () => {
+    const containerWidth = track.parentElement.offsetWidth;
+    const cardWidth = cards[0].offsetWidth + 20;
+    const maxTranslate = (cardWidth * total) - containerWidth;
+    const maxIndex = Math.floor(maxTranslate / cardWidth);
+
+    if (index < maxIndex) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    updateCarousel();
+  });
+
+  updateCarousel();
+}

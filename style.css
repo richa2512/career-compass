@@ -5972,10 +5972,10 @@ input {
     }
 
     .alumni-card {
-      width:274px;
+      flex: 0 0 274px;
       background: #fff;
       border-radius: 8px;
-      border :#E5E5E5 1px solid;
+      border: 1px solid #E5E5E5;
       text-align: center;
       padding: 20px;
     }
