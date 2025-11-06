@@ -501,6 +501,10 @@ p.text-reveal {
 
 .header {
   border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0.1px;
+  background: white;
+  z-index: 100000;
 }
 
 .header-container {
@@ -2902,7 +2906,6 @@ Combos Css */
   .hero {
     padding: 20px 15px;
   }
-
 
   .main-title {
     font-size: 1.5rem;
@@ -7200,6 +7203,9 @@ input {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  background: #f8fafc;
+  padding: 24px 24px 26px 24px;
+  border-radius: 8px;
 }
 
 .syllabus-subject-card {
@@ -7823,7 +7829,7 @@ input {
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
-  padding: 80px 40px 90px 29px;
+  padding: 60px 40px 59px 29px;
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -7930,8 +7936,6 @@ input {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 30px;
-  margin-top: 40px;
 }
 
 .certificate-image {
@@ -8242,7 +8246,6 @@ tr:nth-child(-n + 3) td {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-
   .price-header-section {
     padding: 0;
   }
@@ -8273,7 +8276,6 @@ tr:nth-child(-n + 3) td {
 }
 
 @media (max-width: 768px) {
-
   .price-header-label {
     gap: 12px;
     margin-bottom: 16px;
