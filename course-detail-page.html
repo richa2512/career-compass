@@ -96,7 +96,7 @@
     </header>
 
     <!-- ✅ HERO SECTION -->
-    <section class="bt-hero-section">
+    <section class="bt-hero-section reveal delay-4">
       <div class="bt-hero-overlay"></div>
 
       <div class="bt-hero-container">
@@ -108,7 +108,7 @@
         </div>
 
         <!-- Heading -->
-        <h1 class="bt-title">BT (Knowledge Level)</h1>
+        <h1 class="bt-title text-reveal">BT (Knowledge Level)</h1>
         <p class="bt-subtext">
           Master ACCA Business and Technology with comprehensive video lectures,
           practice tests, and personalized mentorship. Join thousands of
@@ -202,12 +202,12 @@
       </div>
     </section>
 
-    <section class="section-wrapper" id="about">
+    <section class="section-wrapper reveal delay-4" id="about">
       <div class="course-detail-container">
         <div class="left-section">
           <!-- About Course Section -->
           <div class="course-about">
-            <h2 class="course-section-title">About Course</h2>
+            <h2 class="course-section-title text-reveal">About Course</h2>
             <p class="course-section-text">
               The Business Technology course builds a strong foundation in
               understanding how businesses operate in today's digital world.
@@ -224,7 +224,7 @@
           <!-- What you'll Learn Section -->
           <div class="course-what-learn" id="what-learn">
             <div class="learn-header">
-              <h3 class="course-subsection-title">What you'll Learn</h3>
+              <h3 class="course-subsection-title text-reveal">What you'll Learn</h3>
               <svg
                 class="chevron-icon"
                 viewBox="0 0 24 24"
@@ -346,7 +346,7 @@
 
               <!-- Course Features inside Learn Content -->
               <div class="course-features-inner">
-                <h4 class="features-title-inner">Course Features</h4>
+                <h4 class="features-title-inner text-reveal">Course Features</h4>
                 <div class="features-grid-inner">
                   <div class="feature-item">
                     <div class="feature-icon-small">
@@ -488,7 +488,7 @@
           <!-- Course Curriculum Breakdown Section -->
           <div class="curriculum-breakdown" id="curriculum">
             <div class="curriculum-header">
-              <h3 class="curriculum-title">Course Curriculum Breakdown</h3>
+              <h3 class="curriculum-title text-reveal">Course Curriculum Breakdown</h3>
               <button class="curriculum-toggle-btn">
                 <a href="#" class="expand-all">Expand All</a>
                 <svg
@@ -835,15 +835,15 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="section-wrapper" id="reviews">
+    <section class="section-wrapper reveal delay-4" id="reviews">
       <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle">TESTIMONIALS</h4>
+        <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
         <span class="subtitle-line"></span>
       </div>
 
       <div class="section-header">
         <div>
-          <h2 class="section-title">Inspiring students experiences</h2>
+          <h2 class="section-title text-reveal">Inspiring students experiences</h2>
           <p class="section-description">
             Join us and become our next success story
           </p>
@@ -858,22 +858,28 @@
               alt="Career Compass"
               class="career-logo"
             />
-            <h3>Students stories</h3>
-            <div>
-              <div>
+            <h3 style="font-size: 24px; font-weight: 600;">Students<br/>stories</h3>
+            <div style="display: flex ;flex-direction: column; align-items: center; gap: 10px; width: 100%; margin-top: 20px; text-align: center;">
+             <div style="display: flex; align-items: center; gap:10px">
                 <img
                   src="./assets/images/google.png"
                   alt="Google"
                   class="google-icon"
                 />
-                <span>Google</span>
+                <span style="font-size: 18px;">Google</span>
               </div>
-              <div>
+              <div style="display: flex; align-items: center; gap:10px">
                 <span class="score">4.8</span>
-                <span class="stars">★★★★★</span>
+                <div class="teacher-rating">
+              <img src="./assets/images/TestStar.png" />
+              <img src="./assets/images/TestStar.png" />
+              <img src="./assets/images/TestStar.png" />
+             <img src="./assets/images/TestStar.png" />
+             <img src="./assets/images/TestStar.png" />
+            </div>
               </div>
               <div>
-                <p>See all our reviews</p>
+                <p style="font-size: 11px;">See all our reviews</p>
               </div>
             </div>
             <div>
@@ -889,50 +895,118 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <div class="testimonial-video-wrapper">
+                  <iframe
+                    class="youtube-iframe"
+                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                    title="YouTube Shorts"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="testimonial-rating">
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
+                <div class="testimonial-divider"></div>
+                <div class="testimonial-student">
+                  <img src="./assets/images/student-dipak.png" alt="Dipak" class="student-avatar" />
+                  <div class="student-info">
+                    <p class="student-name">Dipak</p>
+                    <p class="student-role">Student</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <div class="testimonial-video-wrapper">
+                  <iframe
+                    class="youtube-iframe"
+                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                    title="YouTube Shorts"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="testimonial-rating">
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
+                <div class="testimonial-divider"></div>
+                <div class="testimonial-student">
+                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <div class="student-info">
+                    <p class="student-name">Dipak</p>
+                    <p class="student-role">Student</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <div class="testimonial-video-wrapper">
+                  <iframe
+                    class="youtube-iframe"
+                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                    title="YouTube Shorts"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="testimonial-rating">
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
+                <div class="testimonial-divider"></div>
+                <div class="testimonial-student">
+                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <div class="student-info">
+                    <p class="student-name">Dipak</p>
+                    <p class="student-role">Student</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <div class="testimonial-video-wrapper">
+                  <iframe
+                    class="youtube-iframe"
+                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                    title="YouTube Shorts"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="testimonial-rating">
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
+                <div class="testimonial-divider"></div>
+                <div class="testimonial-student">
+                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <div class="student-info">
+                    <p class="student-name">Dipak</p>
+                    <p class="student-role">Student</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -941,13 +1015,13 @@
     </section>
 
     <!-- Course Fees Section -->
-    <section class="section-wrapper" id="fees">
+    <section class="section-wrapper reveal delay-4" id="fees">
       <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle">WHAT WILL IT COST YOU?</h4>
+        <h4 class="section-subtitle text-reveal">WHAT WILL IT COST YOU?</h4>
         <span class="subtitle-line"></span>
       </div>
       <div class="section-header">
-        <h2 class="section-title">Know your course fees & structure</h2>
+        <h2 class="section-title text-reveal">Know your course fees & structure</h2>
       </div>
 
       <div class="pricing-content">
@@ -996,14 +1070,14 @@
       </div>
     </section>
 
-    <section class="section-wrapper" id="demo">
+    <section class="section-wrapper reveal delay-4" id="demo">
       <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle">YOUTUBE</h4>
+        <h4 class="section-subtitle text-reveal">YOUTUBE</h4>
         <span class="subtitle-line"></span>
       </div>
       <div class="section-header">
         <div>
-          <h2 class="section-title">Demo Session</h2>
+          <h2 class="section-title text-reveal">Demo Session</h2>
         </div>
       </div>
       <div class="youtube-grid">
@@ -1028,15 +1102,15 @@
       </div>
     </section>
 
-    <section class="section-wrapper" id="what-learn">
+    <section class="section-wrapper reveal delay-4" id="what-learn">
       <div class="container-instructor">
         <div class="section-subtitle-wrapper">
-          <h4 class="section-subtitle">INSTRUCTOR</h4>
+          <h4 class="section-subtitle text-reveal">INSTRUCTOR</h4>
           <span class="subtitle-line"></span>
         </div>
         <div class="section-header">
           <div>
-            <h2 class="section-title">Meet Your Teacher</h2>
+            <h2 class="section-title text-reveal">Meet Your Teacher</h2>
             <p class="section-description">
               Learn from industry experts with proven track records in ACCA
               education
@@ -1053,7 +1127,7 @@
               class="teacher-img"
             />
 
-            <h4 class="teacher-name">Tejas Tank</h4>
+            <h4 class="teacher-name text-reveal">Tejas Tank</h4>
             <p class="teacher-role">ACCA Expert Instructor</p>
 
             <div class="teacher-rating">
@@ -1068,7 +1142,7 @@
 
           <!-- Right: Instructor Details -->
           <div class="instructor-right">
-            <h4 class="about-title">About the Instructor</h4>
+            <h4 class="about-title text-reveal">About the Instructor</h4>
             <p class="about-text">
               Tejas Tank is a qualified ACCA member with over 8 years of
               experience in teaching and<br />
@@ -1123,14 +1197,14 @@
     </section>
 
     <!-- Youtube -->
-    <section class="section-wrapper" id="demo">
+    <section class="section-wrapper reveal delay-4" id="demo">
       <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle">YOUTUBE</h4>
+        <h4 class="section-subtitle text-reveal">YOUTUBE</h4>
         <span class="subtitle-line"></span>
       </div>
       <div class="section-header">
         <div>
-          <h2 class="section-title">Explore Latest Videos</h2>
+          <h2 class="section-title text-reveal">Explore Latest Videos</h2>
         </div>
         <div>
           <a href="#" class="btn-primary">Explore YouTube →</a>
@@ -1199,10 +1273,10 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section-wrapper" id="faqs">
+    <section class="section-wrapper reveal delay-4" id="faqs">
       <div class="faq-container">
         <div class="faq-left">
-          <h2 class="faq-title">FAQs</h2>
+          <h2 class="faq-title text-reveal">FAQs</h2>
           <p class="faq-desc">
             We’ve heard it all. Here’s everything you need to know before
             working with us.
