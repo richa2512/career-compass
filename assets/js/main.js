@@ -8,24 +8,79 @@ if (toggle && menu) {
 }
 
 
-const elements = document.querySelectorAll(
-  '.reveal, .fade-up, .fade-left, .fade-right, .scale-up'
-);
+// Scroll reveal observer
+const revealEls = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      console.log("Observing:", entry);
-      if (entry.isIntersecting) {
-        console.log("Intersecting:", entry.target);
-        entry.target.classList.add("active");
+const appearOptions = {
+  threshold: 0.15,
+  rootMargin: "0px 0px -5% 0px"
+};
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+revealEls.forEach(el => appearOnScroll.observe(el));
+
+
+// Subtle parallax on mouse move
+document.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 6;
+  const y = (e.clientY / window.innerHeight - 0.5) * 6;
+
+  document.querySelectorAll(".parallax").forEach(el => {
+    el.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+  });
+});
+
+
+
+/* ================= WORD SPLIT & REVEAL ================ */
+function revealText() {
+  document.querySelectorAll(".text-reveal").forEach(block => {
+    const childNodes = Array.from(block.childNodes);
+    block.innerHTML = ""; 
+
+    childNodes.forEach(node => {
+      if (node.nodeType === 3) {  // text node
+        const words = node.textContent.trim().split(" ");
+        words.forEach((word, i) => {
+          if (word !== "") {
+            const span = document.createElement("span");
+            span.textContent = word;
+            block.appendChild(span);
+            if (i < words.length - 1) block.appendChild(document.createTextNode(" "));
+          }
+        });
+      } else {
+        // Element node (like your <span class="text-gradient">Potential</span>)
+        block.appendChild(node);
       }
     });
-  },
-  { threshold: 0.15 }
-);
+  });
+}
+revealText();
 
-elements.forEach(el => observer.observe(el));
+
+/* Intersection Observer for text */
+const textObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll("span").forEach((span,i)=>{
+        setTimeout(()=> span.classList.add("active"), i * 55);
+      });
+      textObserver.unobserve(entry.target);
+    }
+  })
+},{ threshold:.2 });
+
+document.querySelectorAll(".text-reveal").forEach(el => textObserver.observe(el));
+
 
 
 // Pagination Logic Only
