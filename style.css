@@ -938,6 +938,10 @@ p.text-reveal {
   height: 20px;
   margin-top: 16px;
   fill: white;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============================= */
