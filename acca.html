@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Compass</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" title="Career Compass - Home">
+          <img
+            src="./assets/images/logo.png"
+            alt="Career Compass Logo"
+            class="logo"
+          />
+        </a>
+
+          <nav class="navbar" id="navMenu"  aria-label="Main Navigation">     
+          <ul class="nav-menu">
+              <li><a href="index.html" class="nav-link">Home</a></li> 
+              <li><a href="acca.html" class="nav-link nav-link-active">ACCA Courses</a></li>
+              <li class="dropdown"><a href="#" class="nav-link">Courses ▾</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="courses.html">All Courses</a></li>
+                     <li class="submenu"><a href="#">Prep. Certification ▸</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="acca.html">ACCA</a></li>
+                            <li><a href="cma.html">CMA</a></li>
+                            <li><a href="cfa.html">CFA</a></li>
+                         </ul>
+                      </li>
+                   </ul>
+               </li>
+              <li><a href="combos.html" class="nav-link">Combos</a></li>
+              <li><a href="about.html" class="nav-link">About Us</a></li>
+              <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+          <a href="cart.html" class="cart-icon">
+            <svg
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM17 17H9.29395C8.83288 17 8.60193 17 8.41211 16.918C8.24466 16.8456 8.09938 16.7291 7.99354 16.5805C7.8749 16.414 7.82719 16.1913 7.73274 15.7505L5.27148 4.26465C5.17484 3.81363 5.12587 3.58838 5.00586 3.41992C4.90002 3.27135 4.75477 3.15441 4.58732 3.08205C4.39746 3 4.16779 3 3.70653 3H3M6 6H18.8732C19.595 6 19.9555 6 20.1978 6.15036C20.41 6.28206 20.5653 6.48862 20.633 6.729C20.7104 7.00343 20.611 7.34996 20.411 8.04346L19.0264 12.8435C18.9068 13.2581 18.8469 13.465 18.7256 13.6189C18.6185 13.7547 18.4772 13.861 18.317 13.9263C18.1361 14 17.9211 14 17.4921 14H7.73047M8 21C6.89543 21 6 20.1046 6 19C6 17.8954 6.89543 17 8 17C9.10457 17 10 17.8954 10 19C10 20.1046 9.10457 21 8 21Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+
+          <div class="auth-buttons">
+            <a href="login.html" class="btn-primary">Login</a>
+          </div>
+
+          <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="menu-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <a href="index.html" class="nav-link nav-link-active">Home</a>
+        <a href="courses.html" class="nav-link">ACCA Courses</a>
+        <a href="combos.html" class="nav-link">Courses & Combos</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="acca-hero">
+      <div class="acca-container">
+        <div class="acca-left">
+          <img
+            src="./assets/images/acca/ALP-LOGO-GOLD 1.png"
+            alt="ACCA Badge"
+            class="acca-badge"
+          />
+
+          <h1>ACCA</h1>
+          <p class="subtext">Association of Chartered Certified Accountants</p>
+
+          <div class="acca-stats">
+            <div class="stat">
+              <h2>10+</h2>
+              <p>Years Of Experience</p>
+            </div>
+
+            <div class="stat">
+              <h2>2,000+</h2>
+              <p>Successful Students</p>
+            </div>
+
+            <div class="stat">
+              <h2>90%+</h2>
+              <p>First-Attempt Pass Rate</p>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="google-logo-group">
+              <img
+                src="./assets/images/google.png"
+                alt="Google"
+                class="google-logo"
+              />
+              <span class="google-text">Google</span>
+            </div>
+
+            <div class="rating-stack">
+              <div class="rating-top-row">
+                <span class="rating-number">4.8</span>
+                <div class="rating-stars">
+                  <img src="assets/images/icons/star.svg" alt="star" />
+                  <img src="assets/images/icons/star.svg" alt="star" />
+                  <img src="assets/images/icons/star.svg" alt="star" />
+                  <img src="assets/images/icons/star.svg" alt="star" />
+                  <img src="assets/images/icons/star.svg" alt="star" />
+                </div>
+              </div>
+
+              <span class="reviews-text">See all our reviews</span>
+            </div>
+            <button class="book-demo-btn">
+              <img src="assets/images/acca/play-circle.png" alt="" />Book Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="acca-right">
+          <div class="student-slider">
+            <img
+              src="./assets/images/acca/Frame 2147225942.png"
+              alt="Zane Sorell"
+              class="student-photo"
+            />
+          </div>
+
+          <h3 class="cta-text">YOU’LL BE NEXT ONE</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Acca -->
+    <section class="what-acca">
+      <div class="what-acca-container">
+        <div class="what-acca-left">
+          <p class="what-acca-subtitle">
+            ASSOCIATION OF CHARTERED CERTIFIED ACCOUNTANTS
+          </p>
+          <h1 class="what-acca-title">What is ACCA?</h1>
+          <p class="what-acca-desc">
+            Your gateway to international accounting excellence with global
+            recognition, exceptional career opportunities, and competitive
+            salaries.
+          </p>
+
+          <ul class="what-acca-list">
+            <li>
+              <img
+                src="assets/images/list.png"
+                alt="check"
+                class="what-acca-icon"
+              />
+              International Accounting Body
+            </li>
+            <li>
+              <img
+                src="assets/images/list.png"
+                alt="check"
+                class="what-acca-icon"
+              />
+              Grade 10 Cleared Eligibility
+            </li>
+            <li>
+              <img
+                src="assets/images/list.png"
+                alt="check"
+                class="what-acca-icon"
+              />
+              5x Yearly Growth Rate
+            </li>
+            <li>
+              <img
+                src="assets/images/list.png"
+                alt="check"
+                class="what-acca-icon"
+              />
+              64,000+ Job Opportunities
+            </li>
+            <li>
+              <img
+                src="assets/images/list.png"
+                alt="check"
+                class="what-acca-icon"
+              />
+              Up to ₹12 Lac p.a. Salary
+            </li>
+          </ul>
+
+          <div class="what-acca-buttons">
+            <button class="what-acca-btn-primary">Get Started Today</button>
+            <button class="what-acca-btn-secondary">Download Brochure</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemption -->
+    <section class="exemption-section">
+      <div class="exemption-container">
+        <div class="exemption-header">
+          <h1 class="exemption-title">Check Your <span>Exemptions</span></h1>
+          <div class="exemption-tabs">
+            <button class="exemption-tab">B.com</button>
+            <button class="exemption-tab">B.Com + CA Inter / CA IPCC</button>
+            <button class="exemption-tab active">CA / CMA</button>
+          </div>
+        </div>
+
+        <div class="exemption-cards">
+          <!-- Card 1 -->
+          <div class="exemption-card">
+            <div class="exemption-card-header">
+              <img
+                src="assets/images/acca/Frame (7).png"
+                alt="icon"
+                class="exemption-title-icon"
+              />
+              <h3>Exemptions</h3>
+            </div>
+            <div class="exemption-card-content">
+              <p class="exemption-number">06</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="exemption-card">
+            <div class="exemption-card-header">
+              <img
+                src="assets/images/courses/progress.png"
+                alt="icon"
+                class="exemption-title-icon"
+              />
+              <h3>Papers</h3>
+            </div>
+            <div class="exemption-card-content">
+              <div class="exemption-tags">
+                <span
+                  ><img
+                    src="assets/images/acca/Rectangle 161124244.png"
+                    alt="dot"
+                    class="exemption-dot"
+                  />
+                  BT</span
+                >
+                <span
+                  ><img
+                    src="assets/images/acca/Rectangle 161124244.png"
+                    alt="dot"
+                    class="exemption-dot"
+                  />
+                  MA</span
+                >
+                <span
+                  ><img
+                    src="assets/images/acca/Rectangle 161124244.png"
+                    alt="dot"
+                    class="exemption-dot"
+                  />
+                  FA LW</span
+                >
+                <span
+                  ><img
+                    src="assets/images/acca/Rectangle 161124244.png"
+                    alt="dot"
+                    class="exemption-dot"
+                  />
+                  TX & AA</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="exemption-card">
+            <div class="exemption-card-header">
+              <img
+                src="assets/images/acca/Frame (6).png"
+                alt="icon"
+                class="exemption-title-icon"
+              />
+              <h3>Exemption Fees</h3>
+            </div>
+            <div class="exemption-card-content">
+              <p class="exemption-fee">
+                <strong>15 GBP</strong><span>/Per Exemption</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exemption-summary">
+          <p class="exemption-summary-heading">CA / CMA</p>
+          <p>
+            You qualify for <strong>06 exemptions</strong> covering
+            <strong>BT, MA, FA, LW, TX, AA</strong> papers. Your total
+            investment will be <strong>£90</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Syllabus -->
+    <div class="syllabus-container">
+      <section class="syllabus-header">
+        <h2>ACCA COURSE SYLLABUS</h2>
+        <h1>Experience a top-tier curriculum</h1>
+        <p>
+          Boost your skills and career with an in-demand professional
+          qualification. Choose the right course for you to kickstart a path to
+          ACCA learning and career success!
+        </p>
+      </section>
+
+      <section class="syllabus-levels">
+        <div class="syllabus-level-card selected">
+          <h3>LEVEL 1</h3>
+          <p>ACCA Knowledge Level</p>
+          <span>3 Subjects</span>
+          <div class="syllabus-radio-button"></div>
+        </div>
+        <div class="syllabus-level-card">
+          <h3>LEVEL 2</h3>
+          <p>ACCA Skill Level</p>
+          <span>6 Subjects</span>
+          <div class="syllabus-radio-button"></div>
+        </div>
+        <div class="syllabus-level-card">
+          <h3>LEVEL 3</h3>
+          <p>ACCA Professional Level</p>
+          <span>4 Subjects</span>
+          <div class="syllabus-radio-button"></div>
+        </div>
+      </section>
+
+      <section class="syllabus-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Business and Technology (BT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Accounting (FA)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Management Accounting (MA)</h4>
+          <a href="#">See Details</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Mentors -->
+    <section class="section-wrapper fade-up delay-4">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle">Mentors Team</h4>
+        <span class="subtitle-line"></span>
+      </div>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Our Mentors</h2>
+          <p class="section-description">Our Dedicated Mentorship Team</p>
+        </div>
+        <div>
+          <a href="#" class="btn-primary">View More →</a>
+        </div>
+      </div>
+
+      <div class="mentors-grid">
+        <div class="mentor-card fade-up delay-1">
+          <img src="./assets/images/mentor/dipan.png" alt="Dipan Ghataliya" />
+          <div class="mentor-overlay">
+            <div class="mentor-info">
+              <p class="mentor-name">Dipan Sir</p>
+              <p class="mentor-role">ACCA (Founder)</p>
+              <a href="index.html">
+                <svg class="mentor-icon">
+                  <use href="../assets/images/svg/linkedin.svg"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mentor-card fade-up delay-2">
+          <img src="./assets/images/mentor/sakshe.png" alt="Sakshe" />
+          <div class="mentor-overlay">
+            <div class="mentor-info">
+              <p class="mentor-name">Sakshe Ma’am</p>
+              <p class="mentor-role">ACCA</p>
+              <a href="index.html">
+                <svg class="mentor-icon">
+                  <use href="../assets/images/svg/linkedin.svg"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mentor-card fade-up delay-3">
+          <img src="./assets/images/mentor/tejas.png" alt="Harsh" />
+          <div class="mentor-overlay">
+            <div class="mentor-info">
+              <p class="mentor-name">Tejas Sir</p>
+              <p class="mentor-role">CMA</p>
+              <a href="index.html">
+                <svg class="mentor-icon">
+                  <use href="../assets/images/svg/linkedin.svg"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mentor-card fade-up delay-4">
+          <img src="./assets/images/mentor/rachit.png" alt="Rachit" />
+          <div class="mentor-overlay">
+            <div class="mentor-info">
+              <p class="mentor-name">Rachit Sir</p>
+              <p class="mentor-role">ACCA</p>
+              <a href="index.html">
+                <svg class="mentor-icon">
+                  <use href="../assets/images/svg/linkedin.svg"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers section -->
+    <section class="acca-numbers-section fade-up delay-4">
+      <div class="acca-numbers-container">
+        <div class="acca-numbers-header">
+          <h2>Why Do ACCA with CareerCompass?</h2>
+        </div>
+
+        <div class="acca-numbers-grid">
+          <div class="acca-numbers-item">
+            <img
+              src="./assets/images/acca/1500+.png"
+              class="acca-numbers-icon"
+            />
+            <p class="acca-numbers-text">Global Students</p>
+          </div>
+          <div class="acca-numbers-item">
+            <img src="./assets/images/acca/98.png" class="acca-numbers-icon" />
+            <p class="acca-numbers-text">Pass Rate</p>
+          </div>
+          <div class="acca-numbers-item">
+            <img
+              src="./assets/images/acca/10,000+.png"
+              class="acca-numbers-icon"
+            />
+            <p class="acca-numbers-text">Placements</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- why-career-compass -->
+    <section class="why-career-compass">
+      <div class="why-career-compass-container">
+        <div class="why-career-compass-text">
+          <p class="subheading">WHY CAREER COMPASS?</p>
+          <h2 class="main-heading">Standout features of this program</h2>
+          <p class="description">
+            Get expert ACCA courses that covers 100% of the syllabus in a way
+            that’s simple to learn and makes your exams easier to pass!
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/Vector.png"
+              alt="Honest Guidance"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>Honest Guidance, Always</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/SCeWKoKt9H1NdEB3pcPNm4MXCkQ.png"
+              alt="Doubts Resolved"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>Doubts Resolved in 24 Hours</h3>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/kEIaZwECAbh5kmA6EGwym9fiA.png"
+              alt="Team of Mentors"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>Team of Mentors, Not Salesmen</h3>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/zvmGv7XBCyTSHFH70qizoa0lQg.png"
+              alt="Practical Teaching"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>Practical Teaching Style</h3>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/bfYaddYv0ODSLztAJlywzRw0.png"
+              alt="Career Preparation"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>We Don’t Promise Jobs. We Prepare You for Them.</h3>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="assets/images/acca/5Hrn6ShZ1VntViaBAQifEnN3k.png"
+              alt="Anytime Access"
+              class="feature-img"
+            />
+            <div class="feature-content">
+              <h3>Anytime Access</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCA vs CA Comparison Section -->
+    <section class="comparison-section section-wrapper">
+      <div class="comparison-header">
+        <div class="section-subtitle-wrapper">
+          <span class="section-subtitle">ACCA vs CA</span>
+          <span class="subtitle-line"></span>
+        </div>
+        <h2 class="section-title">Detailed Comparison</h2>
+      </div>
+
+      <div class="comparison-container">
+        <div class="comparison-table-wrapper">
+          <div class="comparison-headers">
+            <div class="header-label"></div>
+            <div class="header-acca">ACCA</div>
+            <div class="header-ca">CA</div>
+          </div>
+
+          <div class="comparison-rows">
+            <div class="comparison-row row-alternate">
+              <div class="row-label">Offered By</div>
+              <div class="row-acca has-gradient">
+                Association of Chartered<br />Certified Accountants
+              </div>
+              <div class="row-ca">
+                Institute of Chartered Accountants of India
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="row-label">Recognition</div>
+              <div class="row-acca">180+ Countries</div>
+              <div class="row-ca">Mainly In India</div>
+            </div>
+
+            <div class="comparison-row row-alternate">
+              <div class="row-label">Structure</div>
+              <div class="row-acca has-gradient">Modern exam system</div>
+              <div class="row-ca">Traditional exam system</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="row-label">Duration</div>
+              <div class="row-acca">Can be completed in 2<br />to 3 years</div>
+              <div class="row-ca">Typically 4.5 to 5 years</div>
+            </div>
+
+            <div class="comparison-row row-alternate">
+              <div class="row-label">Passing Rate</div>
+              <div class="row-acca has-gradient">~40–50%</div>
+              <div class="row-ca">~5–15%</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="row-label">Job Opportunity</div>
+              <div class="row-acca">
+                MNCs, international roles,<br />global finance firms
+              </div>
+              <div class="row-ca">
+                Indian firms, audit firms,<br />tax consultancies, corporates
+              </div>
+            </div>
+
+            <div class="comparison-row row-alternate">
+              <div class="row-label">Avg. Salary</div>
+              <div class="row-acca has-gradient">₹8–10 LPA</div>
+              <div class="row-ca">₹8–10 LPA</div>
+            </div>
+            <div class="comparison-row">
+              <div></div>
+              <div class="row-acca has-gradient"></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alumni -->
+    <section class="section-wrapper">
+      <div class="section-subtitle-wrapper">
+        <span class="section-subtitle">Top Students</span>
+        <span class="subtitle-line"></span>
+      </div>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Our Alumni</h2>
+          <p class="section-description">
+            Celebrating extraordinary achievements in professional excellence
+          </p>
+        </div>
+      </div>
+
+      <!-- Alumni Carousel -->
+      <div class="alumni-carousel">
+        <button class="alumni-nav left">&#10094;</button>
+        <div class="alumni-track-wrapper">
+          <div class="alumni-track">
+            <div class="alumni-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="alumni"
+              />
+              <h3>Zane Sorell</h3>
+              <p style="color: #1d587a">ACCA March 2020</p>
+              <p>Senior Financial Analyst</p>
+              <p class="company">Deloitte.</p>
+            </div>
+
+            <div class="alumni-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="alumni"
+              />
+              <h3>Anna Roussel</h3>
+              <p style="color: #1d587a">ACCA March 2020</p>
+              <p>Senior Financial Analyst</p>
+              <p class="company">Deloitte.</p>
+            </div>
+
+            <div class="alumni-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/55.jpg"
+                alt="alumni"
+              />
+              <h3>Maria Lopez</h3>
+              <p style="color: #1d587a">ACCA March 2020</p>
+              <p>Senior Financial Analyst</p>
+              <p class="company">Deloitte.</p>
+            </div>
+
+            <div class="alumni-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/60.jpg"
+                alt="alumni"
+              />
+              <h3>Emily Carter</h3>
+              <p style="color: #1d587a">ACCA March 2020</p>
+              <p>Senior Financial Analyst</p>
+              <p class="company">Deloitte.</p>
+            </div>
+
+            <div class="alumni-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/50.jpg"
+                alt="alumni"
+              />
+              <h3>James Cole</h3>
+              <p style="color: #1d587a">ACCA March 2020</p>
+              <p>Senior Financial Analyst</p>
+              <p class="company">Deloitte.</p>
+            </div>
+          </div>
+        </div>
+        <button class="alumni-nav right">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section fade-left delay-4">
+      <div class="partners-container">
+        <div class="partners-left">
+          <div class="section-subtitle-wrapper">
+            <h4 class="section-subtitle">PLACEMENT</h4>
+            <span class="subtitle-line"></span>
+          </div>
+
+          <div class="section-header">
+            <h2 class="section-title placement-title">
+              CFA Student
+              <br />
+              <span class="placement-highlight">works here</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="partners-right">
+          <div class="marquee-wrapper">
+            <div class="marquee marquee-left">
+              <div class="marquee-track">
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+              </div>
+            </div>
+
+            <div class="marquee marquee-right">
+              <div class="marquee-track">
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate-page-wrapper -->
+    <section class="certificate-section">
+      <div class="certificate-container">
+        <!-- Left Text -->
+        <div class="certificate-text">
+          <p class="certificate-subheading">ADD-ON CERTIFICATE</p>
+          <h2 class="certificate-heading">Get certified in CFA</h2>
+          <p class="certificate-description">
+            Earn a trusted credential and prove your skills with CareerCompass
+            professional CFA certifications.
+          </p>
+
+          <ul class="certificate-features">
+            <li>
+              <img
+                src="assets/images/courses/doubletick.png"
+                alt="Tick"
+                class="check-icon"
+              />
+              Build a collection
+            </li>
+            <li>
+              <img
+                src="assets/images/courses/doubletick.png"
+                alt="Tick"
+                class="check-icon"
+              />
+              Validate your achievement
+            </li>
+            <li>
+              <img
+                src="assets/images/courses/doubletick.png"
+                alt="Tick"
+                class="check-icon"
+              />
+              Share with your network
+            </li>
+          </ul>
+
+          <button class="certificate-btn">Get Started</button>
+        </div>
+
+        <!-- Right Image -->
+        <div class="certificate-image-wrapper">
+          <img
+            src="assets/images/certificate.png"
+            alt="Certificate"
+            class="certificate-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Fees -->
+    <section class="section-wrapper" id="fees">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle">WHAT WILL IT COST YOU?</h4>
+        <span class="subtitle-line"></span>
+      </div>
+      <div class="section-header">
+        <h2 class="section-title">Know your course fees & structure</h2>
+      </div>
+
+      <div class="pricing-content">
+        <div class="pricing-left">
+          <h3 class="pricing-what-title">What you'll get:</h3>
+          <ul class="pricing-benefits">
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span>Get a limited-time discounted fee</span>
+            </li>
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span>Save time with upto 9 exam exemptions</span>
+            </li>
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span
+                >Get a certificate in finance+accounting from Career
+                Compass</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="pricing-right">
+          <p class="pricing-label">Starting at</p>
+          <h3 class="pricing-amount">INR 6,625 per month</h3>
+          <p class="pricing-total">Total INR 2,75,000* (Incl. of taxes)</p>
+          <button class="btn-primary pricing-btn">Apply Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-wrapper reveal delay-4">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
+        <span class="subtitle-line"></span>
+      </div>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title text-reveal">
+            Inspiring students experiences
+          </h2>
+          <p class="section-description text-reveal">
+            Join us and become our next success story
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-wrapper">
+        <div class="info-card">
+          <div class="info-content">
+            <img
+              src="./assets/images/logo-white.png"
+              alt="Career Compass"
+              class="career-logo"
+            />
+            <h3 class="text-reveal">Students stories</h3>
+            <div>
+              <div>
+                <img
+                  src="./assets/images/google.png"
+                  alt="Google"
+                  class="google-icon"
+                />
+                <span>Google</span>
+              </div>
+              <div>
+                <span class="score">4.8</span>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div>
+                <p>See all our reviews</p>
+              </div>
+            </div>
+            <div>
+              <p class="info-text text-reveal">
+                Our work speaks for itself, but our students say it even better.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Table-->
+    <div class="price-page-wrapper">
+      <div class="price-container">
+        <div class="price-content">
+          <!-- Header Section -->
+          <div class="price-header-section">
+            <div class="price-header-label">
+              <span class="price-label">OUR PRICING</span>
+              <div class="price-divider"></div>
+            </div>
+            <h1 class="price-main-title">Choose best pricing package</h1>
+          </div>
+
+          <!-- Pricing Table -->
+          <div class="price-table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th class="price-feature-header">FEATURE</th>
+                  <th class="price-plan-header">
+                    Career Accelerator<br />Bundle
+                  </th>
+                  <th class="price-plan-header price-popular">
+                    <span class="price-popular-badge">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fbbf24' width='16' height='16'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E"
+                        alt="star"
+                        class="price-popular-icon"
+                      />
+                      MOST POPULAR
+                    </span>
+                    Advanced<br />Plan
+                  </th>
+                  <th class="price-plan-header">Foundation<br />Plan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Knowledge Level Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Knowledge Level</td>
+                  <td class="price-feature-value">68000</td>
+                  <td class="price-feature-value price-highlighted">62000</td>
+                  <td class="price-feature-value">42000</td>
+                </tr>
+
+                <!-- Skill Level Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Skill Level</td>
+                  <td class="price-feature-value">120000</td>
+                  <td class="price-feature-value price-highlighted">108000</td>
+                  <td class="price-feature-value">88000</td>
+                </tr>
+
+                <!-- Professional Level Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Professional Level</td>
+                  <td class="price-feature-value">120000</td>
+                  <td class="price-feature-value price-highlighted">110000</td>
+                  <td class="price-feature-value">60000</td>
+                </tr>
+
+                <!-- Classes Row -->
+                <tr>
+                  <td class="price-feature-name">Classes</td>
+                  <td class="price-feature-value">Live+Recorded</td>
+                  <td class="price-feature-value">Live+Recorded</td>
+                  <td class="price-feature-value">Recorded</td>
+                </tr>
+
+                <!-- Mock Test Evaluation Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Mock Test Evaluation</td>
+                  <td class="price-feature-value">3</td>
+                  <td class="price-feature-value price-highlighted">3</td>
+                  <td class="price-feature-value">3</td>
+                </tr>
+
+                <!-- Unlimited Doubt Solving Row -->
+                <tr>
+                  <td class="price-feature-name">Unlimited Doubt Solving</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                </tr>
+
+                <!-- Placement Guidance & Opportunities Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">
+                    Placement Guidance & Opportunities
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                </tr>
+
+                <!-- Study Material Row -->
+                <tr>
+                  <td class="price-feature-name">Study Material</td>
+                  <td class="price-feature-value">Hard & Soft copy</td>
+                  <td class="price-feature-value">Hard & Soft copy</td>
+                  <td class="price-feature-value">Soft copy</td>
+                </tr>
+
+                <!-- Certificates Add-ons Section -->
+                <tr class="price-section-spacer">
+                  <td colspan="4"></td>
+                </tr>
+
+                <tr class="price-section-header price-highlight-row">
+                  <td class="price-feature-name price-section-title">
+                    Certificates Add-ons
+                  </td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                </tr>
+
+                <!-- Basic Excel Row -->
+                <tr>
+                  <td class="price-feature-name">Basic Excel</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                </tr>
+
+                <!-- Public Speaking & Etiquets Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Public Speaking & Etiquets</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- Xero Certificate Advisor Row -->
+                <tr>
+                  <td class="price-feature-name">Xero Certificate Advisor</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- ESG Training Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">ESG Training</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted price-no">
+                    -
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- Power BI Certification Program Row -->
+                <tr>
+                  <td class="price-feature-name">
+                    Power BI Certification Program
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- Placement Add-ons Section -->
+                <tr class="price-section-spacer">
+                  <td colspan="4"></td>
+                </tr>
+
+                <tr class="price-section-header price-highlight-row">
+                  <td class="price-feature-name price-section-title">
+                    Placement Add-ons
+                  </td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                </tr>
+
+                <!-- Resume Building Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Resume Building</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- LinkedIn Program Row -->
+                <tr>
+                  <td class="price-feature-name">LinkedIn Program</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- Mock Interviews Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">Mock Interviews</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- Mentoring Add-ons Section -->
+                <tr class="price-section-spacer">
+                  <td colspan="4"></td>
+                </tr>
+
+                <tr class="price-section-header price-highlight-row">
+                  <td class="price-feature-name price-section-title">
+                    Mentoring Add-ons
+                  </td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                  <td class="price-feature-value price-highlighted"></td>
+                </tr>
+
+                <!-- Progress Report Row -->
+                <tr>
+                  <td class="price-feature-name">Progress Report</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+
+                <!-- 1:1 Mentorship Row -->
+                <tr class="price-highlight-row">
+                  <td class="price-feature-name">1:1 Mentorship</td>
+                  <td class="price-feature-value">
+                    <span class="price-checkmark">✓</span>
+                  </td>
+                  <td class="price-feature-value price-highlighted price-no">
+                    -
+                  </td>
+                  <td class="price-feature-value price-no">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="price-faq-section">
+            <span class="price-faq-icon">❓</span>
+            <div class="price-faq-content">
+              <p>
+                Have questions? We have your questions answered.
+                <a href="#faq" class="price-faq-link">View FAQs</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile App -->
+    <section class="section-wrapper fade-right delay-4">
+      <div class="app-section">
+        <div class="app-image">
+          <img src="./assets/images/app/app.png" alt="Unacademy app preview" />
+        </div>
+
+        <div class="app-content">
+          <h2>Get the learning app</h2>
+          <p>
+            Download lessons and learn anytime, anywhere with the Unacademy app
+          </p>
+
+          <ul class="app-features">
+            <li>
+              <img
+                src="./assets/images/list.png"
+                alt="Download on App Store"
+                class="list-icon"
+              />
+              Interactive live classes
+            </li>
+            <li>
+              <img
+                src="./assets/images/list.png"
+                alt="Download on App Store"
+                class="list-icon"
+              />Mock tests and practice questions
+            </li>
+            <li>
+              <img
+                src="./assets/images/list.png"
+                alt="Download on App Store"
+                class="list-icon"
+              />High-quality notes
+            </li>
+          </ul>
+
+          <div class="app-buttons">
+            <a href="#" class="store-btn">
+              <img
+                src="./assets/images/app/app_store.png"
+                alt="Download on App Store"
+              />
+            </a>
+            <a href="#" class="store-btn">
+              <img
+                src="./assets/images/app/play_store.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Youtube -->
+    <section class="section-wrapper fade-left">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle">YOUTUBE</h4>
+        <span class="subtitle-line"></span>
+      </div>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Explore Latest Videos</h2>
+        </div>
+        <div>
+          <a href="#" class="btn-primary">Explore YouTube →</a>
+        </div>
+      </div>
+      <div class="youtube-grid">
+        <div class="youtube-left">
+          <div class="youtube-card">
+            <iframe
+              class="youtube-iframe"
+              src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="youtube-info">
+              <p class="youtube-text">
+                ACCA FR - Rapid Revision with Dipan sir (session -1)
+              </p>
+              <p class="youtube-link">See Playlist →</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="youtube-right">
+          <div class="youtube-box">
+            <div class="youtube-video">
+              <iframe
+                class="youtube-iframe"
+                src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="youtube-desc">
+              <p class="youtube-text">
+                ACCA FR - Rapid Revision with Dipan sir (session -1)
+              </p>
+              <a href="#" class="youtube-link">See Playlist →</a>
+            </div>
+          </div>
+
+          <div class="youtube-box">
+            <div class="youtube-video">
+              <iframe
+                class="youtube-iframe"
+                src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="youtube-desc">
+              <p class="youtube-text">
+                ACCA FR - Rapid Revision with Dipan sir (session -2)
+              </p>
+              <a href="#" class="youtube-link">See Playlist →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-wrapper">
+      <div class="faq-container">
+        <div class="faq-left">
+          <h2 class="faq-title">FAQs</h2>
+          <p class="faq-desc">
+            We’ve heard it all. Here’s everything you need to know before
+            working with us.
+          </p>
+
+          <div class="ask-question">
+            <p>Can’t find your question?</p>
+            <a href="#" class="ask-link">↳ Ask a Question</a>
+          </div>
+        </div>
+
+        <div class="faq-right">
+          <div class="faq-item active">
+            <div class="faq-header">
+              <h3>Question 1</h3>
+              <button class="toggle-btn">×</button>
+            </div>
+            <div class="faq-body">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3>Question 2</h3>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="faq-body">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3>Question 3</h3>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="faq-body">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3>Question 4</h3>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="faq-body">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Background decorative images -->
+      <img
+        src="assets/images/footer/vector1.png"
+        alt=""
+        class="footer-vector footer-vector-left"
+      />
+      <img
+        src="assets/images/footer/vector2.png"
+        alt=""
+        class="footer-vector footer-vector-right"
+      />
+
+      <div class="footer-container">
+        <div class="footer-col-1">
+          <img
+            src="assets/images/logo-white.png"
+            alt="Career Compass Logo"
+            class="footer-logo"
+          />
+          <p class="footer-text">
+            For 8 years, Career Compass has guided aspiring accountants toward
+            success. We specialize in expert ACCA coaching and dedicated student
+            support.
+          </p>
+        </div>
+
+        <div class="footer-col-2">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Placements</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-3">
+          <h3 class="footer-heading">Resource</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Students Stories</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Payments</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-4">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <img src="assets/images/footer/call.svg" alt="phone" />
+              <span>+91 95122 35353</span>
+            </li>
+            <li>
+              <img src="assets/images/footer/sms.svg" alt="email" />
+              <span>dipan@careercompass.co.in</span>
+            </li>
+            <li>
+              <img src="assets/images/footer/location.svg" alt="address" />
+              <span>
+                708, Space Odyssey, 150 Feet Ring Rd, above Naturals Ice cream,
+                near KKV Hall, Bharatvan Society, Nalanda Society, Rajkot,
+                Gujarat 360007
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <div class="footer-bottom-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Legal</a>
+          </div>
+          <p class="footer-copy">© 2025 Copyright By Career Compass</p>
+          <div class="footer-socials">
+            <!-- YouTube -->
+            <a href="#" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h-.1s-5.6 0-8.6.4c-.4.1-1.3.1-2.1 1C.7 4.6.5 6.2.5 6.2S0 8 0 9.8v1.6c0 1.8.5 3.6.5 3.6s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.2.4 8.3.4s8.6 0 8.6-.4c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.5-1.8.5-3.6V9.8c0-1.8-.5-3.6-.5-3.6zM9.8 14.8V8.9l6.2 3-6.2 2.9z"
+                />
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="#" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 2h3a5 5 0 005 5v3c-1.7 0-3.3-.5-4.7-1.5v7.5a6.5 6.5 0 11-6.5-6.5h.2v3a3.5 3.5 0 103.5 3.5V2z"
+                />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="#" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M20.5 3h-17A1.5 1.5 0 002 4.5v15A1.5 1.5 0 003.5 21h17a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0020.5 3zM8.3 18.4H5.8V9h2.5v9.4zM7 7.7a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12 10.7h-2.5v-4.6c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4v4.7h-2.5V9h2.4v1.3h.1c.3-.6 1.2-1.3 2.4-1.3 2.6 0 3.1 1.7 3.1 4v5.4z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="#" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.8a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm0 6.9a2.7 2.7 0 110-5.4 2.7 2.7 0 010 5.4zm5.3-7.6a1.1 1.1 0 100-2.2 1.1 1.1 0 000 2.2z"
+                />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.7h2.5l-.4 3h-2.1v7A10 10 0 0022 12z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: { delay: 3000 },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3.5 },
+        },
+      });
+    </script>
+
+    <script>
+      const items = document.querySelectorAll(".faq-item");
+
+      items.forEach((item) => {
+        const button = item.querySelector(".toggle-btn");
+
+        button.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+
+          // close all
+          items.forEach((i) => {
+            i.classList.remove("active");
+            i.querySelector(".toggle-btn").textContent = "+";
+          });
+
+          // open the clicked one
+          if (!isActive) {
+            item.classList.add("active");
+            button.textContent = "×";
+          }
+        });
+      });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

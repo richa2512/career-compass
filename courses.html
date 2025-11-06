@@ -30,15 +30,28 @@
           />
         </a>
 
-        <nav id="navMenu" class="nav-menu" aria-label="Main Navigation">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="courses.html" class="nav-link nav-link-active"
-            >ACCA Courses</a
-          >
-          <a href="combos.html" class="nav-link">Courses & Combos</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
+       <nav class="navbar" id="navMenu"  aria-label="Main Navigation">     
+          <ul class="nav-menu">
+              <li><a href="index.html" class="nav-link">Home</a></li> 
+              <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
+              <li class="dropdown"><a href="#" class="nav-link nav-link-active">Courses ▾</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="courses.html" class="nav-link nav-link-active">All Courses</a></li>
+                     <li class="submenu"><a href="#">Prep. Certification ▸</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="acca.html">ACCA</a></li>
+                            <li><a href="cma.html">CMA</a></li>
+                            <li><a href="cfa.html">CFA</a></li>
+                         </ul>
+                      </li>
+                   </ul>
+               </li>
+              <li><a href="combos.html" class="nav-link">Combos</a></li>
+              <li><a href="about.html" class="nav-link">About Us</a></li>
+              <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
         </nav>
+
 
         <div class="header-right">
           <a href="cart.html" class="cart-icon">
@@ -60,7 +73,7 @@
           </a>
 
           <div class="auth-buttons">
-            <a href="login.html" class="btn-primary">Start Your Journey</a>
+            <a href="login.html" class="btn-primary">Login</a>
           </div>
 
           <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
