@@ -1095,7 +1095,7 @@ a {
 }
 
 .info-card {
-  width: 320px;
+  width: 274px;
   background-color: #1d587a;
   border-radius: 20px;
   color: white;
@@ -1127,18 +1127,19 @@ a {
 }
 
 .google-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .score {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
+  color: #FFD029;
 }
 
 .info-card .stars {
   color: #facc15;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .info-text {
@@ -1151,17 +1152,98 @@ a {
 .swiper {
   flex-grow: 1;
 }
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myswiper
+{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+}
 
 .testimonial-card {
   background: #fff;
+  border: 1px solid #E5E5E5;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  /* padding: 1.5rem; */
   text-align: center;
-  height: 100%;
+  height: 98%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 0;
+  overflow: hidden;
+}
+
+.testimonial-video-wrapper {
+  width: 100%;
+  height: 190px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.testimonial-video-wrapper .youtube-iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px 16px;
+}
+
+.testimonial-rating img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.testimonial-divider {
+  width: 80%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0 auto;
+}
+
+.testimonial-student {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.student-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-info {
+  text-align: left;
+}
+
+.student-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.student-role {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 4px 0 0 0;
+  padding: 0;
 }
 
 .testimonial-card .stars {
