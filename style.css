@@ -4367,7 +4367,6 @@ input {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 60px;
   padding: 40px;
   background: #f8fafc;
   border-radius: 8px;
