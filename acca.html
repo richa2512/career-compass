@@ -32,25 +32,32 @@
 
         <nav id="navMenu" class="nav-menu" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="courses.html" class="nav-link nav-link-active">Courses</a>
+          <a href="courses.html" class="nav-link nav-link-active"
+            >ACCA Courses</a
+          >
 
-          <div class="dropdown">
-            <div class="dropdown-header">
-              <a href="combos.html" class="nav-link">Courses</a>
+          <div class="dropdown-container">
+            <div
+              class="dropdown-trigger"
+              role="button"
+              aria-haspopup="listbox"
+              tabindex="0"
+            >
+              <a href="#" class="nav-link">Courses</a>
               <span class="dropdown-arrow">⌄</span>
             </div>
 
-            <div class="dropdown-menu">
-              <a href="foundation.html" class="nav-link dropdown-item"
-                >Foundation Level</a
-              >
-              <a href="skill.html" class="nav-link dropdown-item"
-                >Skill Level</a
-              >
-              <a href="professional.html" class="nav-link dropdown-item"
-                >Professional Level</a
-              >
-            </div>
+            <!-- native select is transparent and disabled for pointer events by default -->
+            <select
+              id="courseSelect"
+              class="invisible-select"
+              aria-label="Courses"
+            >
+              <option value="" selected disabled>Select Level</option>
+              <option value="foundation.html">Foundation Level</option>
+              <option value="skill.html">Skill Level</option>
+              <option value="professional.html">Professional Level</option>
+            </select>
           </div>
 
           <a href="combos.html" class="nav-link">Combos</a>
@@ -142,7 +149,7 @@
           <div class="rating-row">
             <div class="google-logo-group">
               <img
-                src="./assets/images/acca/Google__G__Logo 1.png"
+                src="./assets/images/google.png"
                 alt="Google"
                 class="google-logo"
               />
@@ -875,42 +882,57 @@
     </section>
 
     <!-- Fees -->
-    <section class="fees-section">
-      <div class="fees-container">
-        <!-- Subheading -->
-        <h4 class="fees-subheading">WHAT WILL IT COST YOU?</h4>
+    <section class="section-wrapper" id="fees">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle">WHAT WILL IT COST YOU?</h4>
+        <span class="subtitle-line"></span>
+      </div>
+      <div class="section-header">
+        <h2 class="section-title">Know your course fees & structure</h2>
+      </div>
 
-        <!-- Main Heading -->
-        <h2 class="fees-heading">Know your course fees & structure</h2>
+      <div class="pricing-content">
+        <div class="pricing-left">
+          <h3 class="pricing-what-title">What you'll get:</h3>
+          <ul class="pricing-benefits">
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span>Get a limited-time discounted fee</span>
+            </li>
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span>Save time with upto 9 exam exemptions</span>
+            </li>
+            <li>
+              <img
+                src="./assets/images/courses/doubletick.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span
+                >Get a certificate in finance+accounting from Career
+                Compass</span
+              >
+            </li>
+          </ul>
+        </div>
 
-        <!-- Content Box -->
-        <div class="fees-content">
-          <!-- Left Side -->
-          <div class="fees-left">
-            <h3 class="fees-left-title">What you'll get:</h3>
-            <ul class="fees-features">
-              <li>
-                <img src="assets/images/courses/doubletick.png" alt="check" />
-                Get a limited-time discounted fee
-              </li>
-              <li>
-                <img src="assets/images/courses/doubletick.png" alt="check" />
-                Save time with upto 9 exam exemptions
-              </li>
-              <li>
-                <img src="assets/images/courses/doubletick.png" alt="check" />
-                Get a certificate in finance+accounting from Career Compass
-              </li>
-            </ul>
-          </div>
-
-          <!-- Right Side -->
-          <div class="fees-card">
-            <p class="fees-starting">Starting at</p>
-            <h3 class="fees-amount">INR 6,625 per month</h3>
-            <p class="fees-total">Total INR 2,75,000* (Incl. of taxes)</p>
-            <button class="apply-btn">Apply Now</button>
-          </div>
+        <div class="pricing-right">
+          <p class="pricing-label">Starting at</p>
+          <h3 class="pricing-amount">INR 6,625 per month</h3>
+          <p class="pricing-total">Total INR 2,75,000* (Incl. of taxes)</p>
+          <button class="btn-primary pricing-btn">Apply Now</button>
         </div>
       </div>
     </section>
@@ -1691,36 +1713,6 @@
       });
     </script>
 
-    <script>
-      // JavaScript for toggling the dropdown menu on click
-      document.addEventListener("DOMContentLoaded", () => {
-        const dropdownHeader = document.querySelector(".dropdown-header");
-        const dropdown = document.querySelector(".dropdown");
-
-        if (dropdownHeader && dropdown) {
-          dropdownHeader.addEventListener("click", (e) => {
-            // Prevent the nested 'Courses' link from navigating immediately
-            e.preventDefault();
-
-            // Toggle the 'open' class on the main dropdown container
-            dropdown.classList.toggle("open");
-          });
-
-          // Close dropdown if user clicks outside the dropdown area
-          document.addEventListener("click", (e) => {
-            // Check if the click occurred outside the dropdown element AND if the dropdown is currently open
-            if (
-              !dropdown.contains(e.target) &&
-              dropdown.classList.contains("open")
-            ) {
-              dropdown.classList.remove("open");
-            }
-          });
-        } else {
-          console.error("Dropdown elements not found in the DOM.");
-        }
-      });
-    </script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

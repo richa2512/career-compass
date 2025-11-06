@@ -20,8 +20,9 @@
     <style></style>
   </head>
   <body>
+
     <!-- Header -->
-    <header class="header">
+     <header class="header">
       <div class="header-container">
         <a href="index.html" title="Career Compass - Home">
           <img
@@ -33,9 +34,26 @@
 
         <nav id="navMenu" class="nav-menu" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="courses.html" class="nav-link">ACCA Courses</a>
-          <a href="combos.html" class="nav-link">Courses & Combos</a>
-          <a href="about.html" class="nav-link nav-link-active">About Us</a>
+          <a href="courses.html" class="nav-link nav-link-active"
+            >ACCA Courses</a
+          >
+
+          <div class="dropdown-container">
+            <div class="dropdown-trigger">
+              <a href="combos.html" class="nav-link">Courses</a>
+              <span class="dropdown-arrow">⌄</span>
+            </div>
+
+            <select class="invisible-select">
+              <option value="" selected disabled>Select Level</option>
+              <option value="#">Foundation Level</option>
+              <option value="#">Skill Level</option>
+              <option value="#">Professional Level</option>
+            </select>
+          </div>
+
+          <a href="combos.html" class="nav-link">Combos</a>
+          <a href="about.html" class="nav-link">About Us</a>
           <a href="contact.html" class="nav-link">Contact Us</a>
         </nav>
 
@@ -59,7 +77,7 @@
           </a>
 
           <div class="auth-buttons">
-            <a href="login.html" class="btn-primary">Start Your Journey</a>
+            <a href="login.html" class="btn-primary">Login</a>
           </div>
 
           <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
