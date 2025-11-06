@@ -34,31 +34,32 @@
           />
         </a>
 
-       <nav class="navbar" id="navMenu"  aria-label="Main Navigation">     
+        <nav class="navbar" id="navMenu" aria-label="Main Navigation">
           <ul class="nav-menu">
-              <li><a href="index.html" class="nav-link">Home</a></li> 
-              <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
-              <li class="dropdown"><a href="#" class="nav-link nav-link-active">Courses ▾</a>
-                  <ul class="dropdown-menu">
-                     <li><a href="courses.html">All Courses</a></li>
-                     <li class="submenu"><a href="#">Prep. Certification ▸</a>
-                        <ul class="sub-dropdown">
-                            <li><a href="acca.html">ACCA</a></li>
-                            <li><a href="cma.html">CMA</a></li>
-                            <li><a href="cfa.html">CFA</a></li>
-                         </ul>
-                      </li>
-                   </ul>
-               </li>
-              <li><a href="combos.html" class="nav-link">Combos</a></li>
-              <li><a href="about.html" class="nav-link">About Us</a></li>
-              <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link nav-link-active">Courses ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="courses.html">All Courses</a></li>
+                <li class="submenu">
+                  <a href="#">Prep. Certification ▸</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="acca.html">ACCA</a></li>
+                    <li><a href="cma.html">CMA</a></li>
+                    <li><a href="cfa.html">CFA</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="combos.html" class="nav-link">Combos</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
         </nav>
 
-
         <div class="header-right">
-          <div class="cart-icon">
+          <a href="cart.html" class="cart-icon">
             <svg
               width="25px"
               height="25px"
@@ -74,7 +75,7 @@
                 stroke-linejoin="round"
               ></path>
             </svg>
-          </div>
+          </a>
 
           <div class="auth-buttons">
             <a href="login.html" class="btn-primary">Login</a>
@@ -203,8 +204,8 @@
     </section>
 
     <!-- ✅ Course Sections Navigation -->
-    <section class="course-sections-nav">
-      <div class="sections-container">
+    <section class="course-sections-nav reveal delay-3">
+      <div class="sections-container reveal delay-4">
         <a href="#about" class="section-link active">About</a>
         <a href="#what-learn" class="section-link">What you'll Learn</a>
         <a href="#curriculum" class="section-link">Course Curriculum</a>
@@ -221,7 +222,7 @@
           <!-- About Course Section -->
           <div class="course-about">
             <h2 class="course-section-title text-reveal">About Course</h2>
-            <p class="course-section-text">
+            <p class="course-section-text text-reveal">
               The Business Technology course builds a strong foundation in
               understanding how businesses operate in today's digital world.
               You'll explore the role of technology in strategic decision-
@@ -237,7 +238,9 @@
           <!-- What you'll Learn Section -->
           <div class="course-what-learn" id="what-learn">
             <div class="learn-header">
-              <h3 class="course-subsection-title text-reveal">What you'll Learn</h3>
+              <h3 class="course-subsection-title text-reveal">
+                What you'll Learn
+              </h3>
               <svg
                 class="chevron-icon"
                 viewBox="0 0 24 24"
@@ -359,7 +362,9 @@
 
               <!-- Course Features inside Learn Content -->
               <div class="course-features-inner">
-                <h4 class="features-title-inner text-reveal">Course Features</h4>
+                <h4 class="features-title-inner text-reveal">
+                  Course Features
+                </h4>
                 <div class="features-grid-inner">
                   <div class="feature-item">
                     <div class="feature-icon-small">
@@ -501,7 +506,9 @@
           <!-- Course Curriculum Breakdown Section -->
           <div class="curriculum-breakdown" id="curriculum">
             <div class="curriculum-header">
-              <h3 class="curriculum-title text-reveal">Course Curriculum Breakdown</h3>
+              <h3 class="curriculum-title text-reveal">
+                Course Curriculum Breakdown
+              </h3>
               <button class="curriculum-toggle-btn">
                 <a href="#" class="expand-all">Expand All</a>
                 <svg
@@ -575,8 +582,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          /></svg
-                        >Business org. Session - 1 [Intro]
+                          /></svg>Business org. Session - 1 [Intro]
                       </li>
                       <li>
                         <svg
@@ -598,8 +604,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          /></svg
-                        >Business org. Complete
+                          /></svg>Business org. Complete
                       </li>
                     </ul>
                   </div>
@@ -857,7 +862,9 @@
 
       <div class="section-header">
         <div>
-          <h2 class="section-title text-reveal">Inspiring students experiences</h2>
+          <h2 class="section-title text-reveal">
+            Inspiring students experiences
+          </h2>
           <p class="section-description">
             Join us and become our next success story
           </p>
@@ -872,28 +879,40 @@
               alt="Career Compass"
               class="career-logo"
             />
-            <h3 style="font-size: 24px; font-weight: 600;">Students<br/>stories</h3>
-            <div style="display: flex ;flex-direction: column; align-items: center; gap: 10px; width: 100%; margin-top: 20px; text-align: center;">
-             <div style="display: flex; align-items: center; gap:10px">
+            <h3 style="font-size: 24px; font-weight: 600">
+              Students<br />stories
+            </h3>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                margin-top: 20px;
+                text-align: center;
+              "
+            >
+              <div style="display: flex; align-items: center; gap: 10px">
                 <img
                   src="./assets/images/google.png"
                   alt="Google"
                   class="google-icon"
                 />
-                <span style="font-size: 18px;">Google</span>
+                <span style="font-size: 18px">Google</span>
               </div>
-              <div style="display: flex; align-items: center; gap:10px">
+              <div style="display: flex; align-items: center; gap: 10px">
                 <span class="score">4.8</span>
                 <div class="teacher-rating">
-              <img src="./assets/images/TestStar.png" />
-              <img src="./assets/images/TestStar.png" />
-              <img src="./assets/images/TestStar.png" />
-             <img src="./assets/images/TestStar.png" />
-             <img src="./assets/images/TestStar.png" />
-            </div>
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
               </div>
               <div>
-                <p style="font-size: 11px;">See all our reviews</p>
+                <p style="font-size: 11px">See all our reviews</p>
               </div>
             </div>
             <div>
@@ -928,7 +947,11 @@
                 </div>
                 <div class="testimonial-divider"></div>
                 <div class="testimonial-student">
-                  <img src="./assets/images/student-dipak.png" alt="Dipak" class="student-avatar" />
+                  <img
+                    src="./assets/images/student-dipak.png"
+                    alt="Dipak"
+                    class="student-avatar"
+                  />
                   <div class="student-info">
                     <p class="student-name">Dipak</p>
                     <p class="student-role">Student</p>
@@ -957,7 +980,11 @@
                 </div>
                 <div class="testimonial-divider"></div>
                 <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <img
+                    src="./assets/images/instructor/instructor.png"
+                    alt="Dipak"
+                    class="student-avatar"
+                  />
                   <div class="student-info">
                     <p class="student-name">Dipak</p>
                     <p class="student-role">Student</p>
@@ -986,7 +1013,11 @@
                 </div>
                 <div class="testimonial-divider"></div>
                 <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <img
+                    src="./assets/images/instructor/instructor.png"
+                    alt="Dipak"
+                    class="student-avatar"
+                  />
                   <div class="student-info">
                     <p class="student-name">Dipak</p>
                     <p class="student-role">Student</p>
@@ -1015,7 +1046,11 @@
                 </div>
                 <div class="testimonial-divider"></div>
                 <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
+                  <img
+                    src="./assets/images/instructor/instructor.png"
+                    alt="Dipak"
+                    class="student-avatar"
+                  />
                   <div class="student-info">
                     <p class="student-name">Dipak</p>
                     <p class="student-role">Student</p>
@@ -1035,7 +1070,9 @@
         <span class="subtitle-line"></span>
       </div>
       <div class="section-header">
-        <h2 class="section-title text-reveal">Know your course fees & structure</h2>
+        <h2 class="section-title text-reveal">
+          Know your course fees & structure
+        </h2>
       </div>
 
       <div class="pricing-content">
@@ -1116,7 +1153,7 @@
       </div>
     </section>
 
-    <section class="section-wrapper reveal delay-4" id="what-learn">
+    <section class="section-wrapper reveal delay-4">
       <div class="container-instructor">
         <div class="section-subtitle-wrapper">
           <h4 class="section-subtitle text-reveal">INSTRUCTOR</h4>
@@ -1210,8 +1247,8 @@
       </div>
     </section>
 
-    <!-- Youtube -->
-    <section class="section-wrapper reveal delay-4" id="demo">
+     <!-- Youtube -->
+    <section class="section-wrapper reveal delay-4">
       <div class="section-subtitle-wrapper">
         <h4 class="section-subtitle text-reveal">YOUTUBE</h4>
         <span class="subtitle-line"></span>
@@ -1236,10 +1273,10 @@
               allowfullscreen
             ></iframe>
             <div class="youtube-info">
-              <p class="youtube-text">
+              <p class="youtube-text text-reveal">
                 ACCA FR - Rapid Revision with Dipan sir (session -1)
               </p>
-              <p class="youtube-link">See Playlist →</p>
+              <p class="youtube-link text-reveal">See Playlist →</p>
             </div>
           </div>
         </div>
@@ -1257,7 +1294,7 @@
               ></iframe>
             </div>
             <div class="youtube-desc">
-              <p class="youtube-text">
+              <p class="youtube-text text-reveal">
                 ACCA FR - Rapid Revision with Dipan sir (session -1)
               </p>
               <a href="#" class="youtube-link">See Playlist →</a>
@@ -1276,7 +1313,7 @@
               ></iframe>
             </div>
             <div class="youtube-desc">
-              <p class="youtube-text">
+              <p class="youtube-text text-reveal">
                 ACCA FR - Rapid Revision with Dipan sir (session -2)
               </p>
               <a href="#" class="youtube-link">See Playlist →</a>
