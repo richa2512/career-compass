@@ -1644,58 +1644,20 @@ p.text-reveal {
   }
 }
 
-/* Mobiles (768px and below) */
-@media (max-width: 768px) {
-  .app-section {
-    flex-direction: column-reverse;
-    text-align: center;
-    border-radius: 0;
-    padding: 0; /* 🟢 Remove all padding on mobile */
-    gap: 0; /* 🟢 Remove extra space between image and text */
-  }
-
-  .app-image,
-  .app-content {
-    width: 100%;
-  }
-
-  .app-image {
-    padding: 0; /* 🟢 Ensure image touches edges */
-    margin: 0;
-  }
-
-  .app-image img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 0;
-    margin: 0;
-    display: block;
-  }
-
-  .app-content {
-    padding: 30px 20px; /* only content has spacing */
-  }
-
-  .app-content h2 {
-    font-size: 32px;
-  }
-
-  .app-content p {
-    font-size: 16px;
-  }
-
-  .app-buttons {
-    justify-content: center;
-  }
-}
 
 /* Small Phones (480px and below) */
 @media (max-width: 480px) {
   .app-content {
     padding: 25px 15px;
-  }
+    
 
+  }
+  .app-section{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+  }
   .app-content h2 {
     font-size: 26px;
   }
@@ -3251,7 +3213,7 @@ h5::after {
 /* --- 4. Locations Section (No blocks) --- */
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 30px;
   text-align: left;
@@ -3302,6 +3264,13 @@ h5::after {
     padding-left: 40px;
     padding-right: 40px;
   }
+  
+}
+
+@media (max-width: 1024px) {
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile stacking (below 900px) */
@@ -3324,7 +3293,9 @@ h5::after {
     padding-top: 50px;
     padding-bottom: 30px;
   }
-
+.locations-grid {
+    grid-template-columns: 1fr;
+  }
   .locations {
     padding-top: 30px;
     padding-bottom: 50px;
