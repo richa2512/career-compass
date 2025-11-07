@@ -31,45 +31,35 @@
           />
         </a>
 
-         <nav class="navbar" id="navMenu"  aria-label="Main Navigation">     
+        <nav class="navbar" id="navMenu" aria-label="Main Navigation">
           <ul class="nav-menu">
-              <li><a href="index.html" class="nav-link nav-link-active">Home</a></li> 
-              <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
-              <li class="dropdown"><a href="#" class="nav-link">Courses ▾</a>
-                  <ul class="dropdown-menu">
-                     <li><a href="courses.html">All Courses</a></li>
-                     <li class="submenu"><a href="#">Prep. Certification ▸</a>
-                        <ul class="sub-dropdown">
-                            <li><a href="acca.html">ACCA</a></li>
-                            <li><a href="cma.html">CMA</a></li>
-                            <li><a href="cfa.html">CFA</a></li>
-                         </ul>
-                      </li>
-                   </ul>
-               </li>
-              <li><a href="combos.html" class="nav-link">Combos</a></li>
-              <li><a href="about.html" class="nav-link">About Us</a></li>
-              <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
+            <li>
+              <a href="index.html" class="nav-link nav-link-active">Home</a>
+            </li>
+            <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Courses ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="courses.html">All Courses</a></li>
+                <li class="submenu">
+                  <a href="#">Prep. Certification ▸</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="acca.html">ACCA</a></li>
+                    <li><a href="cma.html">CMA</a></li>
+                    <li><a href="cfa.html">CFA</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="combos.html" class="nav-link">Combos</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
         </nav>
 
         <div class="header-right">
           <a href="cart.html" class="cart-icon">
-            <svg
-              width="25px"
-              height="25px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM17 17H9.29395C8.83288 17 8.60193 17 8.41211 16.918C8.24466 16.8456 8.09938 16.7291 7.99354 16.5805C7.8749 16.414 7.82719 16.1913 7.73274 15.7505L5.27148 4.26465C5.17484 3.81363 5.12587 3.58838 5.00586 3.41992C4.90002 3.27135 4.75477 3.15441 4.58732 3.08205C4.39746 3 4.16779 3 3.70653 3H3M6 6H18.8732C19.595 6 19.9555 6 20.1978 6.15036C20.41 6.28206 20.5653 6.48862 20.633 6.729C20.7104 7.00343 20.611 7.34996 20.411 8.04346L19.0264 12.8435C18.9068 13.2581 18.8469 13.465 18.7256 13.6189C18.6185 13.7547 18.4772 13.861 18.317 13.9263C18.1361 14 17.9211 14 17.4921 14H7.73047M8 21C6.89543 21 6 20.1046 6 19C6 17.8954 6.89543 17 8 17C9.10457 17 10 17.8954 10 19C10 20.1046 9.10457 21 8 21Z"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
+            <img src="./assets/images/svg/shop.svg" />
           </a>
 
           <div class="auth-buttons">
@@ -145,24 +135,36 @@
 
       <div class="hero-right">
         <div class="hero-right-header">
-          <h3 class="hero-right-title text-reveal">Personal<br />Growth Event</h3>
+          <h3 class="hero-right-title text-reveal">
+            Personal<br />Growth Event
+          </h3>
           <span class="hero-tag">ACCA</span>
         </div>
 
-        <ul class="hero-list">
-          <li class="hero-list-item">
-            <svg class="hero-icon">
-              <use href="./assets/images/svg/location.svg"></use>
-            </svg>
+        <div class="hero-list">
+          <div class="hero-list-item">
+            <img class="hero-icon" src="./assets/images/svg/location.svg" />
             Zoom Meeting Room
+          </div>
+          <div>
+            <img class="hero-icon" src="./assets/images/svg/calendar.svg" />
+            March 25, 2024
+          </div>
+        </div>
+
+        <!-- <ul class="hero-list">
+          <li class="hero-list-item">
+           
           </li>
           <li class="hero-list-item">
-            <svg class="hero-icon">
-              <use href="./assets/images/svg/calendar.svg"></use>
-            </svg>
-            March 25, 2024
+           
           </li>
-        </ul>
+        </ul> -->
+
+        <div class="online-event">
+          <div class="event-title">Online Event</div>
+          <div class="event-desc">Free</div>
+        </div>
 
         <div class="hero-image-container reveal delay-1">
           <img
@@ -239,6 +241,668 @@
       </div>
     </section>
 
+    <!-- Certification Programs -->
+    <section class="section-wrapper reveal delay-4">
+      <div class="section-subtitle-wrapper">
+        <h4 class="section-subtitle text-reveal">Certification Programs</h4>
+        <span class="subtitle-line"></span>
+      </div>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title text-reveal">
+            Choose Your Certification Path
+          </h2>
+          <p class="section-description text-reveal">
+            Select from our industry-leading certification programs designed by
+            experts
+          </p>
+        </div>
+      </div>
+
+      <div class="certification-grid">
+        <!-- ACCA Card -->
+        <div class="certification-card featured">
+          <div class="certification-header">
+            <div class="certification-icon">
+              <img src="./assets/images/svg/openBook.svg" />
+            </div>
+            <div class="certification-title">ACCA</div>
+            <div class="certification-duration">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M2 8C2 8.78793 2.15519 9.56815 2.45672 10.2961C2.75825 11.0241 3.20021 11.6855 3.75736 12.2426C4.31451 12.7998 4.97595 13.2417 5.7039 13.5433C6.43185 13.8448 7.21207 14 8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8Z"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 4.66675V8.00008L10 10.0001"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <span>2-3 Year</span>
+            </div>
+          </div>
+
+          <h3 class="certification-name">
+            Association of Chartered <br />
+            Certified Accountants
+          </h3>
+
+          <div class="certification-stats">
+            <div class="stat">
+              <div>
+                <img src="./assets/images/svg/paper.svg" />
+                <p class="stat-number">13</p>
+              </div>
+              <p class="stat-name">Papers</p>
+            </div>
+            <div class="stat">
+              <div>
+                <img src="./assets/images/icons/star.svg" />
+                <p class="stat-number">4.9</p>
+              </div>
+              <p class="stat-name">Rating</p>
+            </div>
+            <div class="stat">
+              <div>
+                <img src="./assets/images/icons/growth.svg" />
+                <p class="stat-number">98%</p>
+              </div>
+              <p class="stat-name">success ratio</p>
+            </div>
+          </div>
+
+          <ul class="certification-features">
+            <li>
+              <img src="./assets/images/icons/check.svg" />
+              Interactive live classes Mock tests and practice questions
+              High-quality notes
+            </li>
+            <li>
+              <img src="./assets/images/icons/check.svg" />
+              Stay updated with international financial reporting standards
+            </li>
+            <li>
+              <img src="./assets/images/icons/check.svg" />
+              Build leadership skills for senior roles in accounting and finance
+            </li>
+          </ul>
+
+          <div class="certification-footer">
+            <div class="brochure-link">
+              <img src="./assets/images/svg/download.svg" />
+              <span>Brochure</span>
+            </div>
+            <a href="#" class="btn-explore">
+              <span>Explore Now</span>
+              <img src="./assets/images/svg/right-arrow.svg" />
+            </a>
+          </div>
+        </div>
+
+        <!-- CFA Card -->
+        <div class="certification-card">
+          <div class="certification-header">
+            <div class="certification-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.0007 25.6663C20.444 25.6663 25.6673 20.443 25.6673 13.9997C25.6673 7.55635 20.444 2.33301 14.0007 2.33301C7.55733 2.33301 2.33398 7.55635 2.33398 13.9997C2.33398 20.443 7.55733 25.6663 14.0007 25.6663Z"
+                  stroke="#1D587A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14 21C17.866 21 21 17.866 21 14C21 10.134 17.866 7 14 7C10.134 7 7 10.134 7 14C7 17.866 10.134 21 14 21Z"
+                  stroke="#1D587A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.9993 16.3337C15.288 16.3337 16.3327 15.289 16.3327 14.0003C16.3327 12.7117 15.288 11.667 13.9993 11.667C12.7107 11.667 11.666 12.7117 11.666 14.0003C11.666 15.289 12.7107 16.3337 13.9993 16.3337Z"
+                  stroke="#1D587A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="certification-title">CFA</div>
+            <div class="certification-duration">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M2 8C2 8.78793 2.15519 9.56815 2.45672 10.2961C2.75825 11.0241 3.20021 11.6855 3.75736 12.2426C4.31451 12.7998 4.97595 13.2417 5.7039 13.5433C6.43185 13.8448 7.21207 14 8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8Z"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 4.66675V8.00008L10 10.0001"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <span>3 Year</span>
+            </div>
+          </div>
+
+          <h3 class="certification-name">Chartered Financial Analyst</h3>
+
+          <div class="certification-stats">
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.4998 1.66663H7.49984C7.0396 1.66663 6.6665 2.03972 6.6665 2.49996V4.16663C6.6665 4.62686 7.0396 4.99996 7.49984 4.99996H12.4998C12.9601 4.99996 13.3332 4.62686 13.3332 4.16663V2.49996C13.3332 2.03972 12.9601 1.66663 12.4998 1.66663Z"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.3335 3.33337H15.0002C15.4422 3.33337 15.8661 3.50897 16.1787 3.82153C16.4912 4.13409 16.6668 4.55801 16.6668 5.00004V16.6667C16.6668 17.1087 16.4912 17.5327 16.1787 17.8452C15.8661 18.1578 15.4422 18.3334 15.0002 18.3334H5.00016C4.55814 18.3334 4.13421 18.1578 3.82165 17.8452C3.50909 17.5327 3.3335 17.1087 3.3335 16.6667V5.00004C3.3335 4.55801 3.50909 4.13409 3.82165 3.82153C4.13421 3.50897 4.55814 3.33337 5.00016 3.33337H6.66683"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.5 11.6667L9.16667 13.3333L12.5 10"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">3</p>
+                <p class="stat-name">Levels</p>
+              </div>
+            </div>
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.60502 1.91274C9.64153 1.83895 9.69795 1.77685 9.76789 1.73342C9.83784 1.69 9.91852 1.66699 10.0008 1.66699C10.0832 1.66699 10.1639 1.69 10.2338 1.73342C10.3037 1.77685 10.3602 1.83895 10.3967 1.91274L12.3217 5.8119C12.4485 6.06854 12.6357 6.29058 12.8672 6.45895C13.0987 6.62732 13.3676 6.737 13.6508 6.77857L17.9559 7.40857C18.0374 7.42039 18.1141 7.4548 18.1771 7.5079C18.2401 7.56101 18.287 7.63069 18.3125 7.70907C18.338 7.78746 18.3411 7.87141 18.3213 7.95143C18.3016 8.03146 18.2599 8.10436 18.2008 8.1619L15.0875 11.1936C14.8822 11.3937 14.7286 11.6406 14.6399 11.9133C14.5512 12.1859 14.5301 12.476 14.5783 12.7586L15.3133 17.0419C15.3277 17.1234 15.3189 17.2074 15.2879 17.2841C15.2569 17.3609 15.205 17.4274 15.138 17.4761C15.071 17.5247 14.9917 17.5536 14.9091 17.5593C14.8265 17.5651 14.7439 17.5475 14.6708 17.5086L10.8225 15.4852C10.5689 15.3521 10.2868 15.2825 10.0004 15.2825C9.71403 15.2825 9.43192 15.3521 9.17835 15.4852L5.33085 17.5086C5.25779 17.5472 5.17535 17.5646 5.09289 17.5588C5.01044 17.5529 4.93128 17.524 4.86443 17.4754C4.79758 17.4268 4.74571 17.3604 4.71473 17.2838C4.68375 17.2071 4.6749 17.1233 4.68918 17.0419L5.42335 12.7594C5.47185 12.4767 5.45084 12.1864 5.36213 11.9136C5.27343 11.6408 5.11969 11.3937 4.91418 11.1936L1.80085 8.16274C1.74134 8.10526 1.69918 8.03223 1.67915 7.95196C1.65913 7.8717 1.66205 7.78742 1.68758 7.70873C1.71312 7.63004 1.76024 7.5601 1.82358 7.50689C1.88692 7.45367 1.96393 7.41932 2.04585 7.40774L6.35002 6.77857C6.63356 6.73732 6.90284 6.62778 7.13467 6.45939C7.3665 6.291 7.55394 6.0688 7.68085 5.8119L9.60502 1.91274Z"
+                  fill="#FF9335"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">4.9</p>
+                <p class="stat-name">Rating</p>
+              </div>
+            </div>
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.3327 5.83301L11.2493 12.9163L7.08268 8.74967L1.66602 14.1663"
+                  stroke="#00B67A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.334 5.83301H18.334V10.833"
+                  stroke="#00B67A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">98%</p>
+                <p class="stat-name">success ratio</p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="certification-features">
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Comprehensive investment analysis and portfolio management
+            </li>
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Global recognition in investment and wealth management...
+            </li>
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Advanced financial modeling and valuation techniques...
+            </li>
+          </ul>
+
+          <div class="certification-footer">
+            <div class="brochure-link">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.33398 14.1665V15.8332C3.33398 16.2752 3.50958 16.6991 3.82214 17.0117C4.1347 17.3242 4.55862 17.4998 5.00065 17.4998H15.0007C15.4427 17.4998 15.8666 17.3242 16.1792 17.0117C16.4917 16.6991 16.6673 16.2752 16.6673 15.8332V14.1665"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.83398 9.1665L10.0007 13.3332L14.1673 9.1665"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 3.33337V13.3334"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Brochure</span>
+            </div>
+            <a href="#" class="btn-explore-outline">
+              <span>Explore Now</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M4.16797 10H15.8346"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.5 13.3333L15.8333 10"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.5 6.66699L15.8333 10.0003"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CMA Card -->
+        <div class="certification-card">
+          <div class="certification-header">
+            <div class="certification-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.0572 15.0381L19.8247 24.9851C19.8445 25.1022 19.828 25.2226 19.7776 25.3301C19.7271 25.4377 19.645 25.5272 19.5423 25.5868C19.4395 25.6465 19.321 25.6733 19.2026 25.6637C19.0842 25.6542 18.9716 25.6087 18.8797 25.5334L14.703 22.3986C14.5014 22.248 14.2565 22.1666 14.0048 22.1666C13.7531 22.1666 13.5081 22.248 13.3065 22.3986L9.12285 25.5323C9.03106 25.6074 8.91853 25.6528 8.80026 25.6624C8.682 25.6719 8.56364 25.6452 8.46096 25.5858C8.35828 25.5263 8.27617 25.437 8.22559 25.3296C8.17501 25.2223 8.15836 25.1021 8.17785 24.9851L9.94419 15.0381"
+                  stroke="#1D587A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14 16.3334C17.866 16.3334 21 13.1994 21 9.33337C21 5.46738 17.866 2.33337 14 2.33337C10.134 2.33337 7 5.46738 7 9.33337C7 13.1994 10.134 16.3334 14 16.3334Z"
+                  stroke="#1D587A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="certification-title">CMA</div>
+            <div class="certification-duration">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M2 8C2 8.78793 2.15519 9.56815 2.45672 10.2961C2.75825 11.0241 3.20021 11.6855 3.75736 12.2426C4.31451 12.7998 4.97595 13.2417 5.7039 13.5433C6.43185 13.8448 7.21207 14 8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8Z"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 4.66675V8.00008L10 10.0001"
+                    stroke="white"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <span>1-1.5 Year</span>
+            </div>
+          </div>
+
+          <h3 class="certification-name">Certified Management Accountant</h3>
+
+          <div class="certification-stats">
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.4998 1.66663H7.49984C7.0396 1.66663 6.6665 2.03972 6.6665 2.49996V4.16663C6.6665 4.62686 7.0396 4.99996 7.49984 4.99996H12.4998C12.9601 4.99996 13.3332 4.62686 13.3332 4.16663V2.49996C13.3332 2.03972 12.9601 1.66663 12.4998 1.66663Z"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.3335 3.33337H15.0002C15.4422 3.33337 15.8661 3.50897 16.1787 3.82153C16.4912 4.13409 16.6668 4.55801 16.6668 5.00004V16.6667C16.6668 17.1087 16.4912 17.5327 16.1787 17.8452C15.8661 18.1578 15.4422 18.3334 15.0002 18.3334H5.00016C4.55814 18.3334 4.13421 18.1578 3.82165 17.8452C3.50909 17.5327 3.3335 17.1087 3.3335 16.6667V5.00004C3.3335 4.55801 3.50909 4.13409 3.82165 3.82153C4.13421 3.50897 4.55814 3.33337 5.00016 3.33337H6.66683"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.5 11.6667L9.16667 13.3333L12.5 10"
+                  stroke="#1D587A"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">2</p>
+                <p class="stat-name">Parts</p>
+              </div>
+            </div>
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.60502 1.91274C9.64153 1.83895 9.69795 1.77685 9.76789 1.73342C9.83784 1.69 9.91852 1.66699 10.0008 1.66699C10.0832 1.66699 10.1639 1.69 10.2338 1.73342C10.3037 1.77685 10.3602 1.83895 10.3967 1.91274L12.3217 5.8119C12.4485 6.06854 12.6357 6.29058 12.8672 6.45895C13.0987 6.62732 13.3676 6.737 13.6508 6.77857L17.9559 7.40857C18.0374 7.42039 18.1141 7.4548 18.1771 7.5079C18.2401 7.56101 18.287 7.63069 18.3125 7.70907C18.338 7.78746 18.3411 7.87141 18.3213 7.95143C18.3016 8.03146 18.2599 8.10436 18.2008 8.1619L15.0875 11.1936C14.8822 11.3937 14.7286 11.6406 14.6399 11.9133C14.5512 12.1859 14.5301 12.476 14.5783 12.7586L15.3133 17.0419C15.3277 17.1234 15.3189 17.2074 15.2879 17.2841C15.2569 17.3609 15.205 17.4274 15.138 17.4761C15.071 17.5247 14.9917 17.5536 14.9091 17.5593C14.8265 17.5651 14.7439 17.5475 14.6708 17.5086L10.8225 15.4852C10.5689 15.3521 10.2868 15.2825 10.0004 15.2825C9.71403 15.2825 9.43192 15.3521 9.17835 15.4852L5.33085 17.5086C5.25779 17.5472 5.17535 17.5646 5.09289 17.5588C5.01044 17.5529 4.93128 17.524 4.86443 17.4754C4.79758 17.4268 4.74571 17.3604 4.71473 17.2838C4.68375 17.2071 4.6749 17.1233 4.68918 17.0419L5.42335 12.7594C5.47185 12.4767 5.45084 12.1864 5.36213 11.9136C5.27343 11.6408 5.11969 11.3937 4.91418 11.1936L1.80085 8.16274C1.74134 8.10526 1.69918 8.03223 1.67915 7.95196C1.65913 7.8717 1.66205 7.78742 1.68758 7.70873C1.71312 7.63004 1.76024 7.5601 1.82358 7.50689C1.88692 7.45367 1.96393 7.41932 2.04585 7.40774L6.35002 6.77857C6.63356 6.73732 6.90284 6.62778 7.13467 6.45939C7.3665 6.291 7.55394 6.0688 7.68085 5.8119L9.60502 1.91274Z"
+                  fill="#FF9335"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">4.9</p>
+                <p class="stat-name">Rating</p>
+              </div>
+            </div>
+            <div class="stat">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.3327 5.83301L11.2493 12.9163L7.08268 8.74967L1.66602 14.1663"
+                  stroke="#00B67A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.334 5.83301H18.334V10.833"
+                  stroke="#00B67A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p class="stat-number">98%</p>
+                <p class="stat-name">success ratio</p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="certification-features">
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Strategic financial planning and cost management...
+            </li>
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Business intelligence and performance reporting...
+            </li>
+            <li>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6661 3.19971L4.79948 9.06637L2.13281 6.39971"
+                  stroke="white"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Risk management and internal controls expertise...
+            </li>
+          </ul>
+
+          <div class="certification-footer">
+            <div class="brochure-link">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.33398 14.1665V15.8332C3.33398 16.2752 3.50958 16.6991 3.82214 17.0117C4.1347 17.3242 4.55862 17.4998 5.00065 17.4998H15.0007C15.4427 17.4998 15.8666 17.3242 16.1792 17.0117C16.4917 16.6991 16.6673 16.2752 16.6673 15.8332V14.1665"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.83398 9.1665L10.0007 13.3332L14.1673 9.1665"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 3.33337V13.3334"
+                  stroke="#5E5E5E"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Brochure</span>
+            </div>
+            <a href="#" class="btn-explore-outline">
+              <span>Explore Now</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M4.16797 10H15.8346"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.5 13.3333L15.8333 10"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.5 6.66699L15.8333 10.0003"
+                    stroke="#1D587A"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Mentors -->
     <section class="section-wrapper reveal delay-1">
       <div class="section-subtitle-wrapper">
@@ -265,9 +929,9 @@
             <div class="mentor-info">
               <p class="mentor-name text-reveal">Dipan Sir</p>
               <p class="mentor-role">ACCA (Founder)</p>
-               <a href="index.html" class="mentor-icon">
-                 <img src="./assets/images/svg/fb.svg"></img>
-                <img src="./assets/images/svg/linkedin.svg"></img>
+              <a href="index.html" class="mentor-icon">
+                <img src="./assets/images/svg/fb.svg" />
+                <img src="./assets/images/svg/linkedin.svg" />
               </a>
             </div>
           </div>
@@ -280,8 +944,8 @@
               <p class="mentor-name text-reveal">Sakshe Ma’am</p>
               <p class="mentor-role">ACCA</p>
               <a href="index.html" class="mentor-icon">
-                 <img src="./assets/images/svg/fb.svg"></img>
-                <img src="./assets/images/svg/linkedin.svg"></img>
+                <img src="./assets/images/svg/fb.svg" />
+                <img src="./assets/images/svg/linkedin.svg" />
               </a>
             </div>
           </div>
@@ -293,9 +957,9 @@
             <div class="mentor-info">
               <p class="mentor-name text-reveal">Tejas Sir</p>
               <p class="mentor-role">CMA</p>
-               <a href="index.html" class="mentor-icon">
-                 <img src="./assets/images/svg/fb.svg"></img>
-                <img src="./assets/images/svg/linkedin.svg"></img>
+              <a href="index.html" class="mentor-icon">
+                <img src="./assets/images/svg/fb.svg" />
+                <img src="./assets/images/svg/linkedin.svg" />
               </a>
             </div>
           </div>
@@ -308,8 +972,8 @@
               <p class="mentor-name text-reveal">Rachit Sir</p>
               <p class="mentor-role">ACCA</p>
               <a href="index.html" class="mentor-icon">
-                 <img src="./assets/images/svg/fb.svg"></img>
-                <img src="./assets/images/svg/linkedin.svg"></img>
+                <img src="./assets/images/svg/fb.svg" />
+                <img src="./assets/images/svg/linkedin.svg" />
               </a>
             </div>
           </div>
@@ -326,7 +990,9 @@
             <span class="subtitle-line"></span>
           </div>
           <div class="section-header">
-            <h2 class="section-title text-reveal">Trusted by Global Employers</h2>
+            <h2 class="section-title text-reveal">
+              Trusted by Global Employers
+            </h2>
           </div>
         </div>
 
@@ -385,7 +1051,9 @@
 
       <div class="section-header">
         <div>
-          <h2 class="section-title text-reveal">Inspiring students experiences</h2>
+          <h2 class="section-title text-reveal">
+            Inspiring students experiences
+          </h2>
           <p class="section-description text-reveal">
             Join us and become our next success story
           </p>
@@ -408,20 +1076,20 @@
                   alt="Google"
                   class="google-icon"
                 />
-                <span style="font-size: 18px;">Google</span>
+                <span style="font-size: 18px">Google</span>
               </div>
-              <div style="display: flex; align-items: center; gap:10px">
+              <div style="display: flex; align-items: center; gap: 10px">
                 <span class="score">4.8</span>
                 <div class="teacher-rating">
-              <img src="./assets/images/TestStar.png" />
-              <img src="./assets/images/TestStar.png" />
-              <img src="./assets/images/TestStar.png" />
-             <img src="./assets/images/TestStar.png" />
-             <img src="./assets/images/TestStar.png" />
-            </div>
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                  <img src="./assets/images/TestStar.png" />
+                </div>
               </div>
               <div>
-                <p style="font-size: 11px;">See all our reviews</p>
+                <p style="font-size: 11px">See all our reviews</p>
               </div>
             </div>
             <div>
@@ -437,118 +1105,50 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <div class="testimonial-video-wrapper">
-                  <iframe
-                    class="youtube-iframe"
-                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                    title="YouTube Shorts"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="testimonial-rating">
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                </div>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-student">
-                  <img src="./assets/images/student-dipak.png" alt="Dipak" class="student-avatar" />
-                  <div class="student-info">
-                    <p class="student-name">Dipak</p>
-                    <p class="student-role">Student</p>
-                  </div>
-                </div>
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <div class="testimonial-video-wrapper">
-                  <iframe
-                    class="youtube-iframe"
-                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                    title="YouTube Shorts"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="testimonial-rating">
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                </div>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
-                  <div class="student-info">
-                    <p class="student-name">Dipak</p>
-                    <p class="student-role">Student</p>
-                  </div>
-                </div>
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <div class="testimonial-video-wrapper">
-                  <iframe
-                    class="youtube-iframe"
-                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                    title="YouTube Shorts"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="testimonial-rating">
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                </div>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
-                  <div class="student-info">
-                    <p class="student-name">Dipak</p>
-                    <p class="student-role">Student</p>
-                  </div>
-                </div>
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="testimonial-card">
-                <div class="testimonial-video-wrapper">
-                  <iframe
-                    class="youtube-iframe"
-                    src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                    title="YouTube Shorts"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="testimonial-rating">
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                </div>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-student">
-                  <img src="./assets/images/instructor/instructor.png" alt="Dipak" class="student-avatar" />
-                  <div class="student-info">
-                    <p class="student-name">Dipak</p>
-                    <p class="student-role">Student</p>
-                  </div>
-                </div>
+                <iframe
+                  class="youtube-iframe"
+                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                  title="YouTube Shorts"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -884,7 +1484,7 @@
         <div class="faq-right">
           <div class="faq-item active">
             <div class="faq-header">
-              <h3 >Question 1</h3>
+              <h3>Question 1</h3>
               <button class="toggle-btn">×</button>
             </div>
             <div class="faq-body">
