@@ -1282,6 +1282,7 @@ p.text-reveal {
   display: flex;
   gap: 40px;
   align-items: center;
+  width: fit-content;
 }
 
 .marquee-partner-card {
@@ -1294,12 +1295,30 @@ p.text-reveal {
   background: white;
   transition: transform 0.3s;
   padding: 12px 20px;
+  flex-shrink: 0;
 }
 
 .marquee img {
   width: 100%;
   object-fit: cover;
 }
+
+.marquee-partner-morgan {
+  width: 150px;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.marquee-partner-morgan img {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  object-position: center; 
+  border-radius: inherit;
+}
+
 
 .marquee img:hover {
   transform: scale(1.1);
@@ -3692,15 +3711,15 @@ h5::after {
 /* --- 4. Locations Section (No blocks) --- */
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
   margin-top: 30px;
   text-align: left;
 }
 
 .loc h3 {
   font-size: 1.2em;
-  color: #2c3e50;
+  color: #1D587A;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -3709,6 +3728,18 @@ h5::after {
   font-size: 0.95em;
   color: #555;
   margin-bottom: 10px;
+}
+.new-box
+{
+  background-color: white;
+  color: #1D587A;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px dashed #E5E5E5;
 }
 
 /* --- 5. Responsive Adjustments --- */
