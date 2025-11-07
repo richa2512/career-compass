@@ -142,58 +142,77 @@ const prevBtn = document.querySelector(".alumni-nav.left");
 const nextBtn = document.querySelector(".alumni-nav.right");
 const cards = document.querySelectorAll(".alumni-card");
 
-// Only initialize carousel if elements exist
 if (track && prevBtn && nextBtn && cards.length > 0) {
-  let index = 0;
   const total = cards.length;
+  const cardWidth = cards[0].offsetWidth + 20;
+  let currentIndex = 0;
+  let isAnimating = false;
 
-  function visibleCards() {
-    const containerWidth = track.parentElement.offsetWidth;
-    const cardWidth = cards[0].offsetWidth + 20; 
-    return Math.floor(containerWidth / cardWidth);
-  }
-
-  function updateCarousel() {
-    const containerWidth = track.parentElement.offsetWidth;
-    const cardWidth = cards[0].offsetWidth + 20;
-    const visible = visibleCards();
-
-    const maxTranslate = (cardWidth * total) - containerWidth;
-    const maxIndex = Math.floor(maxTranslate / cardWidth);
-
-    if (index > maxIndex) index = maxIndex;
-    if (index < 0) index = 0;
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index >= maxIndex;
-  }
-  
-  nextBtn.addEventListener("click", () => {
-    const containerWidth = track.parentElement.offsetWidth;
-    const cardWidth = cards[0].offsetWidth + 20;
-    const maxTranslate = (cardWidth * total) - containerWidth;
-    const maxIndex = Math.floor(maxTranslate / cardWidth);
-
-    if (index < maxIndex) {
-      index++;
-      updateCarousel();
-    }
+  // Clone cards to create infinite effect
+  const originalCards = Array.from(cards);
+  originalCards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
   });
 
-  prevBtn.addEventListener("click", () => {
-    if (index > 0) {
-      index--;
-      updateCarousel();
+  function updateCarousel(direction) {
+    if (isAnimating) return;
+    
+    isAnimating = true;
+    
+    if (direction === 1) {
+      
+      currentIndex++;
+      const offset = currentIndex * cardWidth;
+      track.style.transform = `translateX(-${offset}px)`;
+
+      setTimeout(() => {
+        track.style.transition = "none";
+        currentIndex = ((currentIndex % total) + total) % total;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        
+        setTimeout(() => {
+          track.style.transition = "transform 0.4s ease-in-out";
+          isAnimating = false;
+        }, 50);
+      }, 400);
+    } else {
+      if (currentIndex <= 0) {
+        track.style.transition = "none";
+        currentIndex = total;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        
+        setTimeout(() => {
+          track.style.transition = "transform 0.4s ease-in-out";
+          currentIndex--;
+          track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+          
+          setTimeout(() => {
+            isAnimating = false;
+          }, 400);
+        }, 50);
+      } else {
+        currentIndex--;
+        const offset = currentIndex * cardWidth;
+        track.style.transform = `translateX(-${offset}px)`;
+        
+        setTimeout(() => {
+          isAnimating = false;
+        }, 400);
+      }
     }
-  });
+  }
+
+  nextBtn.addEventListener("click", () => updateCarousel(1));
+  prevBtn.addEventListener("click", () => updateCarousel(-1));
 
   window.addEventListener("resize", () => {
-    updateCarousel();
+    if (!isAnimating) {
+      track.style.transition = "none";
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
   });
-
-  updateCarousel();
 }
-
 
 // Mobile menu toggle
 const menuToggle = document.getElementById('menuToggle');
