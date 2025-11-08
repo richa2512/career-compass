@@ -1363,23 +1363,7 @@
           }
         });
       });
-
-      // Select all certification cards
-      const certificationCards = document.querySelectorAll(
-        ".certification-card"
-      );
-
-      certificationCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          // Remove 'featured' from any currently featured card
-          document
-            .querySelector(".certification-card.featured")
-            ?.classList.remove("featured");
-
-          // Add 'featured' to the clicked card
-          card.classList.add("featured");
-        });
-      });
+    
     </script>
     <script src="./assets/js/main.js"></script>
   </body>

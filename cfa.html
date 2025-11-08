@@ -177,15 +177,55 @@
         </div>
 
         <div class="acca-right">
-          <div class="student-slider">
-            <img
-              src="./assets/images/acca/Frame 2147225942.png"
-              alt="Zane Sorell"
-              class="student-photo"
-            />
+          <div class="student-slider-wrapper">
+            <div class="student-slider">
+              <!-- Original slides -->
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Zane Sorell"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 3"
+                />
+              </div>
+
+              <!-- Duplicated slides for seamless loop -->
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Zane Sorell"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 3"
+                />
+              </div>
+            </div>
+
+            <!-- Left & Right soft blur gradient -->
+            <div class="blur-left"></div>
+            <div class="blur-right"></div>
           </div>
 
-          <h3 class="cta-text">YOU’LL BE NEXT ONE</h3>
+          <h3 class="cta-text">YOU'LL BE NEXT ONE</h3>
         </div>
       </div>
     </section>
@@ -360,7 +400,7 @@
     </section>
 
     <!-- Syllabus -->
-    <div class="syllabus-container">
+    <div class="syllabus-container section-wrapper">
       <section class="syllabus-header">
         <h2>CFA COURSE SYLLABUS</h2>
         <h1>Experience a top-tier curriculum</h1>
@@ -372,19 +412,31 @@
       </section>
 
       <section class="syllabus-levels">
-        <div class="syllabus-level-card selected">
+        <div
+          class="syllabus-level-card selected"
+          data-level="1"
+          onclick="selectLevel(1)"
+        >
           <h3>LEVEL 1</h3>
           <p>CFA Level 1</p>
           <span>10 Subjects</span>
           <div class="syllabus-radio-button"></div>
         </div>
-        <div class="syllabus-level-card">
+        <div
+          class="syllabus-level-card"
+          data-level="2"
+          onclick="selectLevel(2)"
+        >
           <h3>LEVEL 2</h3>
           <p>CFA Level 2</p>
           <span>10 Subjects</span>
           <div class="syllabus-radio-button"></div>
         </div>
-        <div class="syllabus-level-card">
+        <div
+          class="syllabus-level-card"
+          data-level="3"
+          onclick="selectLevel(3)"
+        >
           <h3>LEVEL 3</h3>
           <p>CFA Level 3</p>
           <span>6 Subjects</span>
@@ -392,20 +444,167 @@
         </div>
       </section>
 
-      <section class="syllabus-subjects">
+      <section class="syllabus-subjects" id="subject-list">
         <div class="syllabus-subject-card">
-          <h4>Business and Technology (BT)</h4>
-          <a href="#">See Details</a>
+          <h4>Quantitative Methods (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
         </div>
         <div class="syllabus-subject-card">
-          <h4>Financial Accounting (FA)</h4>
-          <a href="#">See Details</a>
+          <h4>Economics (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
         </div>
         <div class="syllabus-subject-card">
-          <h4>Management Accounting (MA)</h4>
-          <a href="#">See Details</a>
+          <h4>Financial Statement Analysis (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Corporate Issues (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Equity Investments (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Fixed Income (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Derivatives (5-8%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Alternative Investments (7-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Portfolio Management (8-12%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Ethical and Professional Standards (15-20%)</h4>
+          <a href="course-detail-page.html">See Details</a>
         </div>
       </section>
+    </div>
+
+    <!-- Syllabus Part -->
+    <div id="level-subjects-data" style="display: none">
+      <template id="level-1-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Quantitative Methods (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Economics (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Statement Analysis (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Corporate Issues (6-9%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Equity Investments (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Fixed Income (11-14%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Derivatives (5-8%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Alternative Investments (7-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Portfolio Management (8-12%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Ethical and Professional Standards (15-20%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+      </template>
+
+      <template id="level-2-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Quantitative Methods (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Economics (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Statement Analysis (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Corporate Issues (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Equity Investments (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Fixed Income (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Derivatives (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Alternative Investments (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Portfolio Management (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Ethical and Professional Standards (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+      </template>
+
+      <template id="level-3-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Asset Allocation (15-20%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Portfolio Construction (15-20%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Performance Measurement (5-10%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Derivatives and Risk Management (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Ethical and Professional Standards (10-15%)</h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>
+            Pathways (Portfolio Management or Private Markets or Private Wealth)
+            (30-35%)
+          </h4>
+          <a href="course-detail-page.html">See Details</a>
+        </div>
+      </template>
     </div>
 
     <!-- Mentors -->
@@ -512,26 +711,28 @@
       </div>
     </section>
 
-    <!-- why-career-compass -->
-    <section class="why-career-compass">
+    <!-- Why Career Compass -->
+    <section class="why-career-compass section-wrapper">
       <div class="why-career-compass-container">
         <div class="why-career-compass-text">
-          <p class="subheading">WHY CAREER COMPASS?</p>
-          <h2 class="main-heading">Standout features of this program</h2>
-          <p class="description">
-            Get expert CMA courses that covers 100% of the syllabus in a way
+          <p class="why-career-compass-subheading">WHY CAREER COMPASS?</p>
+          <h2 class="why-career-compass-main-heading">
+            Standout features of this program
+          </h2>
+          <p class="why-career-compass-description">
+            Get expert ACCA courses that cover 100% of the syllabus in a way
             that’s simple to learn and makes your exams easier to pass!
           </p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
+        <div class="why-career-compass-features-grid">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/Vector.png"
+              src="assets/images/acca/butterfly.png"
               alt="Honest Guidance"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Honest Guidance, Always</h3>
               <p>
                 No marketing tricks or false promises — just transparent,
@@ -540,58 +741,78 @@
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/SCeWKoKt9H1NdEB3pcPNm4MXCkQ.png"
+              src="assets/images/acca/award-icon.png"
               alt="Doubts Resolved"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Doubts Resolved in 24 Hours</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/kEIaZwECAbh5kmA6EGwym9fiA.png"
+              src="assets/images/acca/mentorsteam.png"
               alt="Team of Mentors"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Team of Mentors, Not Salesmen</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/zvmGv7XBCyTSHFH70qizoa0lQg.png"
+              src="assets/images/acca/user-folder-icon.png"
               alt="Practical Teaching"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Practical Teaching Style</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/bfYaddYv0ODSLztAJlywzRw0.png"
+              src="assets/images/acca/job.png"
               alt="Career Preparation"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>We Don’t Promise Jobs. We Prepare You for Them.</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/5Hrn6ShZ1VntViaBAQifEnN3k.png"
+              src="assets/images/acca/anytime-access.png"
               alt="Anytime Access"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Anytime Access</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
         </div>
@@ -759,7 +980,7 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="partners-section fade-left delay-4">
+    <section class="partners-section reveal delay-4">
       <div class="partners-container">
         <div class="partners-left">
           <div class="section-subtitle-wrapper">
@@ -783,26 +1004,50 @@
                 <div class="marquee-partner-card">
                   <img src="./assets/images/partners/amazon.png" alt="Amazon" />
                 </div>
+                <div class="marquee-partner-morgan">
+                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+                </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
                   <img src="./assets/images/partners/amazon.png" alt="Amazon" />
                 </div>
+                <div class="marquee-partner-morgan">
+                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+                </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
                   <img src="./assets/images/partners/amazon.png" alt="Amazon" />
                 </div>
+                <div class="marquee-partner-morgan">
+                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+                </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
                   <img src="./assets/images/partners/amazon.png" alt="Amazon" />
                 </div>
+                <div class="marquee-partner-morgan">
+                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+                </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
                 </div>
               </div>
             </div>
@@ -810,34 +1055,76 @@
             <div class="marquee marquee-right">
               <div class="marquee-track">
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/deloitte.png"
+                    alt="Amazon"
+                  />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/accenture.png"
+                    alt="Amazon"
+                  />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/deloitte.png"
+                    alt="Amazon"
+                  />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/accenture.png"
+                    alt="Amazon"
+                  />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/deloitte.png"
+                    alt="Amazon"
+                  />
                 </div>
                 <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+                  <img
+                    src="./assets/images/partners/accenture.png"
+                    alt="Amazon"
+                  />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img
+                    src="./assets/images/partners/deloitte.png"
+                    alt="Amazon"
+                  />
+                </div>
+                <div class="marquee-partner-card">
+                  <img
+                    src="./assets/images/partners/accenture.png"
+                    alt="Amazon"
+                  />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+                </div>
+                <div class="marquee-partner-card">
+                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
                 </div>
               </div>
             </div>
@@ -852,7 +1139,7 @@
         <!-- Left Text -->
         <div class="certificate-text">
           <p class="certificate-subheading">ADD-ON CERTIFICATE</p>
-          <h2 class="certificate-heading">Get certified in CMA</h2>
+          <h2 class="certificate-heading">Get certified in CFA</h2>
           <p class="certificate-description">
             Earn a trusted credential and prove your skills with CareerCompass
             professional CMA certifications.
@@ -1405,7 +1692,7 @@
     </section>
 
     <!-- Youtube -->
-    <section class="section-wrapper fade-left">
+    <section class="section-wrapper reveal delay-4">
       <div class="section-subtitle-wrapper">
         <h4 class="section-subtitle">YOUTUBE</h4>
         <span class="subtitle-line"></span>
@@ -1750,6 +2037,37 @@
       });
     </script>
 
+    <script>
+      function selectLevel(level) {
+        // 1. Update the 'selected' class on the level cards
+        const levelCards = document.querySelectorAll(".syllabus-level-card");
+        levelCards.forEach((card) => {
+          if (card.getAttribute("data-level") == level) {
+            card.classList.add("selected");
+          } else {
+            card.classList.remove("selected");
+          }
+        });
+
+        // 2. Load the corresponding subjects
+        const subjectList = document.getElementById("subject-list");
+        subjectList.innerHTML = ""; // Clear existing subjects
+
+        // Load content for Level 1 and Level 2 using the template structure
+        const templateId = `level-${level}-subjects`;
+        const template = document.getElementById(templateId);
+
+        if (template) {
+          const content = template.content.cloneNode(true);
+          subjectList.appendChild(content);
+        }
+      }
+
+      // Initialize the view when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        selectLevel(1);
+      });
+    </script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

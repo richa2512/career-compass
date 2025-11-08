@@ -1742,6 +1742,18 @@ p.text-reveal {
   }
 }
 
+@media (max-width: 620px) {
+  .app-section {
+    justify-content: center;
+  }
+  .app-image {
+    width: 100%;
+  }
+  .app-content {
+    width: 100%;
+  }
+}
+
 /* Small Phones (480px and below) */
 @media (max-width: 480px) {
   .app-content {
@@ -2577,15 +2589,12 @@ p.text-reveal {
   cursor: pointer;
 }
 
-.certification-card.featured {
-  border: 2px solid var(--Dark-Blue, #1d587a);
-  background: rgba(29, 88, 122, 0.05);
-  box-shadow: 0 2px 25px rgba(29, 88, 122, 0.15);
-}
-
 .certification-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--Dark-Blue, #1d587a);
+  background: rgba(29, 88, 122, 0.05);
+  box-shadow: 0 2px 25px rgba(29, 88, 122, 0.15);
 }
 
 .certification-header {
@@ -7076,7 +7085,6 @@ input {
 /* FIX FOR 1003px - 920px RANGE */
 @media (max-width: 1003px) {
   .acca-container {
-    flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
@@ -7140,11 +7148,10 @@ input {
   }
 
   .acca-stats {
-    flex-direction: column;
     gap: 15px;
   }
 
-  .stat:not(:first-child) {
+  .acca-stats .stat:not(:first-child) {
     border-left: none;
     padding-left: 0;
   }
@@ -8170,6 +8177,17 @@ input {
   }
 }
 
+@media (max-width: 768px) {
+  .why-career-compass-features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-career-compass-feature-card {
+    min-height: 220px;
+  }
+}
+
 @media (max-width: 520px) {
   .why-career-compass-features-grid {
     grid-template-columns: 1fr;
@@ -8494,7 +8512,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 19rem;
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
@@ -8604,7 +8621,6 @@ input {
 @media (max-width: 920px) {
   .certificate-container {
     flex-direction: column;
-    align-items: flex-start;
     text-align: left;
     gap: 40px;
   }
