@@ -8065,8 +8065,8 @@ input {
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
-  height: 182px; /* MATCH height of upper cards */
 }
+
 .syllabus-subject-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   border-color: #ccc;
