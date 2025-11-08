@@ -776,8 +776,6 @@ p.text-reveal {
   }
 }
 
-
-
 /* Right Side */
 .hero-right {
   background-color: #1d587a;
@@ -1744,17 +1742,14 @@ p.text-reveal {
   }
 }
 
-
 /* Small Phones (480px and below) */
 @media (max-width: 480px) {
   .app-content {
     padding: 25px 15px;
-    
-
   }
-  .app-section{
+  .app-section {
     display: flex;
-    
+
     align-items: center;
     justify-content: center;
   }
@@ -3673,7 +3668,6 @@ h5::after {
     padding-left: 40px;
     padding-right: 40px;
   }
-  
 }
 
 @media (max-width: 1024px) {
@@ -3702,7 +3696,7 @@ h5::after {
     padding-top: 50px;
     padding-bottom: 30px;
   }
-.locations-grid {
+  .locations-grid {
     grid-template-columns: 1fr;
   }
   .locations {
@@ -6793,14 +6787,18 @@ input {
 =============================*/
 /* Hero Section */
 .acca-hero {
-  background: rgba(23, 70, 98, 1);
+  padding: 80px 0 !important; /* keep hero’s own padding */
+  margin: 0 !important;
+  max-width: 100% !important; /* ensure full-width background stays intact */
   color: #fff;
-  padding: 70px 0;
   overflow-x: hidden;
+  background: rgba(23, 70, 98, 1);
+  height: 650px;
+  margin-top: 10rem;
 }
 
 .acca-container {
-  width: 93%;
+  width: 90%;
   max-width: 90rem;
   margin: 0 auto;
   display: flex;
@@ -6816,7 +6814,7 @@ input {
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
   min-width: 300px;
 }
 
@@ -6843,7 +6841,7 @@ input {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin: 20px 0;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
@@ -6874,7 +6872,7 @@ input {
   display: flex;
   align-items: center;
   gap: 25px;
-  margin-top: 15px;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
@@ -6953,30 +6951,97 @@ input {
   text-align: center;
 }
 
+/* ===== Wrapper ===== */
+.student-slider-wrapper {
+  position: relative;
+  width: 420px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* ===== Slider Track ===== */
 .student-slider {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 420px;
-  height: auto;
+  gap: 40px;
+  animation: infiniteScroll 24s linear infinite;
+  will-change: transform;
 }
 
-.student-photo {
-  width: 320px;
-  height: auto;
+.slide {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* ===== Perfect Infinite Scroll Animation ===== */
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 3 - 40px * 3));
+  }
+}
+
+/* ===== Left & Right Blur Effects ===== */
+.blur-left,
+.blur-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 55px;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.6s ease; /* Smooth fade when image moves */
+}
+
+/* Smooth gradient blending only on sides */
+/* Left gradient fade */
+.blur-left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(23, 70, 98, 1) 0%,
+    rgba(23, 70, 98, 0.8) 40%,
+    rgba(23, 70, 98, 0.1) 100%
+  );
+}
+
+.blur-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(23, 70, 98, 1) 0%,
+    rgba(23, 70, 98, 0.8) 40%,
+    rgba(23, 70, 98, 0.1) 100%
+  );
+}
+/* Optional subtle fade animation sync with image slider */
+.student-slider-wrapper:hover .blur-left,
+.student-slider-wrapper:hover .blur-right {
+  opacity: 0.8;
+}
+/* ===== Hero Text ===== */
 .cta-text {
-  margin-top: 55px;
+  margin-top: 1.5rem;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
 }
+
+/* ============================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================ */
 
 /* TABLET FIXES (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -6984,16 +7049,31 @@ input {
     font-size: 2.5rem;
   }
 
-  .student-slider {
+  .student-slider-wrapper {
     width: 350px;
+    height: 300px;
   }
 
-  .student-photo {
-    width: 270px;
+  .slide {
+    min-width: 240px;
+  }
+
+  .student-slider {
+    gap: 30px;
+    animation: infiniteScroll 22s linear infinite;
+  }
+
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-240px * 3 - 30px * 3));
+    }
   }
 }
 
-/*  FIX FOR 1003px - 920px RANGE */
+/* FIX FOR 1003px - 920px RANGE */
 @media (max-width: 1003px) {
   .acca-container {
     flex-direction: column;
@@ -7008,6 +7088,7 @@ input {
 
   .acca-right {
     margin-top: 10px;
+    width: 100%;
   }
 
   .acca-stats {
@@ -7029,8 +7110,28 @@ input {
     font-size: 1.1rem;
   }
 
-  .student-photo {
-    width: 240px;
+  .student-slider-wrapper {
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+  }
+
+  .slide {
+    min-width: 220px;
+  }
+
+  .student-slider {
+    gap: 25px;
+    animation: infiniteScroll 20s linear infinite;
+  }
+
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 3 - 25px * 3));
+    }
   }
 
   .cta-text {
@@ -7047,16 +7148,80 @@ input {
     border-left: none;
     padding-left: 0;
   }
+
+  .rating-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .blur-left,
+  .blur-right {
+    width: 80px;
+  }
 }
 
+/* SMALL PHONES (below 480px) */
+@media (max-width: 480px) {
+  .acca-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+
+  .student-slider-wrapper {
+    width: 100%;
+    max-width: 280px;
+    height: 220px;
+  }
+
+  .slide {
+    min-width: 180px;
+  }
+
+  .student-slider {
+    gap: 20px;
+    animation: infiniteScroll 18s linear infinite;
+  }
+
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-180px * 3 - 20px * 3));
+    }
+  }
+
+  .acca-stats {
+    gap: 10px;
+  }
+
+  .stat h2 {
+    font-size: 20px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .blur-left,
+  .blur-right {
+    width: 60px;
+  }
+}
 /* ============================
    What ACCA 
 =============================*/
 .what-acca {
   background: #ffffff;
   color: #143c57;
-  padding: 40px 0;
   overflow: hidden;
+  padding: 70px 0 !important; /* keep original section padding */
+  margin: 0 !important;
+  max-width: 100% !important; /* ensure full background width */
 }
 
 .what-acca-container {
@@ -7613,7 +7778,8 @@ input {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* Changed justify-content from space-between to flex-start for cleaner wrapping */
+  justify-content: flex-start;
   background: #f8fafc;
   padding: 24px 24px 26px 24px;
   border-radius: 8px;
@@ -7624,15 +7790,15 @@ input {
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 25px 30px;
-  flex: 1 1 300px;
+  /* FIX: Calculate for three columns, accounting for 20px gaps */
+  flex: 0 0 calc(33.333% - 13.333px); /* 100% / 3 - (2 * 20px / 3) = 33.333% - 13.333px */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
-  height: 182px; /*  MATCH height of upper cards */
+  height: 182px; /* MATCH height of upper cards */
 }
-
 .syllabus-subject-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   border-color: #ccc;
@@ -7680,8 +7846,8 @@ input {
 
   .syllabus-level-card,
   .syllabus-subject-card {
-    flex: 1 1 calc(50% - 15px);
-    height: auto; /* allow adaptive height on tablet */
+    flex: 0 0 calc(50% - 7.5px); /* 100% / 2 - (1 * 15px / 2) = 50% - 7.5px */
+    height: auto;
     padding: 20px;
   }
 }
@@ -7716,10 +7882,11 @@ input {
 
 .acca-numbers-section {
   background-color: #1d587a;
-  margin-top: 40px;
-  width: 100%;
+  margin-top: 40px !important;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* keep hero’s own padding */
+  max-width: 100% !important;
+  height: 400px;
 }
 
 .acca-numbers-container {
@@ -7845,139 +8012,171 @@ input {
 }
 
 /* ============================= */
-/* WHY CAREER COMPASS SECTION */
+/* WHY CAREER COMPASS SECTION*/
 /* ============================= */
 
-.why-career-compass {
-  padding: 40px 0;
-  background-color: #fff;
-}
-
-.why-career-compass-container {
-  width: 93%;
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
-/* --- Text Block --- */
-.why-career-compass-text {
-  text-align: left;
-  margin-bottom: 60px;
-}
-
-.why-career-compass-text .subheading {
-  color: rgba(29, 88, 122, 1);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.why-career-compass-text .subheading::after {
-  content: "";
-  display: inline-block;
-  width: 50px;
-  height: 2px;
-  background-color: #1d587a;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-.why-career-compass-text .main-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 15px;
-}
-
-.why-career-compass-text.description {
-  font-size: 16px;
-  color: #4b5563;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
 /* --- Grid Layout --- */
-.features-grid {
+.why-career-compass-features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* --- Feature Card --- */
-.feature-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-  min-height: 260px;
-  position: relative;
-  align-items: flex-start;
-}
-
-.feature-card:hover {
-  background-color: #f0f9ff;
-  border-color: #bae6fd;
-  transform: translateY(-5px);
-}
-
-.feature-img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin-bottom: 4px;
-  align-self: flex-start;
-  margin-top: 9rem;
-}
-
-.feature-card:first-child .feature-img {
-  margin-top: 6rem;
-}
-
-/* --- Text block (bottom-left aligned) --- */
-.feature-content {
-  text-align: left;
-  margin-top: auto;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(367px, 1fr)
+  ); /* each card expands to fill width */
+  column-gap: 12px; /* horizontal spacing */
+  row-gap: 35px; /* vertical spacing increased for balance */
+  justify-content: center;
+  align-items: stretch;
   width: 100%;
 }
 
-.feature-content h3 {
-  font-size: 1rem;
+/* --- Feature Card --- */
+.why-career-compass-feature-card {
+  height: 500px; /* fixed height per design */
+  border-radius: 8px;
+  padding: 32px;
+  background: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 95%; /* ensures full stretch within its grid cell */
+}
+
+.why-career-compass-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2.68px 5.36px 33.51px 0px rgba(29, 88, 122, 0.15);
+  background: rgba(242, 253, 255, 1);
+  border: 2px solid rgba(29, 88, 122, 0.25);
+}
+
+/* --- Image --- */
+.why-career-compass-feature-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: auto;
+  margin-bottom: 26px;
+}
+
+/* --- Text --- */
+.why-career-compass-feature-content {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.why-career-compass-feature-content h3 {
+  font-size: 1.4rem;
   font-weight: 700;
   color: #000;
   line-height: 1.3;
+  margin-top: 0;
+  width: 14rem;
   margin-bottom: 4px;
 }
 
-.feature-content p {
+.why-career-compass-feature-content p {
   font-size: 0.9rem;
   color: #4b5563;
   margin-top: 0;
   line-height: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  width: 19rem;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-/* --- Responsive --- */
-@media (max-width: 920px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+.why-career-compass-feature-card:hover .why-career-compass-feature-content p {
+  max-height: 200px;
+  opacity: 1;
+}
+.why-career-compass-text {
+  text-align: left; /* ⬅ Align everything to the left */
+  margin-bottom: 60px; /* spacing below the section */
+}
+
+/* Subheading with line on the right */
+.why-career-compass-subheading {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(29, 88, 122, 1);
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-flex; /* enables inline layout for ::after */
+  align-items: center;
+  gap: 12px; /* space between text and line */
+}
+
+/* Decorative line next to “WHY CAREER COMPASS?” */
+.why-career-compass-subheading::after {
+  content: "";
+  display: inline-block;
+  width: 60px; /* length of line */
+  height: 3px; /* thickness */
+  background-color: rgba(29, 88, 122, 1);
+  border-radius: 2px;
+}
+
+/* Headline and description */
+.why-career-compass-main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 1rem;
+  margin-bottom: 12px;
+}
+
+.why-career-compass-description {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 770px;
+  line-height: 1.6;
+  margin: 0; /* aligns naturally with left text */
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1150px) {
+  .why-career-compass-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: flex-start;
+    gap: 16px;
   }
-  .feature-card {
-    min-height: 240px;
+
+  .why-career-compass-feature-card {
+    width: auto;
+    min-height: 280px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .why-career-compass-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-career-compass-feature-card .why-career-compass-feature-content p {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .why-career-compass-feature-img {
+    margin-top: auto;
+    margin-bottom: 16px;
+    position: static;
   }
 }
 
 @media (max-width: 520px) {
-  .features-grid {
+  .why-career-compass-features-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .feature-card {
+
+  .why-career-compass-feature-card {
     min-height: 220px;
   }
 }
@@ -7985,28 +8184,46 @@ input {
 /* ============================= */
 /* ACCA VS CA */
 /* ============================= */
-
 .comparison-section {
-  padding-top: 40px;
-  padding-bottom: 50px; /* reduced */
+  width: 100%;
 }
 
 .comparison-header {
-  margin-bottom: 45px; /* reduced */
+  margin-bottom: 45px;
+  padding: 0 20px;
+}
+
+.header-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d587a;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .comparison-container {
   width: 100%;
-  max-width: 980px; /* reduced from 1166px */
+  max-width: none;
   margin: 0 auto;
   position: relative;
+  padding: 0 20px;
 }
 
 .comparison-headers {
   display: grid;
-  grid-template-columns: minmax(180px, 280px) minmax(260px, 340px) 1fr; /* narrower */
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
   align-items: flex-end;
+  margin-bottom: 0;
 }
 
 .header-label {
@@ -8016,14 +8233,16 @@ input {
 .header-acca {
   grid-column: 2;
   background-color: #1d587a;
-  border-radius: 20px 20px 0 0; /* slightly smaller corners */
-  padding: 12px 20px; /* reduced padding */
+  border-radius: 20px 20px 0 0;
+  padding: 12px 20px;
   text-align: center;
-  font-size: 24px; /* reduced from 28px */
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.5px;
   color: #ffffff;
+  text-align: left;
+  padding-left: 1.5rem;
 }
 
 .header-ca {
@@ -8039,7 +8258,7 @@ input {
 
 .comparison-row {
   display: grid;
-  grid-template-columns: minmax(180px, 280px) minmax(260px, 340px) 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   min-height: 68px;
   align-items: center;
   gap: 0;
@@ -8099,15 +8318,21 @@ input {
   min-height: 8px;
 }
 
-/* ---------------- Responsive Tweaks ---------------- */
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .comparison-section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
 
 @media (max-width: 1200px) {
   .comparison-headers {
-    grid-template-columns: minmax(160px, 240px) minmax(240px, 320px) 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .comparison-row {
-    grid-template-columns: minmax(160px, 240px) minmax(240px, 320px) 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .row-label {
@@ -8134,6 +8359,10 @@ input {
     padding-bottom: 35px;
   }
 
+  .header-title {
+    font-size: 32px;
+  }
+
   .comparison-headers {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -8148,6 +8377,7 @@ input {
     border-radius: 14px;
     padding: 14px;
     font-size: 20px;
+    grid-column: 1;
   }
 
   .header-ca {
@@ -8157,6 +8387,7 @@ input {
     padding: 14px;
     font-size: 20px;
     text-align: center;
+    grid-column: 1;
   }
 
   .comparison-row {
@@ -8182,11 +8413,25 @@ input {
     background-color: #f8fafc;
     border: 2px solid #e5e5e5;
   }
+
+  .comparison-row:last-child .row-acca {
+    border-radius: 10px;
+    min-height: auto;
+  }
+
+  .comparison-row.row-alternate {
+    background-color: transparent;
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 480px) {
   .comparison-header {
     margin-bottom: 28px;
+  }
+
+  .header-title {
+    font-size: 24px;
   }
 
   .header-acca,
@@ -8197,12 +8442,17 @@ input {
 
   .row-label {
     font-size: 14px;
+    padding: 12px 16px;
   }
 
   .row-acca,
   .row-ca {
     font-size: 13px;
     padding: 10px 14px;
+  }
+
+  .comparison-container {
+    padding: 0 16px;
   }
 }
 

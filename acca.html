@@ -110,7 +110,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="acca-hero">
+    <section class="acca-hero section-wrapper">
       <div class="acca-container">
         <div class="acca-left">
           <img
@@ -118,7 +118,6 @@
             alt="ACCA Badge"
             class="acca-badge"
           />
-
           <h1>ACCA</h1>
           <p class="subtext">Association of Chartered Certified Accountants</p>
 
@@ -127,12 +126,10 @@
               <h2>10+</h2>
               <p>Years Of Experience</p>
             </div>
-
             <div class="stat">
               <h2>2,000+</h2>
               <p>Successful Students</p>
             </div>
-
             <div class="stat">
               <h2>90%+</h2>
               <p>First-Attempt Pass Rate</p>
@@ -148,7 +145,6 @@
               />
               <span class="google-text">Google</span>
             </div>
-
             <div class="rating-stack">
               <div class="rating-top-row">
                 <span class="rating-number">4.8</span>
@@ -160,31 +156,71 @@
                   <img src="assets/images/icons/star.svg" alt="star" />
                 </div>
               </div>
-
               <span class="reviews-text">See all our reviews</span>
             </div>
             <button class="book-demo-btn">
-              <img src="assets/images/acca/play-circle.png" alt="" />Book Demo
+              <img src="assets/images/acca/play-circle.png" alt="" />
+              Book Demo
             </button>
           </div>
         </div>
 
         <div class="acca-right">
-          <div class="student-slider">
-            <img
-              src="./assets/images/acca/Frame 2147225942.png"
-              alt="Zane Sorell"
-              class="student-photo"
-            />
+          <div class="student-slider-wrapper">
+            <div class="student-slider">
+              <!-- Original slides -->
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Zane Sorell"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 3"
+                />
+              </div>
+
+              <!-- Duplicated slides for seamless loop -->
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Zane Sorell"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/images/acca/zane-sorell.png"
+                  alt="Student 3"
+                />
+              </div>
+            </div>
+
+            <!-- Left & Right soft blur gradient -->
+            <div class="blur-left"></div>
+            <div class="blur-right"></div>
           </div>
 
-          <h3 class="cta-text">YOU’LL BE NEXT ONE</h3>
+          <h3 class="cta-text">YOU'LL BE NEXT ONE</h3>
         </div>
       </div>
     </section>
 
     <!-- What Acca -->
-    <section class="what-acca">
+    <section class="what-acca section-wrapper">
       <div class="what-acca-container">
         <div class="what-acca-left">
           <p class="what-acca-subtitle">
@@ -249,7 +285,7 @@
     </section>
 
     <!-- Exemption -->
-    <section class="exemption-section">
+    <section class="exemption-section section-wrapper">
       <div class="exemption-container">
         <div class="exemption-header">
           <h1 class="exemption-title">Check Your <span>Exemptions</span></h1>
@@ -265,7 +301,7 @@
           <div class="exemption-card">
             <div class="exemption-card-header">
               <img
-                src="assets/images/acca/Frame (7).png"
+                src="assets/images/acca/tick-badge.png"
                 alt="icon"
                 class="exemption-title-icon"
               />
@@ -290,7 +326,7 @@
               <div class="exemption-tags">
                 <span
                   ><img
-                    src="assets/images/acca/Rectangle 161124244.png"
+                    src="assets/images/acca/circle.png"
                     alt="dot"
                     class="exemption-dot"
                   />
@@ -298,7 +334,7 @@
                 >
                 <span
                   ><img
-                    src="assets/images/acca/Rectangle 161124244.png"
+                    src="assets/images/acca/circle.png"
                     alt="dot"
                     class="exemption-dot"
                   />
@@ -306,7 +342,7 @@
                 >
                 <span
                   ><img
-                    src="assets/images/acca/Rectangle 161124244.png"
+                    src="assets/images/acca/circle.png"
                     alt="dot"
                     class="exemption-dot"
                   />
@@ -314,7 +350,7 @@
                 >
                 <span
                   ><img
-                    src="assets/images/acca/Rectangle 161124244.png"
+                    src="assets/images/acca/circle.png"
                     alt="dot"
                     class="exemption-dot"
                   />
@@ -328,7 +364,7 @@
           <div class="exemption-card">
             <div class="exemption-card-header">
               <img
-                src="assets/images/acca/Frame (6).png"
+                src="assets/images/acca/pound.png"
                 alt="icon"
                 class="exemption-title-icon"
               />
@@ -354,7 +390,7 @@
     </section>
 
     <!-- Syllabus -->
-    <div class="syllabus-container">
+    <div class="syllabus-container section-wrapper">
       <section class="syllabus-header">
         <h2>ACCA COURSE SYLLABUS</h2>
         <h1>Experience a top-tier curriculum</h1>
@@ -366,19 +402,31 @@
       </section>
 
       <section class="syllabus-levels">
-        <div class="syllabus-level-card selected">
+        <div
+          class="syllabus-level-card selected"
+          data-level="1"
+          onclick="selectLevel(1)"
+        >
           <h3>LEVEL 1</h3>
           <p>ACCA Knowledge Level</p>
           <span>3 Subjects</span>
           <div class="syllabus-radio-button"></div>
         </div>
-        <div class="syllabus-level-card">
+        <div
+          class="syllabus-level-card"
+          data-level="2"
+          onclick="selectLevel(2)"
+        >
           <h3>LEVEL 2</h3>
           <p>ACCA Skill Level</p>
           <span>6 Subjects</span>
           <div class="syllabus-radio-button"></div>
         </div>
-        <div class="syllabus-level-card">
+        <div
+          class="syllabus-level-card"
+          data-level="3"
+          onclick="selectLevel(3)"
+        >
           <h3>LEVEL 3</h3>
           <p>ACCA Professional Level</p>
           <span>4 Subjects</span>
@@ -386,7 +434,7 @@
         </div>
       </section>
 
-      <section class="syllabus-subjects">
+      <section class="syllabus-subjects" id="subject-list">
         <div class="syllabus-subject-card">
           <h4>Business and Technology (BT)</h4>
           <a href="#">See Details</a>
@@ -400,6 +448,80 @@
           <a href="#">See Details</a>
         </div>
       </section>
+    </div>
+
+    <!-- Syllabus Part -->
+    <div id="level-subjects-data" style="display: none">
+      <template id="level-1-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Business and Technology (BT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Accounting (FA)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Management Accounting (MA)</h4>
+          <a href="#">See Details</a>
+        </div>
+      </template>
+
+      <template id="level-2-subjects">
+        <div class="syllabus-subject-card">
+          <h4>Corporate and Business Law (LW)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Performance Management (PM)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Taxation (TX)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Reporting (FR)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Audit and Assurance (AA)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Financial Management (FM)</h4>
+          <a href="#">See Details</a>
+        </div>
+      </template>
+
+      <template id="level-3-subjects">
+        <h3>Essentials</h3>
+        <div class="syllabus-subject-card">
+          <h4>Strategic Business Reporting (SBR - INT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Strategic Business Leader (SBL)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <h3>Optional (2 of 4)</h3>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Audit & Assurance (AAA - INT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Performance Management (APM)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Taxation (ATX - UK)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Financial Management (AFM)</h4>
+          <a href="#">See Details</a>
+        </div>
+      </template>
     </div>
 
     <!-- Mentors -->
@@ -479,7 +601,7 @@
     </section>
 
     <!-- Numbers section -->
-    <section class="acca-numbers-section fade-up delay-4">
+    <section class="acca-numbers-section section-wrapper">
       <div class="acca-numbers-container">
         <div class="acca-numbers-header">
           <h2>Why Do ACCA with CareerCompass?</h2>
@@ -508,26 +630,28 @@
       </div>
     </section>
 
-    <!-- why-career-compass -->
-    <section class="section-wrapper why-career-compass">
+    <!-- Why Career Compass -->
+    <section class="why-career-compass section-wrapper">
       <div class="why-career-compass-container">
         <div class="why-career-compass-text">
-          <p class="subheading">WHY CAREER COMPASS?</p>
-          <h2 class="main-heading">Standout features of this program</h2>
-          <p class="description">
-            Get expert ACCA courses that covers 100% of the syllabus in a way
+          <p class="why-career-compass-subheading">WHY CAREER COMPASS?</p>
+          <h2 class="why-career-compass-main-heading">
+            Standout features of this program
+          </h2>
+          <p class="why-career-compass-description">
+            Get expert ACCA courses that cover 100% of the syllabus in a way
             that’s simple to learn and makes your exams easier to pass!
           </p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
+        <div class="why-career-compass-features-grid">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/Vector.png"
+              src="assets/images/acca/butterfly.png"
               alt="Honest Guidance"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Honest Guidance, Always</h3>
               <p>
                 No marketing tricks or false promises — just transparent,
@@ -536,58 +660,78 @@
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/SCeWKoKt9H1NdEB3pcPNm4MXCkQ.png"
+              src="assets/images/acca/award-icon.png"
               alt="Doubts Resolved"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Doubts Resolved in 24 Hours</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/kEIaZwECAbh5kmA6EGwym9fiA.png"
+              src="assets/images/acca/mentorsteam.png"
               alt="Team of Mentors"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Team of Mentors, Not Salesmen</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/zvmGv7XBCyTSHFH70qizoa0lQg.png"
+              src="assets/images/acca/user-folder-icon.png"
               alt="Practical Teaching"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Practical Teaching Style</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/bfYaddYv0ODSLztAJlywzRw0.png"
+              src="assets/images/acca/job.png"
               alt="Career Preparation"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>We Don’t Promise Jobs. We Prepare You for Them.</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="why-career-compass-feature-card">
             <img
-              src="assets/images/acca/5Hrn6ShZ1VntViaBAQifEnN3k.png"
+              src="assets/images/acca/anytime-access.png"
               alt="Anytime Access"
-              class="feature-img"
+              class="why-career-compass-feature-img"
             />
-            <div class="feature-content">
+            <div class="why-career-compass-feature-content">
               <h3>Anytime Access</h3>
+              <p>
+                No marketing tricks or false promises — just transparent,
+                practical advice for your career.
+              </p>
             </div>
           </div>
         </div>
@@ -754,7 +898,7 @@
     </section>
 
     <!-- Partners Section -->
- <section class="partners-section fade-left delay-4">
+    <section class="partners-section fade-left delay-4">
       <div class="partners-container">
         <div class="partners-left">
           <div class="section-subtitle-wrapper">
@@ -842,7 +986,7 @@
     </section>
 
     <!-- Certificate-page-wrapper -->
-    <section class="certificate-section">
+    <section class="certificate-section section-wrapper">
       <div class="certificate-container">
         <!-- Left Text -->
         <div class="certificate-text">
@@ -950,7 +1094,7 @@
       </div>
     </section>
 
-     <!-- Testimonials -->
+    <!-- Testimonials -->
     <section class="section-wrapper reveal delay-4">
       <div class="section-subtitle-wrapper">
         <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
@@ -1547,7 +1691,7 @@
             </div>
           </div>
 
-           <div class="faq-item">
+          <div class="faq-item">
             <div class="faq-header">
               <h3>Is the ACCA course recognized internationally?</h3>
               <button class="toggle-btn">+</button>
@@ -1735,6 +1879,70 @@
       });
     </script>
 
+    <script>
+      function selectLevel(level) {
+        // 1. Update the 'selected' class on the level cards
+        const levelCards = document.querySelectorAll(".syllabus-level-card");
+        levelCards.forEach((card) => {
+          if (card.getAttribute("data-level") == level) {
+            card.classList.add("selected");
+          } else {
+            card.classList.remove("selected");
+          }
+        });
+
+        // 2. Load the corresponding subjects
+        const subjectList = document.getElementById("subject-list");
+        subjectList.innerHTML = ""; // Clear existing subjects
+
+        if (level === 3) {
+          // Special handling for Level 3 (Professional Level) to show the "Essentials" and "Optional" headers
+          const level3HTML = `
+                <h4 style="width: 100%; margin: 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Essentials</h4>
+                <div class="syllabus-subject-card">
+                    <h4>Strategic Business Reporting (SBR - INT)</h4>
+                    <a href="#">See Details</a>
+                </div>
+                <div class="syllabus-subject-card">
+                    <h4>Strategic Business Leader (SBL)</h4>
+                    <a href="#">See Details</a>
+                </div>
+                <h4 style="width: 100%; margin: 15px 0 0 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Optional (2 of 4)</h4>
+                <div class="syllabus-subject-card">
+                    <h4>Advanced Audit & Assurance (AAA - INT)</h4>
+                    <a href="#">See Details</a>
+                </div>
+                <div class="syllabus-subject-card">
+                    <h4>Advanced Performance Management (APM)</h4>
+                    <a href="#">See Details</a>
+                </div>
+                <div class="syllabus-subject-card">
+                    <h4>Advanced Taxation (ATX - UK)</h4>
+                    <a href="#">See Details</a>
+                </div>
+                <div class="syllabus-subject-card">
+                    <h4>Advanced Financial Management (AFM)</h4>
+                    <a href="#">See Details</a>
+                </div>
+            `;
+          subjectList.innerHTML = level3HTML;
+        } else {
+          // Load content for Level 1 and Level 2 using the template structure
+          const templateId = `level-${level}-subjects`;
+          const template = document.getElementById(templateId);
+
+          if (template) {
+            const content = template.content.cloneNode(true);
+            subjectList.appendChild(content);
+          }
+        }
+      }
+
+      // Initialize the view when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        selectLevel(1);
+      });
+    </script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
