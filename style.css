@@ -6794,136 +6794,167 @@ input {
 /* ============================
    ACCA Page
 =============================*/
-/* Hero Section */
-.acca-hero {
-  padding: 80px 0 !important; /* keep hero’s own padding */
-  margin: 0 !important;
-  max-width: 100% !important; /* ensure full-width background stays intact */
-  color: #fff;
+/* ==================== HERO SECTION ==================== */
+.acca-main-container {
   overflow-x: hidden;
+}
+.acca-hero {
+  max-width: 100% !important;
+  color: #fff;
+  overflow: hidden;
   background: rgba(23, 70, 98, 1);
-  height: 650px;
-  margin-top: 10rem;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
 }
 
+/* ==================== CONTAINER ==================== */
 .acca-container {
-  width: 90%;
-  max-width: 90rem;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  gap: 2rem;
+  gap: 8rem;
+  width: 100%;
+  padding: 0 10px 0 10px !important;
+  margin: 0 !important;
 }
 
-/* LEFT SIDE */
+/* ==================== LEFT SIDE ==================== */
 .acca-left {
-  flex: 1 1 50%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  min-width: 300px;
+  gap: 23px;
+  min-width: 280px;
+  margin-top: 2rem;
 }
 
 .acca-badge {
-  width: 90px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acca-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .acca-left h1 {
-  font-size: 3rem;
-  margin-top: 1rem;
+  font-size: 2.8rem;
+  margin-top: 0.5rem;
   line-height: 1.2;
+  word-wrap: break-word;
+  font-weight: 800;
 }
 
 .subtext {
   opacity: 0.9;
-  margin-top: 1px;
-  font-size: 1.3rem;
-  font-weight: 600;
+  margin-top: 0;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-/* STATS */
+/* ==================== STATS ==================== */
 .acca-stats {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-top: 2rem;
+  gap: 30px;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
 }
 
 .acca-stats .stat h2 {
-  font-size: 26px;
+  font-size: 28px;
   margin: 0;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .acca-stats .stat p {
-  font-size: 14px;
-  opacity: 0.9;
-  margin-top: 5px;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 10px;
+  line-height: 1.3;
 }
 
 .acca-stats .stat:not(:first-child) {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 25px;
 }
 
-/* GOOGLE RATING */
+/* ==================== GOOGLE RATING ==================== */
 .google-logo-group {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .rating-row {
   display: flex;
   align-items: center;
-  gap: 25px;
-  margin-top: 2rem;
+  gap: 3.8rem;
+  margin-top: 3rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .google-logo {
-  width: 28px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .google-text {
-  font-size: 1.5rem;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .rating-stack {
   display: flex;
   flex-direction: column;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .rating-top-row {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
 }
 
 .rating-stars {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
+}
+
+.rating-stars img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
 }
 
 .rating-number {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 20px;
   color: #fff;
 }
 
 .reviews-text {
-  font-size: 0.8rem;
-  opacity: 0.8;
+  font-size: 0.75rem;
+  opacity: 0.75;
   color: #fff;
   margin-top: 2px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .book-demo-btn {
@@ -6933,94 +6964,173 @@ input {
   gap: 8px;
   background: #fff;
   color: #143c57;
-  padding: 10px 22px;
-  border-radius: 30px;
+  padding: 10px 24px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 16px;
   transition: 0.3s ease;
+  width: fit-content;
 }
 
 .book-demo-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .book-demo-btn img {
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
 }
 
-/* RIGHT SIDE */
+/* ==================== RIGHT SIDE ==================== */
 .acca-right {
-  flex: 1 1 40%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  min-width: 280px;
 }
 
-/* ===== Wrapper ===== */
+/* ==================== CTA TEXT ==================== */
+.cta-text {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* ==================== STUDENT SLIDER ==================== */
 .student-slider-wrapper {
   position: relative;
-  width: 420px;
-  height: 360px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
 }
 
-/* ===== Slider Track ===== */
 .student-slider {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   animation: infiniteScroll 24s linear infinite;
   will-change: transform;
+  height: 100%;
 }
 
 .slide {
   min-width: 280px;
   flex-shrink: 0;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.slide img {
+.slide-image {
   width: 100%;
-  border-radius: 16px;
+  flex: 1;
+  border-radius: 12px 12px 0 0;
   display: block;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-/* ===== Perfect Infinite Scroll Animation ===== */
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==================== STUDENT DATA CARD ==================== */
+.student-data {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #fff;
+  color: #143c57;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  z-index: 3;
+}
+
+.student-data h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.student-data .exam-info {
+  font-size: 0.8rem;
+  margin: 2px 0 8px 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.student-data .ranks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.student-data .rank-item {
+  font-size: 0.75rem;
+  color: #555;
+  line-height: 1.3;
+}
+
+.student-data .rank-item strong {
+  font-size: 0.85rem;
+  color: #143c57;
+  font-weight: 700;
+}
+
+/* ==================== SCROLL ANIMATION ==================== */
 @keyframes infiniteScroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-280px * 3 - 40px * 3));
+    transform: translateX(calc(-280px * 3 - 30px * 3));
   }
 }
 
-/* ===== Left & Right Blur Effects ===== */
+/* ==================== BLUR EFFECTS ==================== */
 .blur-left,
 .blur-right {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 55px;
+  width: 45px;
   z-index: 2;
   pointer-events: none;
-  transition: opacity 0.6s ease; /* Smooth fade when image moves */
+  transition: opacity 0.6s ease;
 }
 
-/* Smooth gradient blending only on sides */
-/* Left gradient fade */
 .blur-left {
   left: 0;
   background: linear-gradient(
     to right,
     rgba(23, 70, 98, 1) 0%,
-    rgba(23, 70, 98, 0.8) 40%,
-    rgba(23, 70, 98, 0.1) 100%
+    rgba(23, 70, 98, 0.7) 70%,
+    rgba(23, 70, 98, 0) 100%
   );
 }
 
@@ -7029,117 +7139,44 @@ input {
   background: linear-gradient(
     to left,
     rgba(23, 70, 98, 1) 0%,
-    rgba(23, 70, 98, 0.8) 40%,
-    rgba(23, 70, 98, 0.1) 100%
+    rgba(23, 70, 98, 0.7) 70%,
+    rgba(23, 70, 98, 0) 100%
   );
 }
-/* Optional subtle fade animation sync with image slider */
+
 .student-slider-wrapper:hover .blur-left,
 .student-slider-wrapper:hover .blur-right {
-  opacity: 0.8;
-}
-/* ===== Hero Text ===== */
-.cta-text {
-  margin-top: 1.5rem;
-  font-weight: bold;
-  font-size: 30px;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 1px;
+  opacity: 0.6;
 }
 
-/* ============================================ */
-/* RESPONSIVE DESIGN */
-/* ============================================ */
+/* ==================== RESPONSIVE DESIGN ==================== */
 
-/* TABLET FIXES (max-width: 1024px) */
+/* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
-  .acca-left h1 {
-    font-size: 2.5rem;
+  .acca-hero {
+    min-height: auto;
   }
 
-  .student-slider-wrapper {
-    width: 350px;
-    height: 300px;
-  }
-
-  .slide {
-    min-width: 240px;
-  }
-
-  .student-slider {
-    gap: 30px;
-    animation: infiniteScroll 22s linear infinite;
-  }
-
-  @keyframes infiniteScroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-240px * 3 - 30px * 3));
-    }
-  }
-}
-
-/* FIX FOR 1003px - 920px RANGE */
-@media (max-width: 1003px) {
   .acca-container {
-    text-align: center;
-    gap: 3rem;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 2.5rem;
   }
 
   .acca-left {
-    max-width: 100%;
-    align-items: center;
+    flex: 1 1 100%;
   }
 
   .acca-right {
-    margin-top: 10px;
-    width: 100%;
+    flex: 1 1 100%;
   }
 
-  .acca-stats {
-    justify-content: center;
-  }
-
-  .book-demo-btn {
-    margin: 0 auto;
-  }
-}
-
-/* MOBILE FIXES (below 768px) */
-@media (max-width: 768px) {
   .acca-left h1 {
-    font-size: 2rem;
-  }
-
-  .subtext {
-    font-size: 1.1rem;
+    font-size: 2.4rem;
   }
 
   .student-slider-wrapper {
-    width: 100%;
-    max-width: 350px;
-    height: 280px;
-  }
-
-  .slide {
-    min-width: 220px;
-  }
-
-  .student-slider {
-    gap: 25px;
-    animation: infiniteScroll 20s linear infinite;
-  }
-
-  @keyframes infiniteScroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-220px * 3 - 25px * 3));
-    }
+    max-width: 340px;
   }
 
   .cta-text {
@@ -7167,58 +7204,241 @@ input {
   }
 }
 
-/* SMALL PHONES (below 480px) */
-@media (max-width: 480px) {
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+  .acca-hero {
+    min-height: auto;
+  }
+
+  .acca-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .acca-left {
+    flex: 1 1 100%;
+    gap: 15px;
+  }
+
+  .acca-badge {
+    width: 65px;
+    height: 65px;
+  }
+
   .acca-left h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: 0.3rem;
   }
 
   .subtext {
     font-size: 1rem;
   }
 
-  .student-slider-wrapper {
+  .acca-stats {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .acca-stats .stat:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  .acca-stats .stat h2 {
+    font-size: 22px;
+  }
+
+  .acca-stats .stat p {
+    font-size: 12px;
+  }
+
+  .rating-row {
+    gap: 15px;
+    margin-top: 1rem;
     width: 100%;
-    max-width: 280px;
-    height: 220px;
+  }
+
+  .google-logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .rating-stars img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .google-text {
+    font-size: 1.1rem;
+  }
+
+  .google-logo-group {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .acca-right {
+    flex: 1 1 100%;
+  }
+
+  .student-slider-wrapper {
+    max-width: 100%;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
   }
 
   .slide {
-    min-width: 180px;
-  }
-
-  .student-slider {
-    gap: 20px;
-    animation: infiniteScroll 18s linear infinite;
-  }
-
-  @keyframes infiniteScroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-180px * 3 - 20px * 3));
-    }
-  }
-
-  .acca-stats {
-    gap: 10px;
-  }
-
-  .stat h2 {
-    font-size: 20px;
+    min-width: 280px;
   }
 
   .cta-text {
-    font-size: 16px;
-    margin-top: 15px;
+    font-size: 20px;
+    margin-top: 1.2rem;
   }
 
-  .blur-left,
-  .blur-right {
-    width: 60px;
+  .book-demo-btn {
+    padding: 9px 20px;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+  }
+
+  .book-demo-btn img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .student-data {
+    padding: 10px 12px;
+  }
+
+  .student-data h4 {
+    font-size: 1rem;
+  }
+
+  .student-data .exam-info {
+    font-size: 0.75rem;
+    margin: 1px 0 6px 0;
+  }
+
+  .student-data .rank-item {
+    font-size: 0.7rem;
+  }
+
+  .student-data .rank-item strong {
+    font-size: 0.8rem;
   }
 }
+
+/* Small phones (below 480px) */
+@media (max-width: 480px) {
+  .acca-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .acca-badge {
+    width: 55px;
+    height: 55px;
+  }
+
+  .acca-left h1 {
+    font-size: 1.7rem;
+  }
+
+  .subtext {
+    font-size: 0.95rem;
+  }
+
+  .acca-stats .stat h2 {
+    font-size: 20px;
+  }
+
+  .acca-stats .stat p {
+    font-size: 11px;
+  }
+
+  .google-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .google-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rating-number {
+    font-size: 0.9rem;
+  }
+
+  .rating-stars img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .reviews-text {
+    font-size: 0.7rem;
+  }
+
+  .student-slider-wrapper {
+    max-width: 280px;
+  }
+
+  .slide {
+    min-width: 260px;
+  }
+
+  .cta-text {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+
+  .book-demo-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .book-demo-btn img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .student-data {
+    padding: 10px 10px;
+  }
+
+  .student-data h4 {
+    font-size: 0.95rem;
+  }
+
+  .student-data .exam-info {
+    font-size: 0.7rem;
+  }
+
+  .student-data .rank-item {
+    font-size: 0.65rem;
+  }
+
+  .student-data .rank-item strong {
+    font-size: 0.75rem;
+  }
+
+  .rating-row {
+    gap: 12px;
+  }
+}
+
 /* ============================
    What ACCA 
 =============================*/
@@ -7382,14 +7602,7 @@ input {
 =============================*/
 .exemption-section {
   background: #fff;
-  padding: 60px 0;
   color: #143c57;
-}
-
-.exemption-container {
-  width: 93%;
-  max-width: 90rem;
-  margin: 0 auto;
 }
 
 /* ---------- Header ---------- */
@@ -7496,8 +7709,7 @@ input {
 }
 
 .exemption-fee {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.6rem;
   color: rgba(29, 88, 122, 1);
   margin: 0;
 }
@@ -7548,73 +7760,126 @@ input {
   font-weight: 600;
   font-size: 1.5rem;
 }
+/* -------------------------------------- */
+/* ---------- Fee Structure Grid ---------- */
+/* -------------------------------------- */
 
-/* ---------- Responsive ---------- */
+/* -------------------------------------- */
+/* ---------- Fee Structure Grid ---------- */
+/* -------------------------------------- */
 
-/* Large desktop (above 1200px) */
-@media (min-width: 1200px) {
-  .exemption-card {
-    min-height: 180px;
-  }
+.fee-structure {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
 }
 
-/*  Tablet & small laptops (920px – 1199px) */
-@media (max-width: 1199px) and (min-width: 920px) {
-  .exemption-card {
-    min-height: 160px;
-  }
+.fee-structure-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #143c57;
+  margin-bottom: 20px;
 }
 
-/* Tablets (520px – 919px): Fix card stretching issue */
-@media (max-width: 919px) and (min-width: 520px) {
-  .exemption-cards {
-    flex-wrap: wrap;
+.fee-structure-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fee-structure-item {
+  background: rgba(248, 250, 252, 1);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ changed from center */
+  text-align: left; /* ✅ changed from center */
+  min-height: 100px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Specific styling for first column (Registration Fees) */
+.fee-structure-item:first-child {
+  background: rgba(248, 250, 252, 1);
+  border-color: #dcdcdc;
+}
+
+.fee-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.fee-structure-item span:last-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgba(29, 88, 122, 1);
+  margin-top: auto;
+  line-height: 1;
+  text-align: left; /* ✅ ensures the value stays left aligned */
+}
+
+/* Special styling for "-" values */
+.fee-structure-item span:last-child:empty,
+.fee-structure-item span:last-child:contains("-") {
+  color: #999;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+/* Tablets (max-width 768px) */
+@media (max-width: 768px) {
+  .fee-structure {
+    padding: 20px;
+  }
+
+  .fee-structure-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
-  .exemption-card {
-    flex: 1 1 calc(50% - 15px);
-    min-height: auto; /* 🩵 prevent overheight */
-    height: auto; /* 🩵 fit content perfectly */
-    padding: 20px;
+  .fee-structure-item {
+    padding: 15px;
+    min-height: 90px;
   }
 
-  .exemption-card-content {
-    margin-left: 35px;
-  }
-
-  .exemption-number {
-    font-size: 2.2rem;
-  }
-
-  .exemption-fee {
-    font-size: 1.8rem;
+  .fee-structure-item span:last-child {
+    font-size: 1.6rem;
   }
 }
 
-/* ✅ Mobile (below 520px): Single column */
-@media (max-width: 519px) {
-  .exemption-cards {
-    flex-direction: column;
+/* Mobile (max-width 520px) */
+@media (max-width: 520px) {
+  .fee-structure {
+    padding: 15px;
   }
 
-  .exemption-card {
-    width: 100%;
-    height: auto;
+  .fee-structure-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .fee-structure-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     min-height: auto;
-    padding: 20px;
+    padding: 15px 20px;
+    text-align: left; /* ✅ maintain left alignment on mobile too */
   }
 
-  .exemption-card-content {
-    margin-left: 35px;
+  .fee-structure-item span:last-child {
+    margin-top: 0;
   }
 
-  .exemption-number {
-    font-size: 2rem;
-  }
-
-  .exemption-fee {
-    font-size: 1.6rem;
+  .fee-label {
+    margin-bottom: 0;
+    font-size: 1rem;
   }
 }
 
@@ -7623,11 +7888,7 @@ input {
 =============================*/
 .syllabus-container {
   background-color: transparent;
-  padding: 40px 0;
   color: #143c57;
-  width: 93%;
-  max-width: 90rem;
-  margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -7886,14 +8147,13 @@ input {
 /* ============================= */
 /* ACCA Numbers Section          */
 /* ============================= */
-
 .acca-numbers-section {
   background-color: #1d587a;
   margin-top: 40px !important;
   display: flex;
-  justify-content: center; /* keep hero’s own padding */
+  justify-content: center;
   max-width: 100% !important;
-  height: 400px;
+  height: 400px; /* keep for desktop */
 }
 
 .acca-numbers-container {
@@ -7929,6 +8189,7 @@ input {
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -7976,9 +8237,9 @@ input {
   gap: 0.6rem;
 }
 
-/* --- ICON IMAGE (slightly larger) --- */
+/* --- ICON IMAGE --- */
 .acca-numbers-icon {
-  height: 50px;
+  height: 75px; /* desktop default */
   width: auto;
   object-fit: contain;
   display: block;
@@ -8002,7 +8263,7 @@ input {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -8018,22 +8279,96 @@ input {
   }
 }
 
+/* ==================== RESPONSIVE FIXES ==================== */
+
+/* Tablet screens (below 1024px) */
+@media (max-width: 1024px) {
+  .acca-numbers-section {
+    padding: 50px 0;
+    height: auto; /* allow flexible height */
+  }
+
+  .acca-numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .acca-numbers-icon {
+    height: 60px; /* slightly smaller than desktop */
+  }
+
+  .acca-numbers-text {
+    font-size: 14px;
+    max-width: 220px;
+  }
+
+  .acca-numbers-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Small tablets and large phones (below 768px) */
+@media (max-width: 768px) {
+  .acca-numbers-container {
+    padding: 40px 20px;
+  }
+
+  .acca-numbers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .acca-numbers-icon {
+    height: 50px; /* smaller icons */
+  }
+
+  .acca-numbers-text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .acca-numbers-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile screens (below 520px) */
+@media (max-width: 520px) {
+  .acca-numbers-section {
+    padding: 40px 0;
+  }
+
+  .acca-numbers-grid {
+    grid-template-columns: 1fr; /* stack items vertically */
+    gap: 1.5rem;
+  }
+
+  .acca-numbers-icon {
+    height: 40px; /* smaller icons for mobile */
+  }
+
+  .acca-numbers-text {
+    font-size: 12px;
+    max-width: 200px;
+  }
+
+  .acca-numbers-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
 /* ============================= */
 /* WHY CAREER COMPASS SECTION*/
 /* ============================= */
-
-/* --- Grid Layout --- */
 .why-career-compass-features-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(367px, 1fr)
-  ); /* each card expands to fill width */
-  column-gap: 12px; /* horizontal spacing */
-  row-gap: 35px; /* vertical spacing increased for balance */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 12px;
+  row-gap: 35px;
   justify-content: center;
   align-items: stretch;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* --- Feature Card --- */
@@ -8046,9 +8381,9 @@ input {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   box-sizing: border-box;
-  width: 95%; /* ensures full stretch within its grid cell */
+  width: 95%; /* stretch within its grid cell */
 }
 
 .why-career-compass-feature-card:hover {
@@ -8063,7 +8398,7 @@ input {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 26px;
 }
 
@@ -8080,8 +8415,8 @@ input {
   color: #000;
   line-height: 1.3;
   margin-top: 0;
-  width: 14rem;
   margin-bottom: 4px;
+  word-wrap: break-word;
 }
 
 .why-career-compass-feature-content p {
@@ -8092,7 +8427,6 @@ input {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  width: 19rem;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
@@ -8100,34 +8434,35 @@ input {
   max-height: 200px;
   opacity: 1;
 }
+
+/* Section Text */
 .why-career-compass-text {
-  text-align: left; /* ⬅ Align everything to the left */
-  margin-bottom: 60px; /* spacing below the section */
+  text-align: left;
+  margin-bottom: 60px;
 }
 
-/* Subheading with line on the right */
+/* Subheading with line */
 .why-career-compass-subheading {
   font-size: 16px;
   font-weight: 700;
   color: rgba(29, 88, 122, 1);
   letter-spacing: 1px;
   position: relative;
-  display: inline-flex; /* enables inline layout for ::after */
+  display: inline-flex;
   align-items: center;
-  gap: 12px; /* space between text and line */
+  gap: 12px;
 }
 
-/* Decorative line next to “WHY CAREER COMPASS?” */
 .why-career-compass-subheading::after {
   content: "";
   display: inline-block;
-  width: 60px; /* length of line */
-  height: 3px; /* thickness */
+  width: 60px;
+  height: 3px;
   background-color: rgba(29, 88, 122, 1);
   border-radius: 2px;
 }
 
-/* Headline and description */
+/* Headline & Description */
 .why-career-compass-main-heading {
   font-size: 36px;
   font-weight: 700;
@@ -8141,17 +8476,18 @@ input {
   color: #4b5563;
   max-width: 770px;
   line-height: 1.6;
-  margin: 0; /* aligns naturally with left text */
+  margin: 0;
 }
 
-/* --- RESPONSIVENESS --- */
+/* ==================== RESPONSIVE ==================== */
+
+/* Large Screens - adjust grid and card width */
 @media (max-width: 1150px) {
   .why-career-compass-features-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: flex-start;
     gap: 16px;
   }
-
   .why-career-compass-feature-card {
     width: auto;
     min-height: 280px;
@@ -8159,21 +8495,29 @@ input {
   }
 }
 
+/* Medium Screens - two columns */
 @media (max-width: 920px) {
   .why-career-compass-features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  .why-career-compass-feature-card .why-career-compass-feature-content p {
-    max-height: 200px;
-    opacity: 1;
+  .why-career-compass-feature-card {
+    height: auto; /* allow flexible height */
+    padding: 24px;
+  }
+
+  .why-career-compass-feature-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .why-career-compass-feature-content p {
+    max-height: 180px;
+    font-size: 0.85rem;
   }
 
   .why-career-compass-feature-img {
-    margin-top: auto;
     margin-bottom: 16px;
-    position: static;
   }
 }
 
@@ -8196,19 +8540,43 @@ input {
 
   .why-career-compass-feature-card {
     min-height: 220px;
+    padding: 20px;
+  }
+
+  .why-career-compass-feature-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .why-career-compass-feature-content p {
+    font-size: 0.8rem;
+  }
+
+  .why-career-compass-feature-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .why-career-compass-text {
+    margin-bottom: 40px;
+  }
+
+  .why-career-compass-main-heading {
+    font-size: 28px;
+  }
+
+  .why-career-compass-description {
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
 
 /* ============================= */
 /* ACCA VS CA */
 /* ============================= */
-.comparison-section {
-  width: 100%;
-}
 
 .comparison-header {
   margin-bottom: 45px;
-  padding: 0 20px;
 }
 
 .header-subtitle {
@@ -8233,7 +8601,6 @@ input {
   max-width: none;
   margin: 0 auto;
   position: relative;
-  padding: 0 20px;
 }
 
 .comparison-headers {
@@ -8496,14 +8863,7 @@ input {
 /* ================================
    Certificate CSS
    ================================ */
-
-/* --- SECTION WRAPPER --- */
 .certificate-section {
-  width: 100%;
-  max-width: 90rem;
-  margin: 0 auto;
-  padding: 60px 40px 59px 29px;
-  box-sizing: border-box;
   background-color: #fff;
 }
 
@@ -8513,7 +8873,6 @@ input {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -8618,6 +8977,33 @@ input {
 }
 
 /* --- RESPONSIVE --- */
+
+/* 📱 Medium screens (around 937px): image still on right, proper size */
+@media (max-width: 937px) {
+  .certificate-container {
+    gap: 8rem; /* reduced spacing */
+  }
+
+  .certificate-image-wrapper {
+    justify-content: flex-end;
+    align-items: flex-start; /* aligns top with text */
+  }
+
+  .certificate-image {
+    max-width: 420px;
+    height: auto;
+  }
+
+  .certificate-heading {
+    font-size: 40px;
+  }
+
+  .certificate-description {
+    font-size: 17px;
+  }
+}
+
+/* 📱 Below 920px: stacked view */
 @media (max-width: 920px) {
   .certificate-container {
     flex-direction: column;
@@ -8631,15 +9017,17 @@ input {
 
   .certificate-image-wrapper {
     justify-content: flex-start;
-    padding-bottom: 0;
+    align-items: center;
     margin-top: 20px;
   }
 
   .certificate-image {
     max-width: 400px;
+    width: 100%;
   }
 }
 
+/* 📱 Small devices */
 @media (max-width: 520px) {
   .certificate-section {
     padding: 60px 20px 70px 20px;
@@ -8657,6 +9045,10 @@ input {
     font-size: 15px;
     padding: 12px 30px;
   }
+
+  .certificate-image {
+    max-width: 340px;
+  }
 }
 
 /* ================================
@@ -8667,7 +9059,6 @@ input {
 .price-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  padding: 0 20px;
   margin-bottom: 60px;
 }
 
