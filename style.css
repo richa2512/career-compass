@@ -8115,6 +8115,33 @@ input {
     font-size: 2rem;
   }
 }
+/* ===================== SCROLL ANIMATIONS ===================== */
+.syllabus-header h2,
+.syllabus-header h1,
+.syllabus-header p,
+.syllabus-level-card,
+.syllabus-subject-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.2s ease-out; /* faster now */
+}
+
+.syllabus-level-card:nth-child(odd) {
+  transform: translateX(-40px);
+}
+
+.syllabus-level-card:nth-child(even) {
+  transform: translateX(40px);
+}
+
+.syllabus-subject-card {
+  transform: translateY(40px);
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
 
 /* ============================= */
 /* ACCA Numbers Section          */

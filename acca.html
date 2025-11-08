@@ -2049,8 +2049,11 @@
     </script>
 
     <script>
+      // =========================
+      // LEVEL SELECTION FUNCTION
+      // =========================
       function selectLevel(level) {
-        // 1. Update the 'selected' class on the level cards
+        // 1️⃣ Update selected class on level cards
         const levelCards = document.querySelectorAll(".syllabus-level-card");
         levelCards.forEach((card) => {
           if (card.getAttribute("data-level") == level) {
@@ -2060,56 +2063,89 @@
           }
         });
 
-        // 2. Load the corresponding subjects
+        // 2️⃣ Load the corresponding subjects
         const subjectList = document.getElementById("subject-list");
-        subjectList.innerHTML = ""; // Clear existing subjects
+        subjectList.innerHTML = "";
 
         if (level === 3) {
-          // Special handling for Level 3 (Professional Level) to show the "Essentials" and "Optional" headers
+          // Level 3: Essentials + Optional
           const level3HTML = `
-                <h4 style="width: 100%; margin: 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Essentials</h4>
-                <div class="syllabus-subject-card">
-                    <h4>Strategic Business Reporting (SBR - INT)</h4>
-                    <a href="#">See Details</a>
-                </div>
-                <div class="syllabus-subject-card">
-                    <h4>Strategic Business Leader (SBL)</h4>
-                    <a href="#">See Details</a>
-                </div>
-                <h4 style="width: 100%; margin: 15px 0 0 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Optional (2 of 4)</h4>
-                <div class="syllabus-subject-card">
-                    <h4>Advanced Audit & Assurance (AAA - INT)</h4>
-                    <a href="#">See Details</a>
-                </div>
-                <div class="syllabus-subject-card">
-                    <h4>Advanced Performance Management (APM)</h4>
-                    <a href="#">See Details</a>
-                </div>
-                <div class="syllabus-subject-card">
-                    <h4>Advanced Taxation (ATX - UK)</h4>
-                    <a href="#">See Details</a>
-                </div>
-                <div class="syllabus-subject-card">
-                    <h4>Advanced Financial Management (AFM)</h4>
-                    <a href="#">See Details</a>
-                </div>
-            `;
+        <h4 style="width: 100%; margin: 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Essentials</h4>
+        <div class="syllabus-subject-card">
+          <h4>Strategic Business Reporting (SBR - INT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Strategic Business Leader (SBL)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <h4 style="width: 100%; margin: 15px 0 0 0; padding-bottom: 10px; font-size: 20px; font-weight: 700;">Optional (2 of 4)</h4>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Audit & Assurance (AAA - INT)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Performance Management (APM)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Taxation (ATX - UK)</h4>
+          <a href="#">See Details</a>
+        </div>
+        <div class="syllabus-subject-card">
+          <h4>Advanced Financial Management (AFM)</h4>
+          <a href="#">See Details</a>
+        </div>
+      `;
           subjectList.innerHTML = level3HTML;
         } else {
-          // Load content for Level 1 and Level 2 using the template structure
+          // Level 1 or 2
           const templateId = `level-${level}-subjects`;
           const template = document.getElementById(templateId);
-
           if (template) {
             const content = template.content.cloneNode(true);
             subjectList.appendChild(content);
           }
         }
+
+        // 3️⃣ Reapply animation observer for new cards
+        observeAnimations();
       }
 
-      // Initialize the view when the page loads
+      // =========================
+      // ANIMATION OBSERVER
+      // =========================
+      function observeAnimations() {
+        const elements = document.querySelectorAll(
+          ".syllabus-header h2, .syllabus-header h1, .syllabus-header p, .syllabus-level-card, .syllabus-subject-card"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              } else {
+                // remove when scrolled out — so it can replay when user scrolls back
+                entry.target.classList.remove("show");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        elements.forEach((el, index) => {
+          el.style.transitionDelay = `${index * 0.1}s`; // faster stagger timing
+          observer.observe(el);
+        });
+      }
+
+      // =========================
+      // INITIAL PAGE LOAD
+      // =========================
       document.addEventListener("DOMContentLoaded", () => {
         selectLevel(1);
+        observeAnimations();
       });
     </script>
 
