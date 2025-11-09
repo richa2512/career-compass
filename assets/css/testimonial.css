@@ -38,12 +38,6 @@
   margin: 0;
 }
 
-.subtitle {
-  font-size: 18px;
-  color: #5e5e5e;
-  margin-top: 5px;
-}
-
 .testimonial-wrapper {
   display: flex;
   align-items: stretch;

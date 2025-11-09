@@ -115,16 +115,16 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero reveal delay-1">
       <div class="overlay"></div>
       <div class="content">
-        <h1>Best Selling Combos</h1>
-        <p class="subtitle">
+        <h1 class="text-reveal">Best Selling Combos</h1>
+        <p class="subtitle text-reveal">
           Professional accounting courses designed by industry experts.<br />
           From knowledge level to professional certification.
         </p>
 
-        <div class="info">
+        <div class="info reveal delay-1">
           <div style="display: flex; align-items: center; gap: 4px">
             <img
               src="./assets/images/svg/clock.svg"
@@ -177,10 +177,10 @@
     <!-- Main Container -->
     <div class="container">
       <!-- Header Section -->
-      <div class="header-section">
-        <div class="label">BEST SELLING COMBOS</div>
-        <h1 class="main-title">Explore Our Best Selling Combos</h1>
-        <p class="description">
+      <div class="header-section reveal delay-3">
+        <div class="label text-reveal">BEST SELLING COMBOS</div>
+        <h1 class="main-title text-reveal">Explore Our Best Selling Combos</h1>
+        <p class="description text-reveal">
           Explore 500+ hours of expert-led courses and learn at your own pace.
           Browse now and start your journey!
         </p>
@@ -189,8 +189,8 @@
       <!-- Filter Section -->
       <div class="filter-wrapper">
         <div class="filter-section">
-          <span class="showing-text">Showing 15 Courses</span>
-          <div class="sort-select">
+          <span class="showing-text text-reveal">Showing 15 Courses</span>
+          <div class="sort-select reveal delay-1">
             <svg
               class="sort-icon"
               fill="none"
@@ -211,7 +211,7 @@
       </div>
 
       <!-- Cards Grid -->
-      <div class="cards-grid" id="coursesGrid">
+      <div class="cards-grid reveal delay-2" id="coursesGrid">
         <!-- Course cards will be generated here -->
       </div>
 
@@ -456,7 +456,7 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">${course.title}</h3>
+                        <h3 class="card-title text-reveal">${course.title}</h3>
                         <div class="card-stats">
                             <div class="stats-item">
                                 ${ICONS.lesson}
@@ -472,13 +472,13 @@
                             </div>
                         </div>
                         <div class="price-section">
-                                <span class="current-price">${course.currentPrice}</span>
+                                <span class="current-price text-reveal">${course.currentPrice}</span>
                                 <span class="original-price">${course.originalPrice}</span>
                             </div>
                         
                         <div class="card-footer">
                           <div class="instructor-info">
-                            <div class="instructor-avatar"></div>
+                            <div class="instructor-avatar"><img src="./assets/images/course/Ellipse.png" alt="Instructor" /></div>
                             <span class="instructor-name">${course.instructor}</span>
                         </div>
                             
