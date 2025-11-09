@@ -1,0 +1,175 @@
+/* ============================= */
+/* BT HERO SECTION */
+/* ============================= */
+
+.bt-hero-section {
+  position: relative;
+  background: url("../images/hero/bg.png") center/cover no-repeat;
+  padding: 120px 0 140px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bt-hero-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.bt-hero-container {
+  position: relative;
+  max-width: 1440px;
+  padding: 0 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Breadcrumb */
+.bt-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 22px;
+  color: #f1f1f1;
+  opacity: 0.9;
+}
+
+.bt-breadcrumb a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bt-breadcrumb span {
+  margin: 0 6px;
+  opacity: 0.7;
+}
+
+.bt-breadcrumb .active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Title */
+.bt-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.25;
+}
+
+/* Subtitle */
+.bt-subtext {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 28px;
+}
+
+/* Stats row */
+.bt-stats-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.bt-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.bt-stat img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Stars */
+.bt-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.bt-rating img {
+  width: 18px;
+  height: 18px;
+}
+
+.bt-rating span {
+  margin-left: 8px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bt-title {
+    font-size: 30px;
+  }
+  .bt-subtext {
+    font-size: 15px;
+  }
+  .bt-stats-wrapper {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .bt-hero-section {
+    padding: 80px 0 100px;
+  }
+}
+
+/* --- Responsive Fixes for BT Hero Section --- */
+
+@media (max-width: 1024px) {
+  .bt-hero-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bt-hero-container {
+    padding: 0 20px;
+  }
+
+  .bt-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .bt-subtext {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+
+  .bt-stats-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bt-stat {
+    font-size: 14px;
+  }
+
+  .bt-rating span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bt-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .bt-stat img {
+    width: 16px;
+    height: 16px;
+  }
+}

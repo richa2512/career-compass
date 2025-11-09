@@ -1,0 +1,152 @@
+/* ============================= */
+/* App Section  */
+/* ============================= */
+
+.app-section {
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d9e8ec;
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Left side - image */
+.app-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.app-image img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Right side - content */
+.app-content {
+  width: 50%;
+  min-width: 300px;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.app-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.app-content p {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.app-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.app-features li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.app-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.store-btn img {
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.store-btn img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+  .app-content {
+    padding: 30px 40px;
+  }
+
+  .app-content h2 {
+    font-size: 38px;
+  }
+
+  .app-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 620px) {
+  .app-section {
+    justify-content: center;
+  }
+  .app-image {
+    width: 100%;
+  }
+  .app-content {
+    width: 100%;
+  }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+  .app-content {
+    padding: 25px 15px;
+  }
+  .app-section {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .app-content h2 {
+    font-size: 26px;
+  }
+
+  .app-content p {
+    font-size: 15px;
+  }
+
+  .store-btn img {
+    height: 45px;
+  }
+
+  .app-features li {
+    font-size: 0.9rem;
+  }
+
+  .app-image img {
+    max-width: 100%;
+  }
+}
