@@ -1,0 +1,93 @@
+/* ===== Alumni Carousel Styles ===== */
+.alumni-carousel {
+  position: relative;
+  margin-top: 40px;
+}
+
+.alumni-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.alumni-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.alumni-card {
+  flex: 0 0 274px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 20px;
+}
+
+.alumni-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #66b2b2;
+  margin-bottom: 16px;
+}
+
+.alumni-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.alumni-card p {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin-bottom: 4px;
+}
+
+.alumni-card .company {
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.alumni-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #66b2b2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.alumni-nav:hover {
+  background-color: #3b9090;
+}
+
+.alumni-nav.left {
+  left: -20px;
+}
+
+.alumni-nav.right {
+  right: -20px;
+}
+
+@media (max-width: 1024px) {
+  .alumni-card {
+    flex: 0 0 calc(30% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .alumni-card {
+    flex: 0 0 100%;
+  }
+}

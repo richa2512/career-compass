@@ -1,0 +1,409 @@
+/* ============================
+   Cart Page
+=============================*/
+
+.cart-hero .subtitle {
+  width: 50%;
+}
+
+.cart-grid {
+  margin-top: 40px;
+}
+
+.cart-wrapper {
+  max-width: 1170px;
+  display: flex;
+  gap: 30px;
+}
+
+.cart-left {
+  width: 70%;
+}
+
+.cart-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-thumb {
+  width: 223px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-info {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.cart-info .card-stats {
+  border-bottom: none;
+  padding: 0;
+}
+
+.cart-info .cart-instructor {
+  margin: 16px 0;
+}
+.cart-course-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-instructor {
+  font-size: 15px;
+  color: #5e5e5e;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.cart-price-box {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d587a;
+}
+
+.cart-old-price {
+  text-decoration: line-through;
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+
+.cart-discount {
+  background: #00b67a1a;
+  color: #00b67a;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 82px;
+  font-weight: 500;
+}
+
+.cart-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+/* Order Summary */
+.cart-summary {
+  width: 30%;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart-summary h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cart-summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.summary-row,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+
+.summary-price {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.summary-total {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.coupon-label {
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+  color: #5e5e5e;
+  margin: 0;
+}
+
+.coupon-box {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.coupon-box input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d5dd;
+  width: 100%;
+}
+
+.coupon-apply-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.coupon-apply-btn input {
+  width: 65%;
+}
+
+.coupon-apply-btn button {
+  width: 35%;
+}
+
+.apply-btn {
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  background: #1d587a;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+  font-weight: 500;
+}
+
+.cart-ratings-info {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-rating {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+}
+
+/* ✅ Default already desktop — adjusting for larger screens too */
+@media (min-width: 1400px) {
+  .cart-wrapper {
+    max-width: 1280px;
+  }
+}
+
+/* ✅ Tablet (768px–1024px) */
+@media (max-width: 1024px) {
+  .cart-wrapper {
+    flex-direction: column;
+  }
+
+  .cart-left,
+  .cart-summary {
+    width: 100%;
+  }
+
+  .cart-item {
+    padding: 14px;
+  }
+
+  .cart-thumb {
+    width: 180px;
+    height: 120px;
+  }
+
+  .coupon-apply-btn {
+    flex-direction: row;
+  }
+
+  .coupon-apply-btn input {
+    width: 70%;
+  }
+
+  .coupon-apply-btn button {
+    width: 30%;
+  }
+
+  .checkout-btn {
+    margin-top: 10px;
+  }
+}
+
+/* ✅ Mobile (Under 768px) */
+@media (max-width: 768px) {
+  .cart-hero .subtitle {
+    width: 90%;
+  }
+  /* cart wrapper becomes one column */
+  .cart-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-left {
+    width: 100%;
+  }
+
+  .cart-summary {
+    width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px;
+  }
+
+  .cart-thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .cart-info {
+    margin-left: 0;
+  }
+
+  .cart-course-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .cart-instructor {
+    font-size: 13px;
+  }
+
+  .cart-meta,
+  .card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stats-item,
+  .cart-ratings-info {
+    font-size: 12px;
+  }
+
+  .cart-price-box {
+    flex-wrap: wrap;
+  }
+
+  .cart-price {
+    font-size: 18px;
+  }
+
+  .cart-delete {
+    position: absolute;
+    top: auto !important;
+    right: 15px;
+    bottom: 15px;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-item {
+    position: relative;
+  }
+
+  /* Coupon box fixes */
+  .coupon-apply-btn {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .coupon-apply-btn input {
+    width: 65%;
+  }
+
+  .coupon-apply-btn button {
+    width: 35%;
+  }
+
+  .checkout-btn {
+    font-size: 15px;
+  }
+}
+
+/* ✅ Extra small mobile (under 480px) */
+@media (max-width: 480px) {
+  .cart-hero .subtitle {
+    width: 100%;
+  }
+  .cart-course-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .cart-thumb {
+    height: 180px;
+  }
+
+  .cart-delete {
+    right: 10px;
+    bottom: 10px;
+    padding: 5px;
+  }
+
+  .stats-item,
+  .cart-ratings-info {
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .apply-btn,
+  .checkout-btn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,95 @@
+
+/* ============================= */
+/* Numbers Section  */
+/* ============================= */
+
+.numbers-section {
+  background-color: #1d587a;
+  margin-top: 40px;
+}
+
+/* Container */
+.numbers-container {
+  max-width: 90rem;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .numbers-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .numbers-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Grid Layout */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem; /* gap-x-6 */
+  row-gap: 2.5rem; /* gap-y-10 */
+}
+
+@media (min-width: 768px) {
+  .numbers-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Individual Item */
+.numbers-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+}
+
+/* Icon */
+.numbers-icon {
+  height: 40px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .numbers-icon {
+    height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .numbers-icon {
+    height: 80px;
+  }
+}
+
+/* Text */
+.numbers-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .numbers-text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .numbers-text {
+    font-size: 16px;
+  }
+}
