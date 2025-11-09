@@ -2367,7 +2367,7 @@
 }
 
 .price-checkmark {
-  background: url("./assets/images/icons/tick.svg") no-repeat center center;
+  background: url("../images/icons/tick.svg") no-repeat center center;
   background-size: contain; /* ensures full image is visible */
   height: 20px;
   width: 100%;

@@ -32,7 +32,7 @@ revealEls.forEach((el) => appearOnScroll.observe(el));
 
 // Optional random stagger for variety
 revealEls.forEach((el, i) => {
-  el.style.transitionDelay = `${(Math.random() * 0.5 + 0.1).toFixed(2)}s`;
+  el.style.transitionDelay = `${(Math.random() * 0.8 + 0.1).toFixed(2)}s`;
 });
 
 // ===============================
