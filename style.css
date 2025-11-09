@@ -126,6 +126,82 @@ p.text-reveal {
   transition-delay: 0.3s;
 }
 /* (~ up to 20 words) */
+
+/* =============================== */
+/* NEW PREMIUM ENTRY ANIMATIONS    */
+/* =============================== */
+
+/* Fade in from LEFT */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.97);
+  filter: blur(6px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease-out;
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+}
+
+/* Fade in from RIGHT */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px) scale(0.97);
+  filter: blur(6px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease-out;
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+}
+
+/* Fade in from BOTTOM (stronger float) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(80px) scale(0.95);
+  filter: blur(8px);
+  transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease-out;
+}
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Scale-in Pop (use for icons/logos) */
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.8) rotate(2deg);
+  filter: blur(8px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease-out;
+}
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  filter: blur(0);
+}
+
+/* Fade in with rotation (for cards) */
+.reveal-rotate {
+  opacity: 0;
+  transform: rotateX(12deg) translateY(40px);
+  filter: blur(6px);
+  transform-origin: bottom center;
+  transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease-out;
+}
+.reveal-rotate.active {
+  opacity: 1;
+  transform: rotateX(0) translateY(0);
+  filter: blur(0);
+}
+
 /* ============================= */
 
 .btn-primary {
@@ -4773,213 +4849,6 @@ input {
   }
 }
 
-/* ============= Pricing Section ================ */
-
-.pricing-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding: 40px;
-  background: #f8fafc;
-  border-radius: 8px;
-}
-
-.pricing-left {
-  flex: 1;
-}
-
-.pricing-what-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 24px;
-  line-height: 26px;
-}
-
-.pricing-benefits {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.pricing-benefits li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
-  line-height: 1.6;
-}
-
-.benefit-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.pricing-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.pricing-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #5e5e5e;
-  margin: 0 0 8px 0;
-}
-
-.pricing-amount {
-  font-size: 28px;
-  font-weight: 600;
-  color: #000;
-  margin: 0 0 8px 0;
-  line-height: 1.2;
-}
-
-.pricing-total {
-  font-size: 16px;
-  color: #5e5e5e;
-  margin: 0 0 28px 0;
-  font-weight: 500;
-}
-
-.pricing-btn {
-  font-size: 16px;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Pricing Breakdown Toggle */
-.pricing-breakdown-section {
-  margin-top: 40px;
-}
-
-.pricing-toggle-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  transition: all 0.3s ease;
-  margin-bottom: 0;
-}
-
-.pricing-toggle-btn:hover {
-  border-color: #1d587a;
-  background: #f8fafc;
-}
-
-.toggle-chevron {
-  width: 20px;
-  height: 20px;
-  color: #1d587a;
-  transition: transform 0.3s ease;
-  stroke-width: 2;
-}
-
-.pricing-breakdown-section.collapsed .toggle-chevron {
-  transform: rotate(180deg);
-}
-
-.pricing-breakdown-content {
-  display: grid;
-  gap: 0;
-  margin-top: 0;
-  border: 1px solid #e5e5e5;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-}
-
-.pricing-breakdown-section.collapsed .pricing-breakdown-content {
-  display: none;
-}
-
-.breakdown-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid #e5e5e5;
-  background: #fff;
-}
-
-.breakdown-item:last-child {
-  border-bottom: none;
-}
-
-.breakdown-item.total {
-  background: #f8fafc;
-  font-weight: 600;
-  border-top: 2px solid #1d587a;
-}
-
-.breakdown-label {
-  font-size: 15px;
-  color: #5e5e5e;
-  font-weight: 500;
-}
-
-.breakdown-item.total .breakdown-label {
-  color: #000;
-  font-weight: 600;
-}
-
-.breakdown-value {
-  font-size: 15px;
-  font-weight: 600;
-  color: #000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .pricing-content {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 24px;
-  }
-
-  .pricing-amount {
-    font-size: 32px;
-  }
-
-  .pricing-btn {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .pricing-content {
-    padding: 16px;
-    gap: 24px;
-  }
-
-  .pricing-amount {
-    font-size: 28px;
-  }
-
-  .pricing-benefits li {
-    font-size: 15px;
-  }
-}
-
-/* ============= End Pricing Section ================ */
-
 .course-sections-nav {
   position: sticky;
   top: 1px;
@@ -6813,7 +6682,6 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 8rem;
   width: 100%;
   padding: 0 10px 0 10px !important;
@@ -6867,7 +6735,6 @@ input {
   align-items: center;
   gap: 30px;
   margin-top: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .acca-stats .stat h2 {
@@ -6895,14 +6762,14 @@ input {
   align-items: center;
   gap: 8px;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .rating-row {
   display: flex;
   align-items: center;
-  gap: 3.8rem;
-  margin-top: 3rem;
-  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -7018,6 +6885,20 @@ input {
   overflow: hidden;
   border-radius: 16px;
   margin-bottom: 1rem;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
 
 .student-slider {
@@ -7061,7 +6942,7 @@ input {
   left: 0;
   right: 0;
   width: 100%;
-  padding: 12px 15px;
+  padding: 16px;
   background-color: #fff;
   color: #143c57;
   border-radius: 0 0 12px 12px;
@@ -7071,14 +6952,14 @@ input {
 }
 
 .student-data h4 {
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
 }
 
 .student-data .exam-info {
-  font-size: 0.8rem;
+  font-size: 14px;
   margin: 2px 0 8px 0;
   opacity: 0.8;
   font-weight: 500;
@@ -7091,15 +6972,16 @@ input {
 }
 
 .student-data .rank-item {
-  font-size: 0.75rem;
+  font-size: 14px;
   color: #555;
   line-height: 1.3;
+  font-weight: 500;
 }
 
 .student-data .rank-item strong {
-  font-size: 0.85rem;
+  font-size: 14px;
   color: #143c57;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* ==================== SCROLL ANIMATION ==================== */
@@ -7110,43 +6992,6 @@ input {
   100% {
     transform: translateX(calc(-280px * 3 - 30px * 3));
   }
-}
-
-/* ==================== BLUR EFFECTS ==================== */
-.blur-left,
-.blur-right {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 45px;
-  z-index: 2;
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
-
-.blur-left {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(23, 70, 98, 1) 0%,
-    rgba(23, 70, 98, 0.7) 70%,
-    rgba(23, 70, 98, 0) 100%
-  );
-}
-
-.blur-right {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(23, 70, 98, 1) 0%,
-    rgba(23, 70, 98, 0.7) 70%,
-    rgba(23, 70, 98, 0) 100%
-  );
-}
-
-.student-slider-wrapper:hover .blur-left,
-.student-slider-wrapper:hover .blur-right {
-  opacity: 0.6;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -7188,22 +7033,16 @@ input {
     gap: 15px;
   }
 
-  .acca-stats .stat:not(:first-child) {
-    border-left: none;
-    padding-left: 0;
-  }
-
   .rating-row {
-    flex-direction: column;
     gap: 15px;
-  }
-
-  .blur-left,
-  .blur-right {
-    width: 80px;
   }
 }
 
+@media (max-width: 919px) {
+  .acca-container{
+    flex-direction: column;
+  }
+}
 /* Mobile (below 768px) */
 @media (max-width: 768px) {
   .acca-hero {
@@ -7239,18 +7078,18 @@ input {
   }
 
   .acca-stats {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
     align-items: flex-start;
   }
 
-  .acca-stats .stat:not(:first-child) {
+  /* .acca-stats .stat:not(:first-child) {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 15px;
     padding-left: 0;
-  }
+  } */
 
   .acca-stats .stat h2 {
     font-size: 22px;
@@ -7281,7 +7120,6 @@ input {
   }
 
   .google-logo-group {
-    width: 100%;
     flex-wrap: nowrap;
   }
 
@@ -7436,6 +7274,7 @@ input {
 
   .rating-row {
     gap: 12px;
+    flex-direction: column;
   }
 }
 
@@ -8373,7 +8212,7 @@ input {
 
 /* --- Feature Card --- */
 .why-career-compass-feature-card {
-  height: 500px; /* fixed height per design */
+  height: 420px; /* fixed height per design */
   border-radius: 8px;
   padding: 32px;
   background: #fff;
@@ -8393,10 +8232,17 @@ input {
   border: 2px solid rgba(29, 88, 122, 0.25);
 }
 
+.why-career-compass-feature-card > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-direction: column;
+}
+
 /* --- Image --- */
 .why-career-compass-feature-img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-top: 0;
   margin-bottom: 26px;
@@ -8410,7 +8256,7 @@ input {
 }
 
 .why-career-compass-feature-content h3 {
-  font-size: 1.4rem;
+  font-size: 28px;
   font-weight: 700;
   color: #000;
   line-height: 1.3;
@@ -8420,13 +8266,14 @@ input {
 }
 
 .why-career-compass-feature-content p {
-  font-size: 0.9rem;
+  font-size: 18px;
   color: #4b5563;
   margin-top: 0;
   line-height: 1.5;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  font-weight: 500;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
@@ -8530,6 +8377,11 @@ input {
   .why-career-compass-feature-card {
     min-height: 220px;
   }
+
+  .why-career-compass-feature-content p {
+    font-size: 0.8rem;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 520px) {
@@ -8549,6 +8401,7 @@ input {
 
   .why-career-compass-feature-content p {
     font-size: 0.8rem;
+    opacity: 1;
   }
 
   .why-career-compass-feature-img {
@@ -9278,7 +9131,6 @@ tr:nth-child(-n + 3) td {
   padding: 20px 24px;
   background-color: #f3f4f6;
   border-radius: 6px;
-  margin: 0 20px;
   justify-content: center;
 }
 
@@ -9380,8 +9232,8 @@ tr:nth-child(-n + 3) td {
   }
 
   .price-popular-badge {
-    font-size: 10px;
-    padding: 4px 8px;
+    font-size: 7px;
+    padding: 1px;
   }
 
   .price-checkmark {
@@ -9451,6 +9303,7 @@ tr:nth-child(-n + 3) td {
 
   .price-faq-content p {
     font-size: 11px;
+    text-align: center;
   }
 
   .price-faq-link {

@@ -7,17 +7,20 @@ if (toggle && menu) {
   });
 }
 
-
-// Scroll reveal observer
-const revealEls = document.querySelectorAll(".reveal");
+/// ===============================
+// SCROLL REVEAL (All Directions)
+// ===============================
+const revealEls = document.querySelectorAll(
+  ".reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-zoom, .reveal-rotate"
+);
 
 const appearOptions = {
   threshold: 0.15,
-  rootMargin: "0px 0px -5% 0px"
+  rootMargin: "0px 0px -5% 0px",
 };
 
 const appearOnScroll = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("active");
       appearOnScroll.unobserve(entry.target);
@@ -25,40 +28,46 @@ const appearOnScroll = new IntersectionObserver((entries) => {
   });
 }, appearOptions);
 
-revealEls.forEach(el => appearOnScroll.observe(el));
+revealEls.forEach((el) => appearOnScroll.observe(el));
 
+// Optional random stagger for variety
+revealEls.forEach((el, i) => {
+  el.style.transitionDelay = `${(Math.random() * 0.5 + 0.1).toFixed(2)}s`;
+});
 
-// Subtle parallax on mouse move
+// ===============================
+// PARALLAX EFFECT
+// ===============================
 document.addEventListener("mousemove", (e) => {
   const x = (e.clientX / window.innerWidth - 0.5) * 6;
   const y = (e.clientY / window.innerHeight - 0.5) * 6;
 
-  document.querySelectorAll(".parallax").forEach(el => {
+  document.querySelectorAll(".parallax").forEach((el) => {
     el.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
   });
 });
 
-
-
-/* ================= WORD SPLIT & REVEAL ================ */
+// ===============================
+// TEXT REVEAL SPLIT & ANIMATION
+// ===============================
 function revealText() {
-  document.querySelectorAll(".text-reveal").forEach(block => {
+  document.querySelectorAll(".text-reveal").forEach((block) => {
     const childNodes = Array.from(block.childNodes);
-    block.innerHTML = ""; 
+    block.innerHTML = "";
 
-    childNodes.forEach(node => {
-      if (node.nodeType === 3) {  // text node
+    childNodes.forEach((node) => {
+      if (node.nodeType === 3) {
         const words = node.textContent.trim().split(" ");
         words.forEach((word, i) => {
           if (word !== "") {
             const span = document.createElement("span");
             span.textContent = word;
             block.appendChild(span);
-            if (i < words.length - 1) block.appendChild(document.createTextNode(" "));
+            if (i < words.length - 1)
+              block.appendChild(document.createTextNode(" "));
           }
         });
       } else {
-        // Element node (like your <span class="text-gradient">Potential</span>)
         block.appendChild(node);
       }
     });
@@ -66,22 +75,24 @@ function revealText() {
 }
 revealText();
 
+// Intersection Observer for text-reveal only
+const textObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll("span").forEach((span, i) => {
+          setTimeout(() => span.classList.add("active"), i * 55);
+        });
+        textObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-/* Intersection Observer for text */
-const textObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.querySelectorAll("span").forEach((span,i)=>{
-        setTimeout(()=> span.classList.add("active"), i * 55);
-      });
-      textObserver.unobserve(entry.target);
-    }
-  })
-},{ threshold:.2 });
-
-document.querySelectorAll(".text-reveal").forEach(el => textObserver.observe(el));
-
-
+document
+  .querySelectorAll(".text-reveal")
+  .forEach((el) => textObserver.observe(el));
 
 // Pagination Logic Only
 const totalItems = 100;
@@ -135,8 +146,6 @@ if (document.getElementById("pagination")) {
   renderPagination();
 }
 
-
-
 const track = document.querySelector(".alumni-track");
 const prevBtn = document.querySelector(".alumni-nav.left");
 const nextBtn = document.querySelector(".alumni-nav.right");
@@ -157,11 +166,10 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
 
   function updateCarousel(direction) {
     if (isAnimating) return;
-    
+
     isAnimating = true;
-    
+
     if (direction === 1) {
-      
       currentIndex++;
       const offset = currentIndex * cardWidth;
       track.style.transform = `translateX(-${offset}px)`;
@@ -170,7 +178,7 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
         track.style.transition = "none";
         currentIndex = ((currentIndex % total) + total) % total;
         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        
+
         setTimeout(() => {
           track.style.transition = "transform 0.4s ease-in-out";
           isAnimating = false;
@@ -181,12 +189,12 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
         track.style.transition = "none";
         currentIndex = total;
         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        
+
         setTimeout(() => {
           track.style.transition = "transform 0.4s ease-in-out";
           currentIndex--;
           track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-          
+
           setTimeout(() => {
             isAnimating = false;
           }, 400);
@@ -195,7 +203,7 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
         currentIndex--;
         const offset = currentIndex * cardWidth;
         track.style.transform = `translateX(-${offset}px)`;
-        
+
         setTimeout(() => {
           isAnimating = false;
         }, 400);
@@ -215,153 +223,202 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
 }
 
 // Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('show');
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("show");
   });
 }
 
 // Course sections navigation - active link on scroll
 // Only runs if section links exist on the page
-const sectionLinks = document.querySelectorAll('.section-link');
+const sectionLinks = document.querySelectorAll(".section-link");
 if (sectionLinks.length > 0) {
-  const sections = document.querySelectorAll('[id^="about"], [id^="what-learn"], [id^="curriculum"], [id^="fees"], [id^="reviews"], [id^="demo"], [id^="faqs"]');
+  const sections = document.querySelectorAll(
+    '[id^="about"], [id^="what-learn"], [id^="curriculum"], [id^="fees"], [id^="reviews"], [id^="demo"], [id^="faqs"]'
+  );
 
   if (sections.length > 0) {
-    window.addEventListener('scroll', () => {
-      let current = '';
-      
-      sections.forEach(section => {
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
+          current = section.getAttribute("id");
         }
       });
-      
-      sectionLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
+
+      sectionLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
         }
       });
     });
   }
 }
 
-
 // Section link click handling
-sectionLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
+sectionLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    const targetId = link.getAttribute('href').substring(1);
+    const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
-    
+
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
 
 // Curriculum item accordion
-const curriculumItems = document.querySelectorAll('.curriculum-item .item-header');
-curriculumItems.forEach(header => {
-  header.addEventListener('click', () => {
-    const item = header.closest('.curriculum-item');
-    const isActive = item.classList.contains('active');
-    
+const curriculumItems = document.querySelectorAll(
+  ".curriculum-item .item-header"
+);
+curriculumItems.forEach((header) => {
+  header.addEventListener("click", () => {
+    const item = header.closest(".curriculum-item");
+    const isActive = item.classList.contains("active");
+
     // Close all other items
-    document.querySelectorAll('.curriculum-item').forEach(i => {
-      i.classList.remove('active');
+    document.querySelectorAll(".curriculum-item").forEach((i) => {
+      i.classList.remove("active");
     });
-    
+
     // Toggle current item
     if (!isActive) {
-      item.classList.add('active');
+      item.classList.add("active");
     }
   });
 });
 
 // Expand all lessons button with chevron animation
-const expandAllBtn = document.querySelector('.expand-all');
-const curriculumToggleBtn = document.querySelector('.curriculum-toggle-btn');
+const expandAllBtn = document.querySelector(".expand-all");
+const curriculumToggleBtn = document.querySelector(".curriculum-toggle-btn");
 if (expandAllBtn && curriculumToggleBtn) {
-  curriculumToggleBtn.addEventListener('click', (e) => {
+  curriculumToggleBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const curriculumBreakdown = document.querySelector('.curriculum-breakdown');
-    const allExpanded = document.querySelectorAll('.curriculum-item.active').length === document.querySelectorAll('.curriculum-item').length;
-    
-    document.querySelectorAll('.curriculum-item').forEach(item => {
+    const curriculumBreakdown = document.querySelector(".curriculum-breakdown");
+    const allExpanded =
+      document.querySelectorAll(".curriculum-item.active").length ===
+      document.querySelectorAll(".curriculum-item").length;
+
+    document.querySelectorAll(".curriculum-item").forEach((item) => {
       if (!allExpanded) {
-        item.classList.add('active');
+        item.classList.add("active");
       } else {
-        item.classList.remove('active');
+        item.classList.remove("active");
       }
     });
-    
+
     // Toggle the expanded state for chevron rotation
-    curriculumBreakdown.classList.toggle('expanded', !allExpanded);
-    expandAllBtn.textContent = allExpanded ? 'Expand All' : 'Collapse All';
+    curriculumBreakdown.classList.toggle("expanded", !allExpanded);
+    expandAllBtn.textContent = allExpanded ? "Expand All" : "Collapse All";
   });
 }
 
 // Show more button functionality
-const showMoreBtn = document.querySelector('.show-more-btn');
+const showMoreBtn = document.querySelector(".show-more-btn");
 if (showMoreBtn) {
-  showMoreBtn.addEventListener('click', () => {
-    const courseAbout = document.querySelector('.course-about');
-    const courseText = document.querySelector('.course-section-text');
-    
-    courseAbout.classList.toggle('expanded');
-    
-    if (courseAbout.classList.contains('expanded')) {
+  showMoreBtn.addEventListener("click", () => {
+    const courseAbout = document.querySelector(".course-about");
+    const courseText = document.querySelector(".course-section-text");
+
+    courseAbout.classList.toggle("expanded");
+
+    if (courseAbout.classList.contains("expanded")) {
       showMoreBtn.innerHTML = 'Show less <i class="fas fa-chevron-up"></i>';
-      courseText.style.maxHeight = 'none';
+      courseText.style.maxHeight = "none";
     } else {
       showMoreBtn.innerHTML = 'Show more <i class="fas fa-chevron-down"></i>';
-      courseText.style.maxHeight = '80px';
+      courseText.style.maxHeight = "80px";
     }
   });
 }
 
 // What you'll Learn dropdown functionality
-const learnHeader = document.querySelector('.learn-header');
+const learnHeader = document.querySelector(".learn-header");
 if (learnHeader) {
-  learnHeader.addEventListener('click', () => {
-    const courseWhatLearn = document.querySelector('.course-what-learn');
+  learnHeader.addEventListener("click", () => {
+    const courseWhatLearn = document.querySelector(".course-what-learn");
     if (courseWhatLearn) {
-      courseWhatLearn.classList.toggle('collapsed');
+      courseWhatLearn.classList.toggle("collapsed");
     }
   });
 }
 
 // See all lessons button functionality
-const seeAllLessonsBtn = document.querySelector('.see-all-lessons');
+const seeAllLessonsBtn = document.querySelector(".see-all-lessons");
 if (seeAllLessonsBtn) {
-  seeAllLessonsBtn.addEventListener('click', (e) => {
+  seeAllLessonsBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const curriculumList = document.querySelector('.curriculum-list');
-    const curriculumItems = document.querySelectorAll('.curriculum-item');
-    
-    curriculumList.classList.toggle('expanded');
-    
-    if (curriculumList.classList.contains('expanded')) {
-      seeAllLessonsBtn.textContent = 'Show Less';
-      curriculumItems.forEach(item => {
-        item.style.display = 'block';
+    const curriculumList = document.querySelector(".curriculum-list");
+    const curriculumItems = document.querySelectorAll(".curriculum-item");
+
+    curriculumList.classList.toggle("expanded");
+
+    if (curriculumList.classList.contains("expanded")) {
+      seeAllLessonsBtn.textContent = "Show Less";
+      curriculumItems.forEach((item) => {
+        item.style.display = "block";
       });
     } else {
-      seeAllLessonsBtn.textContent = 'See all lessons';
+      seeAllLessonsBtn.textContent = "See all lessons";
       // Show only first few items
       curriculumItems.forEach((item, index) => {
         if (index >= 4) {
-          item.style.display = 'none';
+          item.style.display = "none";
         }
       });
     }
   });
 }
 
+const counters = document.querySelectorAll(".count");
+
+const countObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute("data-target");
+        const duration = 2000; // total animation duration (ms)
+        const startTime = performance.now();
+
+        // Detect suffix (like +, %, etc.)
+        const suffixMatch = counter.textContent.match(/[^0-9]+/);
+        const suffix = suffixMatch ? suffixMatch[0] : "";
+
+        // Easing function: easeOutCubic → fast start, slow finish
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+        const updateCount = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const currentValue = Math.floor(eased * target);
+
+          counter.textContent = currentValue.toLocaleString() + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.textContent = target.toLocaleString() + suffix;
+          }
+        };
+
+        requestAnimationFrame(updateCount);
+        observer.unobserve(counter);
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+counters.forEach((counter) => {
+  countObserver.observe(counter);
+});
