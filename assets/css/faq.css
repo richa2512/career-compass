@@ -1,0 +1,29 @@
+.faq-page .faq-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.faq-page .faq-container .faq-right {
+  width: 100%;
+}
+
+.faq-question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.faq-question-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.faq-body p {
+    margin-bottom: 12px;
+}
+
+ul li {
+    margin-left: 20px;
+}

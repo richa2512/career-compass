@@ -1,0 +1,28 @@
+.gallery-title {
+  max-width: 90rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@media (min-width: 1280px) {
+  .gallery-title {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
