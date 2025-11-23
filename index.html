@@ -1,1375 +1,1243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Compass</title>
-    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
 
-    <link rel="stylesheet" href="./assets/css/common.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
-    <link rel="stylesheet" href="./assets/css/numbers.css" />
-    <link rel="stylesheet" href="./assets/css/mentors.css" />
-    <link rel="stylesheet" href="./assets/css/partners.css" />
-    <link rel="stylesheet" href="./assets/css/testimonial.css" />
-    <link rel="stylesheet" href="./assets/css/mobile-app.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="header-container">
-        <a href="index.html" title="Career Compass - Home">
-          <img
-            src="./assets/images/logo.png"
-            alt="Career Compass Logo"
-            class="logo"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Compass</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+
+  <link rel="stylesheet" href="./assets/css/common.css" />
+  <link rel="stylesheet" href="./assets/css/home.css" />
+  <link rel="stylesheet" href="./assets/css/numbers.css" />
+  <link rel="stylesheet" href="./assets/css/mentors.css" />
+  <link rel="stylesheet" href="./assets/css/partners.css" />
+  <link rel="stylesheet" href="./assets/css/testimonial.css" />
+  <link rel="stylesheet" href="./assets/css/mobile-app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" title="Career Compass - Home">
+        <img src="./assets/images/logo.png" alt="Career Compass Logo" class="logo" />
+      </a>
+
+      <nav class="navbar" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="dropdown"><a href="#" class="nav-link nav-link-active">Courses ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="acca.html">ACCA</a></li>
+              <li><a href="cma.html">CMA</a></li>
+              <li><a href="cfa.html">CFA</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="nav-link ">Fees▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="acca-fee.html">ACCA</a></li>
+              <li><a href="cma-fee.html">US CMA</a></li>
+              <li><a href="cfa-fee.html">CFA</a></li>
+            </ul>
+          </li>
+          <li><a href="Gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="cart.html" class="cart-icon">
+          <img src="./assets/images/svg/shop.svg" />
         </a>
 
-        <nav class="navbar" id="navMenu" aria-label="Main Navigation">
-          <ul class="nav-menu">
-            <li>
-              <a href="index.html" class="nav-link nav-link-active">Home</a>
-            </li>
-            <li><a href="acca.html" class="nav-link">ACCA Courses</a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-link">Courses ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="courses.html">All Courses</a></li>
-                <li class="submenu">
-                  <a href="#">Prep. Certification ▸</a>
-                  <ul class="sub-dropdown">
-                    <li><a href="acca.html">ACCA</a></li>
-                    <li><a href="cma.html">CMA</a></li>
-                    <li><a href="cfa.html">CFA</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="combos.html" class="nav-link">Combos</a></li>
-            <li><a href="about.html" class="nav-link">About Us</a></li>
-            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-right">
-          <a href="cart.html" class="cart-icon">
-            <img src="./assets/images/svg/shop.svg" />
-          </a>
-
-          <div class="auth-buttons">
-            <a href="login.html" class="btn-primary">Login</a>
-          </div>
-
-          <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="menu-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="4" y1="6" x2="20" y2="6" />
-              <line x1="4" y1="12" x2="20" y2="12" />
-              <line x1="4" y1="18" x2="20" y2="18" />
-            </svg>
-          </button>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-primary">Login</a>
         </div>
+
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <a href="courses.html" class="nav-link">ACCA Courses</a>
+      <a href="combos.html" class="nav-link">Courses & Combos</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section reveal delay-1">
+    <div class="hero-left">
+      <h1 class="section-heading-h1 text-reveal">
+        Unlock Your <br /><span class="text-gradient">Potential</span>
+      </h1>
+      <div class="hero-subtitle">
+        <p class="section-heading-h4 text-black text-reveal">
+          The future of learning isn’t about more content
+        </p>
+        <p class="section-heading-h4 text-black text-reveal">
+          — it’s about the right direction.
+        </p>
       </div>
 
-      <div id="mobileMenu" class="mobile-menu hidden">
-        <a href="index.html" class="nav-link nav-link-active">Home</a>
-        <a href="courses.html" class="nav-link">ACCA Courses</a>
-        <a href="combos.html" class="nav-link">Courses & Combos</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section reveal delay-1">
-      <div class="hero-left">
-        <h1 class="section-heading-h1 text-reveal">
-          Unlock Your <br /><span class="text-gradient">Potential</span>
-        </h1>
-        <div class="hero-subtitle">
-          <p class="section-heading-h4 text-black text-reveal">
-            The future of learning isn’t about more content
-          </p>
-          <p class="section-heading-h4 text-black text-reveal">
-            — it’s about the right direction.
+      <div class="hero-stats">
+        <div class="stat-item flex-2">
+          <p class="stat-number text-reveal count" data-target="10">0+</p>
+          <p class="stat-label text-reveal">
+            Years of <br />
+            Experience
           </p>
         </div>
-
-        <div class="hero-stats">
-          <div class="stat-item flex-2">
-            <p class="stat-number text-reveal count" data-target="10">0+</p>
-            <p class="stat-label text-reveal">
-              Years of <br />
-              Experience
-            </p>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item flex-2">
-            <p class="stat-number text-reveal count" data-target="2000">0+</p>
-            <p class="stat-label text-reveal">
-              Successful <br />
-              Students
-            </p>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item flex-1">
-            <p class="stat-number text-reveal count" data-target="90">0%+</p>
-            <p class="stat-label text-reveal">First-Attempt <br />Pass Rate</p>
-          </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item flex-2">
+          <p class="stat-number text-reveal count" data-target="2000">0+</p>
+          <p class="stat-label text-reveal">
+            Successful <br />
+            Students
+          </p>
         </div>
-
-        <div class="hero-buttons">
-          <a href="login.html" class="btn-primary">Start Your Journey</a>
-
-          <a href="start.html" class="btn-secondary">Book Demo</a>
+        <div class="stat-divider"></div>
+        <div class="stat-item flex-1">
+          <p class="stat-number text-reveal count" data-target="90">0%+</p>
+          <p class="stat-label text-reveal">First-Attempt <br />Pass Rate</p>
         </div>
       </div>
-      
-      <div class="hero-right">
-        <div class="hero-right-header">
-          <h3 class="hero-right-title text-reveal">
-            Personal<br />Growth Event
-          </h3>
-          <span class="hero-tag">ACCA</span>
+
+      <div class="hero-buttons">
+        <a href="login.html" class="btn-primary">Start Your Journey</a>
+
+        <a href="start.html" class="btn-secondary">Book Demo</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-right-header">
+        <h3 class="hero-right-title text-reveal">
+          Personal<br />Growth Event
+        </h3>
+        <span class="hero-tag">ACCA</span>
+      </div>
+
+      <ul class="hero-list">
+        <li class="hero-list-item">
+          <img class="hero-icon" src="./assets/images/svg/location.svg" />
+          Zoom Meeting Room
+        </li>
+        <li class="hero-list-item">
+          <img class="hero-icon" src="./assets/images/svg/calendar.svg" />
+          March 25, 2024
+        </li>
+      </ul>
+
+      <div class="hero-image-container reveal delay-1">
+        <img src="./assets/images/hero/tutor2.png" alt="Dipan Ghataliya" class="hero-image" />
+        <div class="online-event">
+          <div class="event-title">Online Event</div>
+          <div class="event-desc">Free</div>
+        </div>
+        <div class="hero-image-overlay div-gradient">
+          <p class="hero-name parallax text-reveal">Dipan Ghataliya</p>
+          <p class="hero-role text-reveal">ACCA Expert</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company -->
+  <section class="company-section reveal delay-2">
+    <p class="company-title text-reveal">Over 10,000+ students land jobs</p>
+    <div class="company-logos">
+      <img src="./assets/images/company/mozilla.png" alt="mozilla" class="company-logo reveal delay-1" />
+      <img src="./assets/images/company/uber.png" alt="uber" class="company-logo reveal delay-1" />
+      <img src="./assets/images/company/google.png" alt="google" class="company-logo reveal delay-2" />
+      <img src="./assets/images/company/alpaca.png" alt="alpaca" class="company-logo reveal delay-3" />
+      <img src="./assets/images/company/asana.png" alt="asana" class="company-logo reveal delay-3" />
+      <img src="./assets/images/company/paypal.png" alt="paypal" class="company-logo reveal delay-4" />
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="numbers-section">
+    <div class="numbers-container">
+      <div class="numbers-grid">
+        <div class="numbers-item reveal-left">
+          <img src="./assets/images/numbers/8.png" class="numbers-icon" />
+          <p class="numbers-text">Years of Experience</p>
+        </div>
+        <div class="numbers-item reveal-up">
+          <img src="./assets/images/numbers/100h.png" class="numbers-icon" />
+          <p class="numbers-text">teaching hours</p>
+        </div>
+        <div class="numbers-item reveal-up">
+          <img src="./assets/images/numbers/1k.png" class="numbers-icon" />
+          <p class="numbers-text">Students Enrolled</p>
+        </div>
+        <div class="numbers-item reveal-right">
+          <img src="./assets/images/numbers/10k.png" class="numbers-icon" />
+          <p class="numbers-text">Lectures Taken</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification Programs -->
+  <section class="section-wrapper">
+    <div class="section-subtitle-wrapper">
+      <h4 class="section-subtitle text-reveal">Certification Programs</h4>
+      <span class="subtitle-line"></span>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title text-reveal">
+          Choose Your Certification Path
+        </h2>
+        <p class="section-description text-reveal">
+          Select from our industry-leading certification programs designed by
+          experts
+        </p>
+      </div>
+    </div>
+
+    <div class="certification-grid">
+      <!-- ACCA Card -->
+      <div class="certification-card featured reveal-left">
+        <div class="certification-header">
+          <div class="certification-icon">
+            <img src="./assets/images/svg/openBook.svg" />
+          </div>
+          <div class="certification-title">ACCA</div>
+          <div class="certification-duration">
+            <img src="./assets/images/svg/clock.svg" />
+            <span>2-3 Year</span>
+          </div>
         </div>
 
-        <ul class="hero-list">
-          <li class="hero-list-item">
-            <img class="hero-icon" src="./assets/images/svg/location.svg" />
-            Zoom Meeting Room
+        <h3 class="certification-name">
+          Association of Chartered <br />
+          Certified Accountants
+        </h3>
+
+        <div class="certification-stats">
+          <div class="stat">
+            <div>
+              <img src="./assets/images/svg/paper.svg" />
+              <p class="stat-number">13</p>
+            </div>
+            <p class="stat-name">Papers</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/star.svg" />
+              <p class="stat-number">4.9</p>
+            </div>
+            <p class="stat-name">Rating</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/growth.svg" />
+              <p class="stat-number">98%</p>
+            </div>
+            <p class="stat-name">success ratio</p>
+          </div>
+        </div>
+
+        <ul class="certification-features">
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Interactive live classes Mock tests and practice questions
+            High-quality notes
           </li>
-          <li class="hero-list-item">
-            <img class="hero-icon" src="./assets/images/svg/calendar.svg" />
-            March 25, 2024
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Stay updated with international financial reporting standards
+          </li>
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Build leadership skills for senior roles in accounting and finance
           </li>
         </ul>
 
-        <div class="hero-image-container reveal delay-1">
-          <img
-            src="./assets/images/hero/tutor2.png"
-            alt="Dipan Ghataliya"
-            class="hero-image"
-          />
-          <div class="online-event">
-            <div class="event-title">Online Event</div>
-            <div class="event-desc">Free</div>
+        <div class="certification-footer">
+          <div class="brochure-link">
+            <img src="./assets/images/svg/download.svg" />
+            <span>Brochure</span>
           </div>
-          <div class="hero-image-overlay div-gradient">
-            <p class="hero-name parallax text-reveal">Dipan Ghataliya</p>
-            <p class="hero-role text-reveal">ACCA Expert</p>
+          <a href="acca.html" class="btn-explore">
+            <span>Explore Now</span>
+            <img src="./assets/images/svg/right-arrow.svg" />
+          </a>
+        </div>
+      </div>
+
+      <!-- CFA Card -->
+      <div class="certification-card reveal-up">
+        <div class="certification-header">
+          <div class="certification-icon">
+            <img src="./assets/images/svg/openBook.svg" />
+          </div>
+          <div class="certification-title">CFA</div>
+          <div class="certification-duration">
+            <img src="./assets/images/svg/clock.svg" />
+            <span>3 Year</span>
+          </div>
+        </div>
+
+        <h3 class="certification-name">
+          Chartered Financial <br />
+          Analyst
+        </h3>
+
+        <div class="certification-stats">
+          <div class="stat">
+            <div>
+              <img src="./assets/images/svg/paper.svg" />
+              <p class="stat-number">3</p>
+            </div>
+            <p class="stat-name">Levels</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/star.svg" />
+              <p class="stat-number">4.9</p>
+            </div>
+            <p class="stat-name">Rating</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/growth.svg" />
+              <p class="stat-number">98%</p>
+            </div>
+            <p class="stat-name">success ratio</p>
+          </div>
+        </div>
+
+        <ul class="certification-features">
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Comprehensive investment analysis and portfolio management
+          </li>
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Global recognition in investment and wealth management...
+          </li>
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Advanced financial modeling and valuation techniques...
+          </li>
+        </ul>
+
+        <div class="certification-footer">
+          <div class="brochure-link">
+            <img src="./assets/images/svg/download.svg" />
+            <span>Brochure</span>
+          </div>
+          <a href="cfa.html" class="btn-explore">
+            <span>Explore Now</span>
+            <img src="./assets/images/svg/right-arrow.svg" />
+          </a>
+        </div>
+      </div>
+
+      <!-- CMA Card -->
+      <div class="certification-card reveal-right">
+        <div class="certification-header">
+          <div class="certification-icon">
+            <img src="./assets/images/svg/openBook.svg" />
+          </div>
+          <div class="certification-title">CMA</div>
+          <div class="certification-duration">
+            <img src="./assets/images/svg/clock.svg" />
+            <span>1-1.5 Year</span>
+          </div>
+        </div>
+
+        <h3 class="certification-name">
+          Certified Management <br />
+          Accountant
+        </h3>
+
+        <div class="certification-stats">
+          <div class="stat">
+            <div>
+              <img src="./assets/images/svg/paper.svg" />
+              <p class="stat-number">2</p>
+            </div>
+            <p class="stat-name">Parts</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/star.svg" />
+              <p class="stat-number">4.9</p>
+            </div>
+            <p class="stat-name">Rating</p>
+          </div>
+          <div class="stat">
+            <div>
+              <img src="./assets/images/icons/growth.svg" />
+              <p class="stat-number">98%</p>
+            </div>
+            <p class="stat-name">success ratio</p>
+          </div>
+        </div>
+
+        <ul class="certification-features">
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Strategic financial planning and cost management...
+          </li>
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Business intelligence and performance reporting...
+          </li>
+          <li>
+            <img src="./assets/images/icons/check.svg" />
+            Risk management and internal controls expertise...
+          </li>
+        </ul>
+
+        <div class="certification-footer">
+          <div class="brochure-link">
+            <img src="./assets/images/svg/download.svg" />
+            <span>Brochure</span>
+          </div>
+          <a href="cma.html" class="btn-explore">
+            <span>Explore Now</span>
+            <img src="./assets/images/svg/right-arrow.svg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentors -->
+  <section class="section-wrapper">
+    <div class="section-subtitle-wrapper">
+      <h4 class="section-subtitle text-reveal">Mentors Team</h4>
+      <span class="subtitle-line"></span>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title text-reveal">Our Mentors</h2>
+        <p class="section-description text-reveal">
+          Our Dedicated Mentorship Team
+        </p>
+      </div>
+      <div>
+        <a href="#" class="btn-primary">View More →</a>
+      </div>
+    </div>
+
+    <div class="mentors-grid">
+      <div class="mentor-card reveal-left delay-1">
+        <img src="./assets/images/mentor/dipan.png" alt="Dipan Ghataliya" />
+        <div class="mentor-overlay">
+          <div class="mentor-info">
+            <p class="mentor-name text-reveal">Dipan Sir</p>
+            <p class="mentor-role">ACCA (Founder)</p>
+            <a href="index.html" class="mentor-icon">
+              <img src="./assets/images/svg/fb.svg" />
+              <img src="./assets/images/svg/linkedin.svg" />
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Company -->
-    <section class="company-section reveal delay-2">
-      <p class="company-title text-reveal">Over 10,000+ students land jobs</p>
-      <div class="company-logos">
-        <img
-          src="./assets/images/company/mozilla.png"
-          alt="mozilla"
-          class="company-logo reveal delay-1"
-        />
-        <img
-          src="./assets/images/company/uber.png"
-          alt="uber"
-          class="company-logo reveal delay-1"
-        />
-        <img
-          src="./assets/images/company/google.png"
-          alt="google"
-          class="company-logo reveal delay-2"
-        />
-        <img
-          src="./assets/images/company/alpaca.png"
-          alt="alpaca"
-          class="company-logo reveal delay-3"
-        />
-        <img
-          src="./assets/images/company/asana.png"
-          alt="asana"
-          class="company-logo reveal delay-3"
-        />
-        <img
-          src="./assets/images/company/paypal.png"
-          alt="paypal"
-          class="company-logo reveal delay-4"
-        />
-      </div>
-    </section>
-
-    <!-- Numbers -->
-    <section class="numbers-section">
-      <div class="numbers-container">
-        <div class="numbers-grid">
-          <div class="numbers-item reveal-left">
-            <img src="./assets/images/numbers/8.png" class="numbers-icon" />
-            <p class="numbers-text">Years of Experience</p>
-          </div>
-          <div class="numbers-item reveal-up">
-            <img src="./assets/images/numbers/100h.png" class="numbers-icon" />
-            <p class="numbers-text">teaching hours</p>
-          </div>
-          <div class="numbers-item reveal-up">
-            <img src="./assets/images/numbers/1k.png" class="numbers-icon" />
-            <p class="numbers-text">Students Enrolled</p>
-          </div>
-          <div class="numbers-item reveal-right">
-            <img src="./assets/images/numbers/10k.png" class="numbers-icon" />
-            <p class="numbers-text">Lectures Taken</p>
+      <div class="mentor-card reveal-left delay-2">
+        <img src="./assets/images/mentor/sakshe.png" alt="Sakshe" />
+        <div class="mentor-overlay">
+          <div class="mentor-info">
+            <p class="mentor-name text-reveal">Sakshe Ma’am</p>
+            <p class="mentor-role">ACCA</p>
+            <a href="index.html" class="mentor-icon">
+              <img src="./assets/images/svg/fb.svg" />
+              <img src="./assets/images/svg/linkedin.svg" />
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Certification Programs -->
-    <section class="section-wrapper">
-      <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">Certification Programs</h4>
-        <span class="subtitle-line"></span>
+      <div class="mentor-card reveal-left delay-3">
+        <img src="./assets/images/mentor/tejas.png" alt="Harsh" />
+        <div class="mentor-overlay">
+          <div class="mentor-info">
+            <p class="mentor-name text-reveal">Tejas Sir</p>
+            <p class="mentor-role">CMA</p>
+            <a href="index.html" class="mentor-icon">
+              <img src="./assets/images/svg/fb.svg" />
+              <img src="./assets/images/svg/linkedin.svg" />
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="section-header">
-        <div>
+      <div class="mentor-card reveal-left delay-4">
+        <img src="./assets/images/mentor/rachit.png" alt="Rachit" />
+        <div class="mentor-overlay">
+          <div class="mentor-info">
+            <p class="mentor-name text-reveal">Rachit Sir</p>
+            <p class="mentor-role">ACCA</p>
+            <a href="index.html" class="mentor-icon">
+              <img src="./assets/images/svg/fb.svg" />
+              <img src="./assets/images/svg/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners-section reveal-left delay-2">
+    <div class="partners-container">
+      <div class="partners-left reveal-left">
+        <div class="section-subtitle-wrapper">
+          <h4 class="section-subtitle text-reveal">OUR PARTNERS</h4>
+          <span class="subtitle-line"></span>
+        </div>
+        <div class="section-header">
           <h2 class="section-title text-reveal">
-            Choose Your Certification Path
+            Trusted by Global Employers
           </h2>
-          <p class="section-description text-reveal">
-            Select from our industry-leading certification programs designed by
-            experts
-          </p>
         </div>
       </div>
 
-      <div class="certification-grid">
-        <!-- ACCA Card -->
-        <div class="certification-card featured reveal-left">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <img src="./assets/images/svg/openBook.svg" />
-            </div>
-            <div class="certification-title">ACCA</div>
-            <div class="certification-duration">
-              <img src="./assets/images/svg/clock.svg" />
-              <span>2-3 Year</span>
+      <div class="partners-right reveal-right">
+        <div class="marquee-wrapper">
+          <div class="marquee marquee-left">
+            <div class="marquee-track">
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-morgan">
+                <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/kotak.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-morgan">
+                <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/kotak.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-morgan">
+                <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/kotak.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/amazon.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-morgan">
+                <img src="./assets/images/partners/morgan.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/ibm.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/kotak.png" alt="Amazon" />
+              </div>
             </div>
           </div>
 
-          <h3 class="certification-name">
-            Association of Chartered <br />
-            Certified Accountants
+          <div class="marquee marquee-right">
+            <div class="marquee-track">
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/deloitte.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/accenture.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/grant.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/deloitte.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/accenture.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/grant.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/deloitte.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/accenture.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/grant.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/deloitte.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/accenture.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/oracle.png" alt="Amazon" />
+              </div>
+              <div class="marquee-partner-card">
+                <img src="./assets/images/partners/grant.png" alt="Amazon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-wrapper reveal-rotate delay-4">
+    <div class="section-subtitle-wrapper">
+      <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
+      <span class="subtitle-line"></span>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title text-reveal">
+          Inspiring students experiences
+        </h2>
+        <p class="section-description text-reveal">
+          Join us and become our next success story
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonial-wrapper">
+      <div class="info-card">
+        <div class="info-content">
+          <img src="./assets/images/logo-white.png" alt="Career Compass" class="career-logo" />
+          <h3 class="text-reveal">
+            Students <br />
+            stories
           </h3>
-
-          <div class="certification-stats">
-            <div class="stat">
-              <div>
-                <img src="./assets/images/svg/paper.svg" />
-                <p class="stat-number">13</p>
-              </div>
-              <p class="stat-name">Papers</p>
+          <div class="google-section">
+            <div class="google-image">
+              <img src="./assets/images/google.png" alt="Google" class="google-icon" />
+              <span style="font-size: 18px">Google</span>
             </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/star.svg" />
-                <p class="stat-number">4.9</p>
-              </div>
-              <p class="stat-name">Rating</p>
-            </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/growth.svg" />
-                <p class="stat-number">98%</p>
-              </div>
-              <p class="stat-name">success ratio</p>
-            </div>
-          </div>
-
-          <ul class="certification-features">
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Interactive live classes Mock tests and practice questions
-              High-quality notes
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Stay updated with international financial reporting standards
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Build leadership skills for senior roles in accounting and finance
-            </li>
-          </ul>
-
-          <div class="certification-footer">
-            <div class="brochure-link">
-              <img src="./assets/images/svg/download.svg" />
-              <span>Brochure</span>
-            </div>
-            <a href="acca.html" class="btn-explore">
-              <span>Explore Now</span>
-              <img src="./assets/images/svg/right-arrow.svg" />
-            </a>
-          </div>
-        </div>
-
-        <!-- CFA Card -->
-        <div class="certification-card reveal-up">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <img src="./assets/images/svg/openBook.svg" />
-            </div>
-            <div class="certification-title">CFA</div>
-            <div class="certification-duration">
-              <img src="./assets/images/svg/clock.svg" />
-              <span>3 Year</span>
-            </div>
-          </div>
-
-          <h3 class="certification-name">
-            Chartered Financial <br />
-            Analyst
-          </h3>
-
-          <div class="certification-stats">
-            <div class="stat">
-              <div>
-                <img src="./assets/images/svg/paper.svg" />
-                <p class="stat-number">3</p>
-              </div>
-              <p class="stat-name">Levels</p>
-            </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/star.svg" />
-                <p class="stat-number">4.9</p>
-              </div>
-              <p class="stat-name">Rating</p>
-            </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/growth.svg" />
-                <p class="stat-number">98%</p>
-              </div>
-              <p class="stat-name">success ratio</p>
-            </div>
-          </div>
-
-          <ul class="certification-features">
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Comprehensive investment analysis and portfolio management
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Global recognition in investment and wealth management...
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Advanced financial modeling and valuation techniques...
-            </li>
-          </ul>
-
-          <div class="certification-footer">
-            <div class="brochure-link">
-              <img src="./assets/images/svg/download.svg" />
-              <span>Brochure</span>
-            </div>
-            <a href="cfa.html" class="btn-explore">
-              <span>Explore Now</span>
-              <img src="./assets/images/svg/right-arrow.svg" />
-            </a>
-          </div>
-        </div>
-
-        <!-- CMA Card -->
-        <div class="certification-card reveal-right">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <img src="./assets/images/svg/openBook.svg" />
-            </div>
-            <div class="certification-title">CMA</div>
-            <div class="certification-duration">
-              <img src="./assets/images/svg/clock.svg" />
-              <span>1-1.5 Year</span>
-            </div>
-          </div>
-
-          <h3 class="certification-name">
-            Certified Management <br />
-            Accountant
-          </h3>
-
-          <div class="certification-stats">
-            <div class="stat">
-              <div>
-                <img src="./assets/images/svg/paper.svg" />
-                <p class="stat-number">2</p>
-              </div>
-              <p class="stat-name">Parts</p>
-            </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/star.svg" />
-                <p class="stat-number">4.9</p>
-              </div>
-              <p class="stat-name">Rating</p>
-            </div>
-            <div class="stat">
-              <div>
-                <img src="./assets/images/icons/growth.svg" />
-                <p class="stat-number">98%</p>
-              </div>
-              <p class="stat-name">success ratio</p>
-            </div>
-          </div>
-
-          <ul class="certification-features">
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Strategic financial planning and cost management...
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Business intelligence and performance reporting...
-            </li>
-            <li>
-              <img src="./assets/images/icons/check.svg" />
-              Risk management and internal controls expertise...
-            </li>
-          </ul>
-
-          <div class="certification-footer">
-            <div class="brochure-link">
-              <img src="./assets/images/svg/download.svg" />
-              <span>Brochure</span>
-            </div>
-            <a href="cma.html" class="btn-explore">
-              <span>Explore Now</span>
-              <img src="./assets/images/svg/right-arrow.svg" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mentors -->
-    <section class="section-wrapper">
-      <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">Mentors Team</h4>
-        <span class="subtitle-line"></span>
-      </div>
-
-      <div class="section-header">
-        <div>
-          <h2 class="section-title text-reveal">Our Mentors</h2>
-          <p class="section-description text-reveal">
-            Our Dedicated Mentorship Team
-          </p>
-        </div>
-        <div>
-          <a href="#" class="btn-primary">View More →</a>
-        </div>
-      </div>
-
-      <div class="mentors-grid">
-        <div class="mentor-card reveal-left delay-1">
-          <img src="./assets/images/mentor/dipan.png" alt="Dipan Ghataliya" />
-          <div class="mentor-overlay">
-            <div class="mentor-info">
-              <p class="mentor-name text-reveal">Dipan Sir</p>
-              <p class="mentor-role">ACCA (Founder)</p>
-              <a href="index.html" class="mentor-icon">
-                <img src="./assets/images/svg/fb.svg" />
-                <img src="./assets/images/svg/linkedin.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mentor-card reveal-left delay-2">
-          <img src="./assets/images/mentor/sakshe.png" alt="Sakshe" />
-          <div class="mentor-overlay">
-            <div class="mentor-info">
-              <p class="mentor-name text-reveal">Sakshe Ma’am</p>
-              <p class="mentor-role">ACCA</p>
-              <a href="index.html" class="mentor-icon">
-                <img src="./assets/images/svg/fb.svg" />
-                <img src="./assets/images/svg/linkedin.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mentor-card reveal-left delay-3">
-          <img src="./assets/images/mentor/tejas.png" alt="Harsh" />
-          <div class="mentor-overlay">
-            <div class="mentor-info">
-              <p class="mentor-name text-reveal">Tejas Sir</p>
-              <p class="mentor-role">CMA</p>
-              <a href="index.html" class="mentor-icon">
-                <img src="./assets/images/svg/fb.svg" />
-                <img src="./assets/images/svg/linkedin.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mentor-card reveal-left delay-4">
-          <img src="./assets/images/mentor/rachit.png" alt="Rachit" />
-          <div class="mentor-overlay">
-            <div class="mentor-info">
-              <p class="mentor-name text-reveal">Rachit Sir</p>
-              <p class="mentor-role">ACCA</p>
-              <a href="index.html" class="mentor-icon">
-                <img src="./assets/images/svg/fb.svg" />
-                <img src="./assets/images/svg/linkedin.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Partners -->
-    <section class="partners-section reveal-left delay-2">
-      <div class="partners-container">
-        <div class="partners-left reveal-left">
-          <div class="section-subtitle-wrapper">
-            <h4 class="section-subtitle text-reveal">OUR PARTNERS</h4>
-            <span class="subtitle-line"></span>
-          </div>
-          <div class="section-header">
-            <h2 class="section-title text-reveal">
-              Trusted by Global Employers
-            </h2>
-          </div>
-        </div>
-
-        <div class="partners-right reveal-right">
-          <div class="marquee-wrapper">
-            <div class="marquee marquee-left">
-              <div class="marquee-track">
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-morgan">
-                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-morgan">
-                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-morgan">
-                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/amazon.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-morgan">
-                  <img src="./assets/images/partners/morgan.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/ibm.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/kotak.png" alt="Amazon" />
-                </div>
-              </div>
-            </div>
-
-            <div class="marquee marquee-right">
-              <div class="marquee-track">
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/deloitte.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/accenture.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/deloitte.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/accenture.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/deloitte.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/accenture.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/deloitte.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img
-                    src="./assets/images/partners/accenture.png"
-                    alt="Amazon"
-                  />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/oracle.png" alt="Amazon" />
-                </div>
-                <div class="marquee-partner-card">
-                  <img src="./assets/images/partners/grant.png" alt="Amazon" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section-wrapper reveal-rotate delay-4">
-      <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
-        <span class="subtitle-line"></span>
-      </div>
-
-      <div class="section-header">
-        <div>
-          <h2 class="section-title text-reveal">
-            Inspiring students experiences
-          </h2>
-          <p class="section-description text-reveal">
-            Join us and become our next success story
-          </p>
-        </div>
-      </div>
-
-      <div class="testimonial-wrapper">
-        <div class="info-card">
-          <div class="info-content">
-            <img
-              src="./assets/images/logo-white.png"
-              alt="Career Compass"
-              class="career-logo"
-            />
-            <h3 class="text-reveal">
-              Students <br />
-              stories
-            </h3>
-            <div class="google-section">
-              <div class="google-image">
-                <img
-                  src="./assets/images/google.png"
-                  alt="Google"
-                  class="google-icon"
-                />
-                <span style="font-size: 18px">Google</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 10px">
-                <span class="score">4.8</span>
-                <div class="teacher-rating">
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                  <img src="./assets/images/TestStar.png" />
-                </div>
-              </div>
-              <div>
-                <p style="font-size: 11px">See all our reviews</p>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <span class="score">4.8</span>
+              <div class="teacher-rating">
+                <img src="./assets/images/TestStar.png" />
+                <img src="./assets/images/TestStar.png" />
+                <img src="./assets/images/TestStar.png" />
+                <img src="./assets/images/TestStar.png" />
+                <img src="./assets/images/TestStar.png" />
               </div>
             </div>
             <div>
-              <p class="info-text text-reveal">
-                Our work speaks for itself, but our students say it even better.
-              </p>
+              <p style="font-size: 11px">See all our reviews</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Swiper Carousel -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card">
-                <iframe
-                  class="youtube-iframe"
-                  src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
-                  title="YouTube Shorts"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="reveal delay-4">
-      <div class="section-wrapper">
-        <div class="section-subtitle-wrapper">
-          <h4 class="section-subtitle text-reveal">GALLERY</h4>
-          <span class="subtitle-line"></span>
-        </div>
-
-        <div class="section-header">
-          <div>
-            <h2 class="section-title text-reveal">Captured Moments</h2>
           </div>
           <div>
-            <a href="#" class="btn-primary">Explore More →</a>
+            <p class="info-text text-reveal">
+              Our work speaks for itself, but our students say it even better.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="gallery-slider">
-        <div class="slider-track">
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
+      <!-- Swiper Carousel -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <iframe class="youtube-iframe"
+                src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                title="YouTube Shorts" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <iframe class="youtube-iframe"
+                src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                title="YouTube Shorts" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <iframe class="youtube-iframe"
+                src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                title="YouTube Shorts" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide large">
-            <img src="./assets/images/gallery/image1.png" alt="" />
-          </div>
-
-          <div class="slide small">
-            <img src="./assets/images/gallery/image1.png" alt="" />
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <iframe class="youtube-iframe"
+                src="https://www.youtube.com/embed/neZwUtlSZZ4?autoplay=0&mute=0&modestbranding=1&rel=0"
+                title="YouTube Shorts" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Mobile App -->
-    <section class="section-wrapper reveal delay-4">
-      <div class="app-section">
-        <div class="app-image">
-          <img src="./assets/images/app/app.png" alt="Unacademy app preview" />
-        </div>
-
-        <div class="app-content">
-          <h2>Get the learning app</h2>
-          <p class="text-reveal">
-            Download lessons and learn anytime, anywhere with the Unacademy app
-          </p>
-
-          <ul class="app-features">
-            <li>
-              <img
-                src="./assets/images/list.png"
-                alt="Download on App Store"
-                class="list-icon"
-              />
-              Interactive live classes
-            </li>
-            <li>
-              <img
-                src="./assets/images/list.png"
-                alt="Download on App Store"
-                class="list-icon"
-              />Mock tests and practice questions
-            </li>
-            <li>
-              <img
-                src="./assets/images/list.png"
-                alt="Download on App Store"
-                class="list-icon"
-              />High-quality notes
-            </li>
-          </ul>
-
-          <div class="app-buttons">
-            <a href="#" class="store-btn">
-              <img
-                src="./assets/images/app/app_store.png"
-                alt="Download on App Store"
-              />
-            </a>
-            <a href="#" class="store-btn">
-              <img
-                src="./assets/images/app/play_store.png"
-                alt="Get it on Google Play"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blogs -->
-    <section class="section-wrapper reveal delay-2">
+  <!-- Gallery -->
+  <section class="reveal delay-4">
+    <div class="section-wrapper">
       <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">BLOGS</h4>
+        <h4 class="section-subtitle text-reveal">GALLERY</h4>
         <span class="subtitle-line"></span>
       </div>
 
       <div class="section-header">
         <div>
-          <h2 class="section-title text-reveal">Stories From Real People</h2>
-          <p class="section-description text-reveal">
-            Read inspiring stories from the Career Compass community.
-          </p>
+          <h2 class="section-title text-reveal">Captured Moments</h2>
         </div>
         <div>
           <a href="#" class="btn-primary">Explore More →</a>
         </div>
       </div>
+    </div>
 
-      <div class="blog-grid reveal-left">
-        <div class="blog-card">
-          <img src="./assets/images/blog/blog1.png" class="blog-image" />
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category text-reveal">STUDENT</p>
-              <p class="blog-time text-reveal">2 min read</p>
-            </div>
-            <p class="blog-text text-reveal">
-              What is ACCA? Course Details, Salary & Comparison 2025
-            </p>
-            <div class="blog-footer">
-              <p class="blog-author text-reveal">by Dipan sir</p>
-              <p class="blog-date">Jun 5, 2025</p>
-            </div>
-          </div>
+    <div class="gallery-slider">
+      <div class="slider-track">
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
         </div>
 
-        <div class="blog-card">
-          <img src="./assets/images/blog/blog2.png" class="blog-image" />
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category">STUDENT</p>
-              <p class="blog-time">2 min read</p>
-            </div>
-            <p class="blog-text text-reveal">
-              What is CFA? Full Form, Meaning & Course details 2025
-            </p>
-            <div class="blog-footer text-reveal">
-              <p class="blog-author">by Dipan sir</p>
-              <p class="blog-date">Jun 5, 2025</p>
-            </div>
-          </div>
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
         </div>
 
-        <div class="blog-card">
-          <img src="./assets/images/blog/blog3.png" class="blog-image" />
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category text-reveal">Career</p>
-              <p class="blog-time text-reveal">2 min read</p>
-            </div>
-            <p class="blog-text text-reveal">
-              What is US CMA? Course Details, Fees, and Eligibility
-            </p>
-            <div class="blog-footer">
-              <p class="blog-author text-reveal">by Dipan sir</p>
-              <p class="blog-date text-reveal">Jun 5, 2025</p>
-            </div>
-          </div>
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
         </div>
 
-        <div class="blog-card">
-          <img src="./assets/images/blog/blog4.png" class="blog-image" />
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category text-reveal">Course</p>
-              <p class="blog-time text-reveal">2 min read</p>
-            </div>
-            <p class="blog-text text-reveal">
-              What is FRM? Full Form, Course Details & Fees
-            </p>
-            <div class="blog-footer">
-              <p class="blog-author text-reveal">by Dipan sir</p>
-              <p class="blog-date text-reveal">Jun 5, 2025</p>
-            </div>
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide large">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+
+        <div class="slide small">
+          <img src="./assets/images/gallery/image1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile App -->
+  <section class="section-wrapper reveal delay-4">
+    <div class="app-section">
+      <div class="app-image">
+        <img src="./assets/images/app/app.png" alt="Unacademy app preview" />
+      </div>
+
+      <div class="app-content">
+        <h2>Get the learning app</h2>
+        <p class="text-reveal">
+          Download lessons and learn anytime, anywhere with the Unacademy app
+        </p>
+
+        <ul class="app-features">
+          <li>
+            <img src="./assets/images/list.png" alt="Download on App Store" class="list-icon" />
+            Interactive live classes
+          </li>
+          <li>
+            <img src="./assets/images/list.png" alt="Download on App Store" class="list-icon" />Mock tests and practice
+            questions
+          </li>
+          <li>
+            <img src="./assets/images/list.png" alt="Download on App Store" class="list-icon" />High-quality notes
+          </li>
+        </ul>
+
+        <div class="app-buttons">
+          <a href="#" class="store-btn">
+            <img src="./assets/images/app/app_store.png" alt="Download on App Store" />
+          </a>
+          <a href="#" class="store-btn">
+            <img src="./assets/images/app/play_store.png" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blogs -->
+  <section class="section-wrapper reveal delay-2">
+    <div class="section-subtitle-wrapper">
+      <h4 class="section-subtitle text-reveal">BLOGS</h4>
+      <span class="subtitle-line"></span>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title text-reveal">Stories From Real People</h2>
+        <p class="section-description text-reveal">
+          Read inspiring stories from the Career Compass community.
+        </p>
+      </div>
+      <div>
+        <a href="#" class="btn-primary">Explore More →</a>
+      </div>
+    </div>
+
+    <div class="blog-grid reveal-left">
+      <div class="blog-card">
+        <img src="./assets/images/blog/blog1.png" class="blog-image" />
+        <div class="blog-content">
+          <div class="blog-meta">
+            <p class="blog-category text-reveal">STUDENT</p>
+            <p class="blog-time text-reveal">2 min read</p>
+          </div>
+          <p class="blog-text text-reveal">
+            What is ACCA? Course Details, Salary & Comparison 2025
+          </p>
+          <div class="blog-footer">
+            <p class="blog-author text-reveal">by Dipan sir</p>
+            <p class="blog-date">Jun 5, 2025</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Youtube -->
-    <section class="section-wrapper reveal delay-4">
-      <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">YOUTUBE</h4>
-        <span class="subtitle-line"></span>
-      </div>
-      <div class="section-header">
-        <div>
-          <h2 class="section-title text-reveal">Explore Latest Videos</h2>
+      <div class="blog-card">
+        <img src="./assets/images/blog/blog2.png" class="blog-image" />
+        <div class="blog-content">
+          <div class="blog-meta">
+            <p class="blog-category">STUDENT</p>
+            <p class="blog-time">2 min read</p>
+          </div>
+          <p class="blog-text text-reveal">
+            What is CFA? Full Form, Meaning & Course details 2025
+          </p>
+          <div class="blog-footer text-reveal">
+            <p class="blog-author">by Dipan sir</p>
+            <p class="blog-date">Jun 5, 2025</p>
+          </div>
         </div>
-        <div>
-          <a href="#" class="btn-primary">Explore YouTube →</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="./assets/images/blog/blog3.png" class="blog-image" />
+        <div class="blog-content">
+          <div class="blog-meta">
+            <p class="blog-category text-reveal">Career</p>
+            <p class="blog-time text-reveal">2 min read</p>
+          </div>
+          <p class="blog-text text-reveal">
+            What is US CMA? Course Details, Fees, and Eligibility
+          </p>
+          <div class="blog-footer">
+            <p class="blog-author text-reveal">by Dipan sir</p>
+            <p class="blog-date text-reveal">Jun 5, 2025</p>
+          </div>
         </div>
       </div>
-      <div class="youtube-grid">
-        <div class="youtube-left reveal-left">
-          <div class="youtube-card">
-            <iframe
-              class="youtube-iframe"
+
+      <div class="blog-card">
+        <img src="./assets/images/blog/blog4.png" class="blog-image" />
+        <div class="blog-content">
+          <div class="blog-meta">
+            <p class="blog-category text-reveal">Course</p>
+            <p class="blog-time text-reveal">2 min read</p>
+          </div>
+          <p class="blog-text text-reveal">
+            What is FRM? Full Form, Course Details & Fees
+          </p>
+          <div class="blog-footer">
+            <p class="blog-author text-reveal">by Dipan sir</p>
+            <p class="blog-date text-reveal">Jun 5, 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Youtube -->
+  <section class="section-wrapper reveal delay-4">
+    <div class="section-subtitle-wrapper">
+      <h4 class="section-subtitle text-reveal">YOUTUBE</h4>
+      <span class="subtitle-line"></span>
+    </div>
+    <div class="section-header">
+      <div>
+        <h2 class="section-title text-reveal">Explore Latest Videos</h2>
+      </div>
+      <div>
+        <a href="#" class="btn-primary">Explore YouTube →</a>
+      </div>
+    </div>
+    <div class="youtube-grid">
+      <div class="youtube-left reveal-left">
+        <div class="youtube-card">
+          <iframe class="youtube-iframe"
+            src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="youtube-info">
+            <p class="youtube-text text-reveal">
+              ACCA FR - Rapid Revision with Dipan sir (session -1)
+            </p>
+            <p class="youtube-link text-reveal">See Playlist →</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="youtube-right reveal-right">
+        <div class="youtube-box">
+          <div class="youtube-video">
+            <iframe class="youtube-iframe"
               src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
-              title="YouTube video player"
-              frameborder="0"
+              title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <div class="youtube-info">
-              <p class="youtube-text text-reveal">
-                ACCA FR - Rapid Revision with Dipan sir (session -1)
-              </p>
-              <p class="youtube-link text-reveal">See Playlist →</p>
-            </div>
+              allowfullscreen></iframe>
+          </div>
+          <div class="youtube-desc">
+            <p class="youtube-text text-reveal">
+              ACCA FR - Rapid Revision with Dipan sir (session -1)
+            </p>
+            <a href="#" class="youtube-link">See Playlist →</a>
           </div>
         </div>
 
-        <div class="youtube-right reveal-right">
-          <div class="youtube-box">
-            <div class="youtube-video">
-              <iframe
-                class="youtube-iframe"
-                src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="youtube-desc">
-              <p class="youtube-text text-reveal">
-                ACCA FR - Rapid Revision with Dipan sir (session -1)
-              </p>
-              <a href="#" class="youtube-link">See Playlist →</a>
-            </div>
+        <div class="youtube-box">
+          <div class="youtube-video">
+            <iframe class="youtube-iframe"
+              src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
-
-          <div class="youtube-box">
-            <div class="youtube-video">
-              <iframe
-                class="youtube-iframe"
-                src="https://www.youtube.com/embed/j2JXwvrDU8E?rel=0&modestbranding=1&controls=1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="youtube-desc">
-              <p class="youtube-text text-reveal">
-                ACCA FR - Rapid Revision with Dipan sir (session -2)
-              </p>
-              <a href="#" class="youtube-link">See Playlist →</a>
-            </div>
+          <div class="youtube-desc">
+            <p class="youtube-text text-reveal">
+              ACCA FR - Rapid Revision with Dipan sir (session -2)
+            </p>
+            <a href="#" class="youtube-link">See Playlist →</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FAQ -->
-    <section class="section-wrapper">
-      <div class="faq-container">
-        <div class="faq-left">
-          <h2 class="faq-title text-reveal">FAQs</h2>
-          <p class="faq-desc text-reveal">
-            We’ve heard it all. Here’s everything you need to know before
-            working with us.
-          </p>
+  <!-- FAQ -->
+  <section class="section-wrapper">
+    <div class="faq-container">
+      <div class="faq-left">
+        <h2 class="faq-title text-reveal">FAQs</h2>
+        <p class="faq-desc text-reveal">
+          We’ve heard it all. Here’s everything you need to know before
+          working with us.
+        </p>
 
-          <div class="ask-question">
-            <p class="text-reveal">Can’t find your question?</p>
-            <a href="#" class="ask-link text-reveal">↳ Ask a Question</a>
-          </div>
-        </div>
-
-        <div class="faq-right reveal-up">
-          <div class="faq-item active">
-            <div class="faq-header">
-              <h3>Question 1</h3>
-              <button class="toggle-btn">×</button>
-            </div>
-            <div class="faq-body">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-header">
-              <h3>Question 2</h3>
-              <button class="toggle-btn">+</button>
-            </div>
-            <div class="faq-body">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-header">
-              <h3>Question 3</h3>
-              <button class="toggle-btn">+</button>
-            </div>
-            <div class="faq-body">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-header">
-              <h3>Question 4</h3>
-              <button class="toggle-btn">+</button>
-            </div>
-            <div class="faq-body">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <!-- Background decorative images -->
-      <img
-        src="./assets/images/footer/vector1.png"
-        alt=""
-        class="footer-vector footer-vector-left"
-      />
-      <img
-        src="./assets/images/footer/vector2.png"
-        alt=""
-        class="footer-vector footer-vector-right"
-      />
-
-      <div class="footer-container">
-        <div class="footer-col-1">
-          <img
-            src="./assets/images/logo-white.png"
-            alt="Career Compass Logo"
-            class="footer-logo"
-          />
-          <p class="footer-text">
-            For 8 years, Career Compass has guided aspiring accountants toward
-            success. We specialize in expert ACCA coaching and dedicated student
-            support.
-          </p>
-        </div>
-
-        <div class="footer-col-2">
-          <h3 class="footer-heading">Company</h3>
-          <ul class="footer-links">
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Placements</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col-3">
-          <h3 class="footer-heading">Resource</h3>
-          <ul class="footer-links">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Students Stories</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Payments</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col-4">
-          <h3 class="footer-heading">Contact</h3>
-          <ul class="footer-contact">
-            <li>
-              <img src="./assets/images/footer/call.svg" alt="phone" />
-              <span>+91 95122 35353</span>
-            </li>
-            <li>
-              <img src="./assets/images/footer/sms.svg" alt="email" />
-              <span>dipan@careercompass.co.in</span>
-            </li>
-            <li>
-              <img src="./assets/images/footer/location.svg" alt="address" />
-              <span>
-                708, Space Odyssey, 150 Feet Ring Rd, above Naturals Ice cream,
-                near KKV Hall, Bharatvan Society, Nalanda Society, Rajkot,
-                Gujarat 360007
-              </span>
-            </li>
-          </ul>
+        <div class="ask-question">
+          <p class="text-reveal">Can’t find your question?</p>
+          <a href="#" class="ask-link text-reveal">↳ Ask a Question</a>
         </div>
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="footer-bottom">
-        <div class="footer-bottom-container">
-          <div class="footer-bottom-links">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Legal</a>
+      <div class="faq-right reveal-up">
+        <div class="faq-item active">
+          <div class="faq-header">
+            <h3>Question 1</h3>
+            <button class="toggle-btn">×</button>
           </div>
-          <p class="footer-copy">© 2025 Copyright By Career Compass</p>
-          <div class="footer-socials">
-            <!-- YouTube -->
-            <a href="#" class="footer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h-.1s-5.6 0-8.6.4c-.4.1-1.3.1-2.1 1C.7 4.6.5 6.2.5 6.2S0 8 0 9.8v1.6c0 1.8.5 3.6.5 3.6s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.2.4 8.3.4s8.6 0 8.6-.4c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.5-1.8.5-3.6V9.8c0-1.8-.5-3.6-.5-3.6zM9.8 14.8V8.9l6.2 3-6.2 2.9z"
-                />
-              </svg>
-            </a>
+          <div class="faq-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
 
-            <!-- TikTok -->
-            <a href="#" class="footer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M12 2h3a5 5 0 005 5v3c-1.7 0-3.3-.5-4.7-1.5v7.5a6.5 6.5 0 11-6.5-6.5h.2v3a3.5 3.5 0 103.5 3.5V2z"
-                />
-              </svg>
-            </a>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Question 2</h3>
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="faq-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
 
-            <!-- LinkedIn -->
-            <a href="#" class="footer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M20.5 3h-17A1.5 1.5 0 002 4.5v15A1.5 1.5 0 003.5 21h17a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0020.5 3zM8.3 18.4H5.8V9h2.5v9.4zM7 7.7a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12 10.7h-2.5v-4.6c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4v4.7h-2.5V9h2.4v1.3h.1c.3-.6 1.2-1.3 2.4-1.3 2.6 0 3.1 1.7 3.1 4v5.4z"
-                />
-              </svg>
-            </a>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Question 3</h3>
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="faq-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
 
-            <!-- Instagram -->
-            <a href="#" class="footer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.8a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm0 6.9a2.7 2.7 0 110-5.4 2.7 2.7 0 010 5.4zm5.3-7.6a1.1 1.1 0 100-2.2 1.1 1.1 0 000 2.2z"
-                />
-              </svg>
-            </a>
-
-            <!-- Facebook -->
-            <a href="#" class="footer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.7h2.5l-.4 3h-2.1v7A10 10 0 0022 12z"
-                />
-              </svg>
-            </a>
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Question 4</h3>
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="faq-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 24,
-        loop: true,
-        autoplay: { delay: 3000 },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3.5 },
-        },
-      });
-    </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Background decorative images -->
+    <img src="./assets/images/footer/vector1.png" alt="" class="footer-vector footer-vector-left" />
+    <img src="./assets/images/footer/vector2.png" alt="" class="footer-vector footer-vector-right" />
 
-    <script>
-      const items = document.querySelectorAll(".faq-item");
+    <div class="footer-container">
+      <div class="footer-col-1">
+        <img src="./assets/images/logo-white.png" alt="Career Compass Logo" class="footer-logo" />
+        <p class="footer-text">
+          For 8 years, Career Compass has guided aspiring accountants toward
+          success. We specialize in expert ACCA coaching and dedicated student
+          support.
+        </p>
+      </div>
 
-      items.forEach((item) => {
-        const button = item.querySelector(".toggle-btn");
+      <div class="footer-col-2">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Placements</a></li>
+        </ul>
+      </div>
 
-        button.addEventListener("click", () => {
-          const isActive = item.classList.contains("active");
+      <div class="footer-col-3">
+        <h3 class="footer-heading">Resource</h3>
+        <ul class="footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Students Stories</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Payments</a></li>
+        </ul>
+      </div>
 
-          // close all
-          items.forEach((i) => {
-            i.classList.remove("active");
-            i.querySelector(".toggle-btn").textContent = "+";
-          });
+      <div class="footer-col-4">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-contact">
+          <li>
+            <img src="./assets/images/footer/call.svg" alt="phone" />
+            <span>+91 95122 35353</span>
+          </li>
+          <li>
+            <img src="./assets/images/footer/sms.svg" alt="email" />
+            <span>dipan@careercompass.co.in</span>
+          </li>
+          <li>
+            <img src="./assets/images/footer/location.svg" alt="address" />
+            <span>
+              708, Space Odyssey, 150 Feet Ring Rd, above Naturals Ice cream,
+              near KKV Hall, Bharatvan Society, Nalanda Society, Rajkot,
+              Gujarat 360007
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-          // open the clicked one
-          if (!isActive) {
-            item.classList.add("active");
-            button.textContent = "×";
-          }
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div class="footer-bottom-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+          <a href="#">Legal</a>
+        </div>
+        <p class="footer-copy">© 2025 Copyright By Career Compass</p>
+        <div class="footer-socials">
+          <!-- YouTube -->
+          <a href="#" class="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h-.1s-5.6 0-8.6.4c-.4.1-1.3.1-2.1 1C.7 4.6.5 6.2.5 6.2S0 8 0 9.8v1.6c0 1.8.5 3.6.5 3.6s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.2.4 8.3.4s8.6 0 8.6-.4c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.5-1.8.5-3.6V9.8c0-1.8-.5-3.6-.5-3.6zM9.8 14.8V8.9l6.2 3-6.2 2.9z" />
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="#" class="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2h3a5 5 0 005 5v3c-1.7 0-3.3-.5-4.7-1.5v7.5a6.5 6.5 0 11-6.5-6.5h.2v3a3.5 3.5 0 103.5 3.5V2z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="#" class="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20.5 3h-17A1.5 1.5 0 002 4.5v15A1.5 1.5 0 003.5 21h17a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0020.5 3zM8.3 18.4H5.8V9h2.5v9.4zM7 7.7a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12 10.7h-2.5v-4.6c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4v4.7h-2.5V9h2.4v1.3h.1c.3-.6 1.2-1.3 2.4-1.3 2.6 0 3.1 1.7 3.1 4v5.4z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="#" class="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.8a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm0 6.9a2.7 2.7 0 110-5.4 2.7 2.7 0 010 5.4zm5.3-7.6a1.1 1.1 0 100-2.2 1.1 1.1 0 000 2.2z" />
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="#" class="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.7h2.5l-.4 3h-2.1v7A10 10 0 0022 12z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 3000 },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3.5 },
+      },
+    });
+  </script>
+
+  <script>
+    const items = document.querySelectorAll(".faq-item");
+
+    items.forEach((item) => {
+      const button = item.querySelector(".toggle-btn");
+
+      button.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // close all
+        items.forEach((i) => {
+          i.classList.remove("active");
+          i.querySelector(".toggle-btn").textContent = "+";
         });
+
+        // open the clicked one
+        if (!isActive) {
+          item.classList.add("active");
+          button.textContent = "×";
+        }
       });
-    
-    </script>
-    <script src="./assets/js/main.js"></script>
-  </body>
+    });
+
+  </script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

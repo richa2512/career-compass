@@ -9,13 +9,15 @@
 
   <link rel="stylesheet" href="./assets/css/common.css" />
   <link rel="stylesheet" href="./assets/css/course-section.css" />
-  <link rel="stylesheet" href="./assets/css/course.css" />
   <link rel="stylesheet" href="./assets/css/pagination.css" />
+  <link rel="stylesheet" href="./assets/css/hero-carousel.css" />
+  <link rel="stylesheet" href="./assets/css/filter-tabs.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -49,7 +51,6 @@
         </ul>
       </nav>
 
-
       <div class="header-right">
         <a href="cart.html" class="cart-icon">
           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,57 +76,63 @@
     </div>
 
     <div id="mobileMenu" class="mobile-menu hidden">
-      <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="courses.html" class="nav-link">ACCA Courses</a>
-      <a href="combos.html" class="nav-link">Courses & Combos</a>
+      <a href="combos.html" class="nav-link nav-link-active">Courses & Combos</a>
       <a href="about.html" class="nav-link">About Us</a>
       <a href="contact.html" class="nav-link">Contact Us</a>
     </div>
   </header>
 
-  <!-- ✅ COURSE SECTION -->
-
-  <!-- hero section -->
   <section class="hero reveal delay-1">
-    <div class="overlay"></div>
     <div class="content">
-      <h1 class="text-reveal">Master Your ACCA Journey</h1>
-      <p class="subtitle text-reveal">
-        Professional accounting courses designed by industry experts.<br />
-        From knowledge level to professional certification.
-      </p>
-
-      <div class="info">
-        <div class="info-item text-reveal">
-          <img src="./assets/images/svg/clock.svg" alt="" width="24" height="24" />
-          6-12 Months
+      <!-- Left Content -->
+      <div class="hero-left">
+        <div>
+          <h1 class="text-reveal">Best Selling Combos</h1>
+          <p class="subtitle text-reveal">
+            Professional accounting courses designed by industry experts.<br />
+            From knowledge level to professional certification.
+          </p>
         </div>
 
-        <div class="info-item">
-          <img src="./assets/images/svg/video.svg" alt="" width="24" height="24" />
-          560+ Video Lectures
+        <div class="hero-info">
+          <div class="info reveal delay-1">
+            <div>
+              <img src="./assets/images/combos/clock.png" alt="" width="24" height="24" />6-12 Months
+            </div>
+            <div>
+              <img src="./assets/images/combos/video.png" alt="" width="24" height="24" />
+              560+ Video Lectures
+            </div>
+            <div>
+              <img src="./assets/images/combos/book.png" alt="" width="24" height="24" />
+              13 Courses
+            </div>
+            <div>
+              <img src="./assets/images/combos/users.png" alt="" width="24" height="24" />5,000+ Students
+            </div>
+          </div>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span>4.9 (1,234 reviews)</span>
+          </div>
         </div>
 
-        <div class="info-item">
-          <img src="./assets/images/svg/book.svg" alt="" width="24" height="24" />
-          13 Courses
-        </div>
-
-        <div class="info-item">
-          <img src="./assets/images/svg/users.svg" alt="" width="24" height="24" />
-          5,000+ Students
-        </div>
       </div>
 
-      <div class="rating">
-        <span class="stars">
-          <img src="assets/images/icons/star.svg" alt="" />
-          <img src="assets/images/icons/star.svg" alt="" />
-          <img src="assets/images/icon/star.svg" alt="" />
-          <img src="assets/images/icons/star.svg" alt="" />
-          <img src="assets/images/icons/star.svg" alt="" />
-        </span>
-        <span style="color: white">4.9 (1,234 reviews)</span>
+      <!-- Right Carousel -->
+      <div class="hero-carousel-wrapper">
+        <div class="hero-carousel" id="heroCarousel">
+          <!-- Cards will be duplicated by JavaScript for infinite scroll -->
+        </div>
       </div>
     </div>
   </section>
@@ -133,53 +140,68 @@
   <!-- Main Container -->
   <div class="container">
     <!-- Header Section -->
-    <div class="header-section">
-      <div class="label text-reveal">Our courses</div>
-      <h1 class="main-title text-reveal">Explore Our Courses</h1>
+    <div class="header-section reveal delay-3">
+      <div class="label text-reveal">NOT FOUND YOUR COMBO COURSE ?</div>
+      <h1 class="main-title text-reveal">Explore Our Individual Courses</h1>
       <p class="description text-reveal">
-        Explore 500+ hours of expert-led courses and learn at your own pace.
-        Browse now and start your journey!
+        Explore 500+ hours of expert-led courses and learn at your own pace. Browse now and start your journey!
       </p>
     </div>
 
-    <!-- filters section -->
-    <div class="filters-row">
-      <div class="filter-box reveal delay-11">
-        <button class="filter-btn active">
-          All Courses <span class="count-circle">15</span>
+    <!-- Filter Tabs Section -->
+    <div class="filter-tabs-wrapper">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">
+          All Courses
+          <span class="tab-badge">6</span>
         </button>
-        <button class="filter-btn reveal delay-2">
-          Knowledge Level <span class="count-circle">5</span>
+        <button class="filter-tab" data-filter="knowledge">
+          Knowledge Level
+          <span class="tab-badge">2</span>
         </button>
-        <button class="filter-btn reveal delay-3">
-          Skill Level <span class="count-circle">5</span>
+        <button class="filter-tab" data-filter="skill">
+          Skill Level
+          <span class="tab-badge">2</span>
         </button>
-        <button class="filter-btn reveal delay-4">
-          Professional Level <span class="count-circle">5</span>
+        <button class="filter-tab" data-filter="professional">
+          Professional Level
+          <span class="tab-badge">2</span>
         </button>
       </div>
 
-      <div class="filter-controls">
-        <div class="showing">Showing <strong>15</strong> Courses</div>
-
+      <div class="filter-right">
+        <span class="showing-text">Showing 6 Courses</span>
         <div class="sort-select">
           <svg class="sort-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
           </svg>
-          <select aria-label="Sort by" class="sort-dropdown">
-            <option value="latest">Latest</option>
-            <option value="popular">Most Popular</option>
-            <option value="low">Price: Low to High</option>
-          </select>
+          <span>Latest</span>
+          <span>▼</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-wrapper" style="display: none;">
+      <div class="filter-section">
+        <span class="showing-text text-reveal">Showing 15 Courses</span>
+        <div class="sort-select reveal delay-1">
+          <svg class="sort-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+          </svg>
+          <span>Latest</span>
+          <span>▼</span>
         </div>
       </div>
     </div>
 
     <!-- Cards Grid -->
-    <div class="cards-grid reveal delay-1" id="coursesGrid">
+    <div class="cards-grid reveal delay-2" id="coursesGrid">
       <!-- Course cards will be generated here -->
     </div>
+
     <!--Pagination-->
     <div class="page-wrapper">
       <div class="pagination" id="pagination"></div>
@@ -316,96 +338,85 @@
     });
     const coursesData = [
       {
-        title: "BT- Business Technology (knowledge level)",
+        title: "Bridge Course",
         discount: "₹18,000",
         lessons: "24+",
         duration: "24 Months",
         students: "120",
         instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
+        currentPrice: "₹59,000",
+        originalPrice: "₹65,000",
+        category: "skill",
+        categoryLabel: "Skill Level",
+        backgroundImage: "./assets/images/combos/BridgeCourse.png"
       },
       {
-        title: "Knowledge Level Combo (3 Papers - BT, MA, FA)",
+        title: "Advanced Audit and Assurance",
         discount: "₹18,000",
         lessons: "24+",
         duration: "24 Months",
         students: "100",
         instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
+        currentPrice: "₹36,000",
+        originalPrice: "₹46,000",
+        category: "knowledge",
+        categoryLabel: "Knowledge Level",
+        backgroundImage: "./assets/images/combos/AAA.png"
       },
       {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
+        title: "Business Technology",
+        discount: "₹26,000",
+        lessons: "36+",
+        duration: "24 Months",
+        students: "150",
+        instructor: "Dipan sir",
+        currentPrice: "₹89,900",
+        originalPrice: "₹1,15,900",
+        category: "professional",
+        categoryLabel: "Professional Level",
+        backgroundImage: "./assets/images/combos/BT.png"
+      },
+      {
+        title: "Financial Accounting",
         discount: "₹18,000",
         lessons: "24+",
         duration: "24 Months",
         students: "120",
         instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
+        currentPrice: "₹59,000",
+        originalPrice: "₹65,000",
+        category: "skill",
+        categoryLabel: "Skill Level",
+        backgroundImage: "./assets/images/combos/FA.png"
       },
       {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
+        title: "Advanced Taxation",
         discount: "₹18,000",
         lessons: "24+",
         duration: "24 Months",
-        students: "120",
+        students: "100",
         instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
+        currentPrice: "₹36,000",
+        originalPrice: "₹46,000",
+        category: "knowledge",
+        categoryLabel: "Knowledge Level",
+        backgroundImage: "./assets/images/combos/ATX.png"
       },
       {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-        discount: "₹18,000",
-        lessons: "24+",
+        title: "The Taxation",
+        discount: "₹26,000",
+        lessons: "36+",
         duration: "24 Months",
-        students: "120",
+        students: "150",
         instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
-      },
-      {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-        discount: "₹18,000",
-        lessons: "24+",
-        duration: "24 Months",
-        students: "120",
-        instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
-      },
-      {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-        discount: "₹18,000",
-        lessons: "24+",
-        duration: "24 Months",
-        students: "120",
-        instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
-      },
-      {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-        discount: "₹18,000",
-        lessons: "24+",
-        duration: "24 Months",
-        students: "120",
-        instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
-      },
-      {
-        title: "Skill Level Combo (4 Papers - PM | FR | FM | AA )",
-        discount: "₹18,000",
-        lessons: "24+",
-        duration: "24 Months",
-        students: "120",
-        instructor: "Dipan sir",
-        currentPrice: "₹15,000",
-        originalPrice: "18,000",
-      },
+        currentPrice: "₹89,900",
+        originalPrice: "₹1,15,900",
+        category: "professional",
+        categoryLabel: "Professional Level",
+        backgroundImage: "./assets/images/combos/TX.png"
+      }
     ];
+
     // SVG icons as constants
     const ICONS = {
       lesson: `<svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -421,42 +432,41 @@
 </svg>
 `,
     };
+
     // Function to create a course card
     function createCourseCard(course) {
       return `
-                <div class="course-card">
-                    <div class="course-card-image">
+                <div class="course-card" data-category="${course.category}">
+                    <div class="card-image" style="background-image: url('${course.backgroundImage}');">
                         <div class="professional-badge">
                             <img src="./assets/images/svg/trophy.svg" alt="" width="12" height="12"/>
-                            Professional Level
+                            ${course.categoryLabel}
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">${course.title}</h3>
+                        <h3 class="card-title text-reveal">${course.title}</h3>
                         <div class="card-stats">
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.lesson}
                                 ${course.lessons} Lesson
                             </div>
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.clock}
                                 ${course.duration}
                             </div>
-                            <div class="stat-item">
+                            <div class="stats-item">
                                 ${ICONS.users}
                                 ${course.students} Students
                             </div>
                         </div>
                         <div class="price-section">
-                                <span class="current-price">${course.currentPrice}</span>
+                                <span class="current-price text-reveal">${course.currentPrice}</span>
                                 <span class="original-price">${course.originalPrice}</span>
                             </div>
                         
                         <div class="card-footer">
                           <div class="instructor-info">
-                       <div class="instructor-avatar">
-  <img src="./assets/images/course/Ellipse.png" alt="Instructor" />
-</div>
+                            <div class="instructor-avatar"><img src="./assets/images/course/Ellipse.png" alt="Instructor" /></div>
                             <span class="instructor-name">${course.instructor}</span>
                         </div>
                             
@@ -466,18 +476,84 @@
                 </div>
             `;
     }
+
     // Render all courses
-    function renderCourses() {
+    function renderCourses(filteredData = null) {
       const grid = document.getElementById("coursesGrid");
-      grid.innerHTML = coursesData
+      const dataToRender = filteredData || coursesData;
+      grid.innerHTML = dataToRender
         .map((course) => createCourseCard(course))
         .join("");
     }
 
+    // Filter functionality
+    function initFilterTabs() {
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const showingText = document.querySelector('.filter-tabs-wrapper .showing-text');
+
+      // Count courses by category
+      function countCourses() {
+        const counts = {
+          all: coursesData.length,
+          knowledge: coursesData.filter(c => c.category === 'knowledge').length,
+          skill: coursesData.filter(c => c.category === 'skill').length,
+          professional: coursesData.filter(c => c.category === 'professional').length
+        };
+
+        // Update badge counts
+        filterTabs.forEach(tab => {
+          const filter = tab.getAttribute('data-filter');
+          const badge = tab.querySelector('.tab-badge');
+          if (badge && counts[filter] !== undefined) {
+            badge.textContent = counts[filter];
+          }
+        });
+      }
+
+      // Filter courses
+      function filterCourses(category) {
+        let filteredData = coursesData;
+
+        if (category !== 'all') {
+          filteredData = coursesData.filter(course => course.category === category);
+        }
+
+        // Re-render courses
+        renderCourses(filteredData);
+
+        // Update showing text
+        if (showingText) {
+          showingText.textContent = `Showing ${filteredData.length} Courses`;
+        }
+      }
+
+      // Add click event listeners to filter tabs
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          // Remove active class from all tabs
+          filterTabs.forEach(t => t.classList.remove('active'));
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+
+          // Get filter category
+          const category = this.getAttribute('data-filter');
+
+          // Filter courses
+          filterCourses(category);
+        });
+      });
+
+      // Initialize counts
+      countCourses();
+    }
+
     // Initialize on page load
-    document.addEventListener("DOMContentLoaded", renderCourses);
+    document.addEventListener("DOMContentLoaded", function () {
+      renderCourses();
+      initFilterTabs();
+    });
   </script>
-  <script src="./assets/js/main.js"></script>
 
   <script>
     const items = document.querySelectorAll(".faq-item");
@@ -502,6 +578,142 @@
       });
     });
   </script>
+
+  <script>
+    // Hero Carousel Data
+    const heroCarouselData = [
+      {
+        title: "KNOWLEDGE",
+        subtitles: "LEVEL COMBO",
+        subtitle: "3 Papers - BT | MA | FA",
+        coursesNum: "3+",
+        coursesLabel: "Courses",
+        durationNum: "24",
+        durationLabel: "Months",
+        studentsNum: "120+",
+        studentsLabel: "Students",
+        currentPrice: "₹36,000",
+        originalPrice: "₹51,000",
+        savePercent: "SAVE 30%",
+        isBestSeller: true,
+        // Add your image paths here:
+        backgroundImage: "./assets/images/combos/bg.png",
+        personImage: "./assets/images/combos/instructor.png",
+        accaLogo: "./assets/images/combos/acca.png"
+      },
+      {
+        title: "SKILL",
+        subtitles: "LEVEL COMBO",
+        subtitle: "4 Papers - PM | FR | FM | AA",
+        coursesNum: "4+",
+        coursesLabel: "Courses",
+        durationNum: "24",
+        durationLabel: "Months",
+        studentsNum: "120+",
+        studentsLabel: "Students",
+        currentPrice: "₹59,900",
+        originalPrice: "₹77,900",
+        savePercent: "SAVE 30%",
+        isBestSeller: true,
+        // Add your image paths here:
+        backgroundImage: "./assets/images/combos/bg.png",
+        personImage: "./assets/images/combos/instructor.png",
+        accaLogo: "./assets/images/combos/acca.png"
+      },
+      {
+        title: "STRATEGIC",
+        subtitles: "LEVEL COMBO",
+        subtitle: "6 Papers - SBL | SBR | AFM | APM | ATX | AAA",
+        coursesNum: "6+",
+        coursesLabel: "Courses",
+        durationNum: "24",
+        durationLabel: "Months",
+        studentsNum: "120+",
+        studentsLabel: "Students",
+        currentPrice: "₹89,900",
+        originalPrice: "₹1,15,900",
+        savePercent: "SAVE 30%",
+        isBestSeller: true,
+        // Add your image paths here:
+        backgroundImage: "./assets/images/combos/bg.png",
+        personImage: "./assets/images/combos/instructor.png",
+        accaLogo: "./assets/images/combos/acca.png"
+      }
+    ];
+
+    function createHeroCard(course) {
+      return `
+          <div class="hero-course-card" style="background-image: url('${course.backgroundImage}');">
+            ${course.isBestSeller ? `
+              <div class="best-seller-badge">
+                <img src="${course.accaLogo}" alt="ACCA Logo" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+            ` : ''}
+            
+            <div class="card-content-wrapper">
+              <!-- Left Column: Header and Footer -->
+              <div class="card-left-column">
+                <div class="save-badge">${course.savePercent}</div>
+                <div class="card-header">
+                  <h3 class="card-title-hero">${course.title}</h3>
+                  <p class="card-subtitles">${course.subtitles}</p>
+                  <p class="card-subtitle">${course.subtitle}</p>
+                  
+                  <div class="card-badges">
+                    <span class="badge-pill">
+                      <span class="badge-num">${course.coursesNum}</span>
+                      <span class="badge-label">${course.coursesLabel}</span>
+                    </span>
+                    <span class="badge-pill">
+                      <span class="badge-num">${course.durationNum}</span>
+                      <span class="badge-label">${course.durationLabel}</span>
+                    </span>
+                    <span class="badge-pill">
+                      <span class="badge-num">${course.studentsNum}</span>
+                      <span class="badge-label">${course.studentsLabel}</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="card-footer-hero">
+                  <div class="price-section-hero">
+                    <div class="current-price-hero">${course.currentPrice}</div>
+                    <div class="original-price-hero">${course.originalPrice}</div>
+                  </div>
+                  <button class="add-to-cart-hero">Add to Cart</button>
+                </div>
+              </div>
+
+              <!-- Right Column: Instructor Image -->
+              <div class="card-right-column">
+                <img src="${course.personImage}" 
+                     alt="Instructor" 
+                     class="instructor-image-hero"
+                     onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        `;
+    }
+
+    function initHeroCarousel() {
+      const carousel = document.getElementById('heroCarousel');
+      if (!carousel) return;
+
+      // Create cards HTML
+      const cardsHTML = heroCarouselData.map(course => createHeroCard(course)).join('');
+
+      // Duplicate cards for seamless infinite scroll
+      carousel.innerHTML = cardsHTML + cardsHTML;
+    }
+
+    // Initialize hero carousel on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      initHeroCarousel();
+      renderCourses(); // Keep existing courses rendering
+    });
+  </script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
