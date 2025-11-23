@@ -86,16 +86,8 @@
   margin-bottom: 40px;
 }
 
-/* Mobile: 1 column */
-@media (max-width: 480px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
 /* Tablet: 2 columns */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -149,7 +141,7 @@
   left: 12px;
   background: white;
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 11px;
   font-weight: 600;
   color: #1e5a7d;
