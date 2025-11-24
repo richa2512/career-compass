@@ -1665,11 +1665,15 @@ p.text-reveal {
 .slide.large {
   width: 400px;
   height: 400px;
+  min-width: 400px;
+  min-height: 400px;
 }
 
 .slide.small {
   width: 320px;
   height: 320px;
+  min-width: 320px;
+  min-height: 320px;
 }
 
 /* AUTO SCROLL ANIMATION */
