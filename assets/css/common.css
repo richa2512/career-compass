@@ -62,7 +62,6 @@ a {
   line-height: 32px;
 }
 
-
 /* =============================== */
 /* PREMIUM FRAMER-STYLE ANIMATIONS */
 /* =============================== */
@@ -463,7 +462,6 @@ p.text-reveal {
   line-height: 1.6;
 }
 
-
 /* ============================= */
 /* Header Section  */
 /* ============================= */
@@ -660,12 +658,19 @@ p.text-reveal {
 }
 
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
   flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  gap: 16px;
+  gap: 18px;
+  z-index: 200;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
 }
 
 .mobile-menu a {
@@ -676,6 +681,28 @@ p.text-reveal {
 
 .mobile-menu a:hover {
   color: #1d587a;
+}
+
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 150;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-backdrop.show {
+  opacity: 1;
+  transform: translateX(0);
+
+}
+
+.mobile-backdrop.hidden {
+  pointer-events: none;
+  transform: translateX(-100%);
+
 }
 
 @media (min-width: 640px) {
@@ -720,7 +747,6 @@ p.text-reveal {
 .show {
   display: flex;
 }
-
 
 /* Footer start */
 .footer {
@@ -992,7 +1018,6 @@ p.text-reveal {
   }
 }
 
-
 /* ============================= */
 /* FAQ Section  */
 /* ============================= */
@@ -1126,8 +1151,6 @@ p.text-reveal {
   color: #6b7280;
   margin: 0;
 }
-
-
 
 /* ============================= */
 /* YouTube Section  */
