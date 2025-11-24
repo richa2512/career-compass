@@ -75,23 +75,40 @@
   margin-top: 1.5rem;
 }
 
-.acca-stats .stat h2 {
+.acca-stats .stat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.acca-stats .stat .stat-number {
   font-size: 28px;
   margin: 0;
   font-weight: 700;
   line-height: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.acca-stats .stat p {
-  font-size: 13px;
-  opacity: 0.85;
+.acca-stats .stat .stat-label {
+  font-size: 12px;
   margin-top: 10px;
   line-height: 1.3;
+  font-weight: 600;
+  color: #C5C5C5;
 }
 
 .acca-stats .stat:not(:first-child) {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 25px;
+}
+
+.digit-scroll div {
+  color: #fff;
 }
 
 /* ==================== GOOGLE RATING ==================== */

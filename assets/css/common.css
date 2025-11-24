@@ -33,6 +33,36 @@ a {
   text-decoration: none;
 }
 
+/* Odometer wrapper */
+.digits {
+  display: inline-flex;
+  gap: 2px;
+}
+
+/* Each digit column */
+.digit-container {
+  overflow: hidden;
+  height: 32px; /* match your font-size */
+  width: 22px;
+  position: relative;
+}
+
+/* Digits inside the scroll */
+.digit-scroll {
+  position: absolute;
+  top: 0;
+  transition: transform 0.6s ease-out;
+}
+
+.digit-scroll div {
+  height: 32px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  line-height: 32px;
+}
+
+
 /* =============================== */
 /* PREMIUM FRAMER-STYLE ANIMATIONS */
 /* =============================== */

@@ -380,45 +380,45 @@ if (seeAllLessonsBtn) {
 
 const counters = document.querySelectorAll(".count");
 
-const countObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = +counter.getAttribute("data-target");
-        const duration = 2000; // total animation duration (ms)
-        const startTime = performance.now();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
 
-        // Detect suffix (like +, %, etc.)
-        const suffixMatch = counter.textContent.match(/[^0-9]+/);
-        const suffix = suffixMatch ? suffixMatch[0] : "";
+    const el = entry.target;
+    const targetValue = el.getAttribute("data-target");
+    const digitsWrapper = el.querySelector(".digits");
 
-        // Easing function: easeOutCubic → fast start, slow finish
-        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+    // Split target into individual digits
+    const digits = targetValue.split("");
 
-        const updateCount = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = easeOutCubic(progress);
-          const currentValue = Math.floor(eased * target);
+    digitsWrapper.innerHTML = ""; // reset
 
-          counter.textContent = currentValue.toLocaleString() + suffix;
+    digits.forEach((digit, index) => {
+      // Container for each digit
+      const container = document.createElement("div");
+      container.className = "digit-container";
 
-          if (progress < 1) {
-            requestAnimationFrame(updateCount);
-          } else {
-            counter.textContent = target.toLocaleString() + suffix;
-          }
-        };
+      // Scroll element holding numbers 0-9
+      const scroll = document.createElement("div");
+      scroll.className = "digit-scroll";
 
-        requestAnimationFrame(updateCount);
-        observer.unobserve(counter);
+      for (let i = 0; i <= 9; i++) {
+        const d = document.createElement("div");
+        d.textContent = i;
+        scroll.appendChild(d);
       }
-    });
-  },
-  { threshold: 0.4 }
-);
 
-counters.forEach((counter) => {
-  countObserver.observe(counter);
-});
+      container.appendChild(scroll);
+      digitsWrapper.appendChild(container);
+
+      // Animate with slight stagger for natural look
+      setTimeout(() => {
+        scroll.style.transform = `translateY(-${digit * 32}px)`; // height per digit
+      }, index * 200);
+    });
+
+    observer.unobserve(el);
+  });
+}, { threshold: 0.8 });
+
+counters.forEach((counter) => observer.observe(counter));
