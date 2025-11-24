@@ -225,11 +225,24 @@ if (track && prevBtn && nextBtn && cards.length > 0) {
 // Mobile menu toggle
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
+const mobileBackdrop = document.getElementById("mobileBackdrop");
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
     mobileMenu.classList.toggle("show");
+
+    mobileBackdrop.classList.toggle("hidden");
+    mobileBackdrop.classList.toggle("show");
+  });
+
+  // Tap on backdrop closes menu
+  mobileBackdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("show");
+
+    mobileBackdrop.classList.add("hidden");
+    mobileBackdrop.classList.remove("show");
   });
 }
 
@@ -422,3 +435,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.8 });
 
 counters.forEach((counter) => observer.observe(counter));
+
