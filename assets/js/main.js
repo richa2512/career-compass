@@ -459,4 +459,89 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach((counter) => observer.observe(counter));
 });
 
+// ===============================
+// ACCA SLIDER DATA AND GENERATION (NEW CODE)
+// ===============================
 
+const studentRankings = [
+  {
+    name: "Divyang Manglani",
+    examInfo: "FR 83",
+    imageSrc: "assets/images/acca/divyang.png",
+  },
+  {
+    name: "Upadhyay Maharshi",
+    examInfo: "LAW 81",
+    imageSrc: "assets/images/acca/upadhyay.png",
+  },
+  {
+    name: "Palak Ganatra",
+    examInfo: "BT 80",
+    imageSrc: "assets/images/acca/palak.png",
+  },
+  {
+    name: "Parth Mehta",
+    examInfo: "TX 80",
+    imageSrc: "assets/images/acca/parth.png",
+  },
+  {
+    name: "Mahesh Vira",
+    examInfo: "FR 77",
+    imageSrc: "assets/images/acca/mahesh.png",
+  },
+  {
+    name: "Viyati Kamdar",
+    examInfo: "FM 76",
+    imageSrc: "assets/images/acca/viyati.png",
+  },
+  {
+    name: "Jay Bhandari",
+    examInfo: "PM 75",
+    imageSrc: "assets/images/acca/jay.png",
+  },
+  {
+    name: "Rohit Sharma",
+    examInfo: "SBL 74",
+    imageSrc: "assets/images/acca/rohit.png",
+  },
+  // Add more student objects here as needed!
+];
+
+// Function to generate the HTML for a single student slide
+function createStudentSlideHTML(student) {
+  return `
+        <div class="slide">
+            <div class="slide-image">
+                <img src="${student.imageSrc}" alt="${student.name}" />
+            </div>
+            <div class="student-data">
+                <h4>${student.name}</h4>
+                <p class="exam-info">${student.examInfo}</p>
+            </div>
+        </div>
+    `;
+}
+
+// Logic to generate and insert slides into the container
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderContainer = document.getElementById("studentSlider");
+
+  // Only proceed if the container exists and there is data
+  if (sliderContainer && studentRankings.length > 0) {
+    let allSlidesHTML = [];
+
+    // Loop 1: Generate the slides for the main view
+    studentRankings.forEach((student) => {
+      allSlidesHTML.push(createStudentSlideHTML(student));
+    });
+
+    // Loop 2: Repeat the slides for the seamless infinite scroll effect
+    // It's common practice to repeat the set once for a smooth loop.
+    studentRankings.forEach((student) => {
+      allSlidesHTML.push(createStudentSlideHTML(student));
+    });
+
+    // Inject all generated HTML into the container
+    sliderContainer.innerHTML = allSlidesHTML.join("");
+  }
+});

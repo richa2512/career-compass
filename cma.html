@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/partners.css" />
     <link rel="stylesheet" href="./assets/css/testimonial.css" />
     <link rel="stylesheet" href="./assets/css/mobile-app.css" />
+    <link rel="stylesheet" href="./assets/css/cma.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -114,9 +115,9 @@
       </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="acca-main-container">
-      <section class="acca-hero section-wrapper">
+      <!-- HERO SECTION -->
+      <section class="acca-hero section-wrapper reveal delay-1">
         <div class="acca-container">
           <!-- LEFT SIDE -->
           <div class="acca-left">
@@ -124,8 +125,28 @@
               <img src="assets/images/cma.svg" alt="" />
             </div>
 
-            <h1>US CMA</h1>
-            <p class="subtext">Certified Management Accountant</p>
+            <!-- 👇 MOVED GOOGLE RATING HERE -->
+            <div class="acca-rating-bottom">
+              <div class="google-logo-group reveal-left">
+                <img src="assets/images/google.png" alt="" />
+              </div>
+
+              <div class="rating-stack reveal-right">
+                <div class="rating-top-row">
+                  <span class="rating-number">4.8</span>
+                  <div class="rating-stars">
+                    <img src="assets/images/TestStar.png" alt="" />
+                    <img src="assets/images/TestStar.png" alt="" />
+                    <img src="assets/images/TestStar.png" alt="" />
+                    <img src="assets/images/TestStar.png" alt="" />
+                    <img src="assets/images/TestStar.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1 class="text-reveal">US CMA</h1>
+            <p class="subtext text-reveal">Certified Management Accountant</p>
 
             <!-- STATS SECTION -->
             <div class="acca-stats">
@@ -139,7 +160,7 @@
                 </p>
               </div>
               <div class="stat">
-                <p class="stat-number count" data-target="2000">
+                <p class="stat-number count" data-target="2875">
                   <span class="digits"></span>+
                 </p>
                 <p class="stat-label text-reveal">
@@ -157,33 +178,23 @@
               </div>
             </div>
 
-            <!-- GOOGLE RATING SECTION -->
-            <div class="rating-row">
-              <div class="google-logo-group">
+            <div class="acca-buttons">
+              <button class="acca-btn-primary">Get Started Today</button>
+              <button class="acca-btn-outline acca-second-button">
                 <img
-                  src="./assets/images/google.png"
-                  alt="Google"
-                  class="google-logo"
+                  src="assets/images/acca/play-circle (1).png"
+                  alt=""
+                  class="acca-btn-icon"
                 />
-                <span class="google-text">Google</span>
-              </div>
-
-              <div class="rating-stack">
-                <div class="rating-top-row">
-                  <span class="rating-number">4.8</span>
-                  <div class="rating-stars">
-                    <img src="assets/images/icons/star.svg" alt="star" />
-                    <img src="assets/images/icons/star.svg" alt="star" />
-                    <img src="assets/images/icons/star.svg" alt="star" />
-                    <img src="assets/images/icons/star.svg" alt="star" />
-                    <img src="assets/images/icons/star.svg" alt="star" />
-                  </div>
-                </div>
-
-                <span class="reviews-text">See all our reviews</span>
-              </div>
-              <button class="book-demo-btn">
-                <img src="assets/images/acca/play-circle.png" alt="" />Book Demo
+                Book Demo
+              </button>
+              <button class="acca-btn-outline">
+                <img
+                  src="assets/images/acca/download.svg"
+                  alt=""
+                  class="acca-btn-icon"
+                />
+                Download Brochure
               </button>
             </div>
           </div>
@@ -191,121 +202,8 @@
           <!-- RIGHT SIDE -->
           <div class="acca-right">
             <div class="student-slider-wrapper">
-              <div class="student-slider">
-                <!-- Student 1 -->
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Zane Sorell</h4>
-                    <p class="exam-info">ACCA March 2020</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>3</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>1</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Student 2 -->
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Student Two</h4>
-                    <p class="exam-info">ACCA June 2021</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>5</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>2</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Student 3 -->
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Student Three</h4>
-                    <p class="exam-info">ACCA Dec 2022</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>8</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>3</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Repeat for infinite scroll -->
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Zane Sorell</h4>
-                    <p class="exam-info">ACCA March 2020</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>3</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>1</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Student Two</h4>
-                    <p class="exam-info">ACCA June 2021</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>5</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>2</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="slide">
-                  <div class="slide-image">
-                    <img src="assets/images/acca/zane-sorell.png" alt="" />
-                  </div>
-                  <div class="student-data">
-                    <h4>Student Three</h4>
-                    <p class="exam-info">ACCA Dec 2022</p>
-                    <div class="ranks">
-                      <div class="rank-item">
-                        Global Rank : <strong>8</strong>
-                      </div>
-                      <div class="rank-item">
-                        India Rank : <strong>3</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="student-slider" id="studentSlider"></div>
             </div>
-
             <div class="cta-text">YOU'LL BE NEXT ONE</div>
           </div>
         </div>
@@ -314,65 +212,77 @@
       <!-- What CMA -->
       <section class="what-acca section-wrapper reveal delay-2">
         <div class="what-acca-container">
+          <!-- TOP CONTENT -->
           <div class="what-acca-left">
             <p class="what-acca-subtitle text-reveal">
               Certified Management Accountant
             </p>
+
             <h1 class="what-acca-title text-reveal">What is CMA?</h1>
-            <p class="what-acca-desc text-reveal">
-              The Certified Management Accountant (CMA) certification, offered
-              by the Institute of Management Accountants (IMA) in the United
-              States, is a prestigious and globally recognized professional
-              credential that signifies expertise in financial management and
-              strategic business decision-making
+
+            <p class="what-acca-desc">
+              Gain global recognition as a CMA® professional—master financial
+              planning, analysis, and decision-making to drive business success.
             </p>
+          </div>
 
-            <ul class="what-acca-list">
-              <li class="text-reveal">
-                <img
-                  src="assets/images/list.png"
-                  alt="check"
-                  class="what-acca-icon"
-                />
-                Chance to work with Global company
-              </li>
-              <li class="text-reveal">
-                <img
-                  src="assets/images/list.png"
-                  alt="check"
-                  class="what-acca-icon"
-                />
-                Short duration (12 months)
-              </li>
-              <li class="text-reveal">
-                <img
-                  src="assets/images/list.png"
-                  alt="check"
-                  class="what-acca-icon"
-                />
-                Higher passing rate
-              </li>
-              <li class="text-reveal">
-                <img
-                  src="assets/images/list.png"
-                  alt="check"
-                  class="what-acca-icon"
-                />
-                Highest Flexibility
-              </li>
-              <li class="text-reveal">
-                <img
-                  src="assets/images/list.png"
-                  alt="check"
-                  class="what-acca-icon"
-                />
-                Starting package 4 to 5 LPA
-              </li>
-            </ul>
+          <!-- FEATURE GRID -->
+          <div class="what-acca-grid">
+            <!-- 1 -->
+            <div class="acca-box">
+              <img src="assets/images/acca/globe.png" alt="global icon" />
+              <p class="acca-box-title">
+                Work with Global
+                <br />Companies
+              </p>
+            </div>
 
-            <div class="what-acca-buttons">
-              <button class="what-acca-btn-primary">Get Started Today</button>
-              <button class="what-acca-btn-secondary">Download Brochure</button>
+            <!-- 2 -->
+            <div class="acca-box">
+              <img src="assets/images/acca/inr.png" alt="salary icon" />
+              <p class="acca-box-title">Starting Package<br />₹4-5 Lakh</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="acca-box">
+              <img src="assets/images/sparkle.png" alt="flexible schedule" />
+              <p class="acca-box-title">Highest<br />Flexibility</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="acca-box">
+              <img src="assets/images/acca/clock.png" alt="completion time" />
+              <p class="acca-box-title">Short Duration<br />12 Months</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="acca-box">
+              <img src="assets/images/acca/growth.png" alt="passing ratio" />
+              <p class="acca-box-title">Higher<br />Passing Rate</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="acca-box">
+              <img
+                src="assets/images/acca/thunderstorm.png"
+                alt="start early"
+              />
+              <p class="acca-box-title">Can Start<br />After 12th</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="acca-box">
+              <img
+                src="assets/images/acca/television.png"
+                alt="on demand exams"
+              />
+              <p class="acca-box-title">On Demand<br />Exams</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="acca-box">
+              <img src="assets/images/exams.png" alt="clients" />
+              <p class="acca-box-title">CBE<br />Exams</p>
             </div>
           </div>
         </div>
@@ -1011,6 +921,338 @@
         </div>
       </section>
 
+      <!-- Testimonials -->
+      <section class="section-wrapper reveal-rotate delay-4">
+        <div class="section-subtitle-wrapper">
+          <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
+          <span class="subtitle-line"></span>
+        </div>
+
+        <div class="section-header">
+          <div>
+            <h2 class="section-title text-reveal">
+              Students love learning here
+            </h2>
+            <p class="section-description text-reveal">
+              Feedback from students who've achieved their career goals
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <!-- Swiper Carousel -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        Dipen sir teaches in a very simple and
+                        easy-to-understand way. Classes are interactive and he
+                        always clears doubts patiently. Best place in Rajkot for
+                        ACCA prep!
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">DP</div>
+                      <div class="user-profile">
+                        <div class="user-name">Dhruv Pilojpara</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        Dipan sir is a good mentor and he teaches every tough
+                        things in ease manner. and I think that career compass
+                        is the perfect place for an ACCA aspirant.
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">DJ</div>
+                      <div class="user-profile">
+                        <div class="user-name">Devansh Joshi</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        Best place for Acca as Dipan Sir is really great. His
+                        teaching skills is really amazing. Doubts are solved
+                        within and outside the lectures sessions easily.
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">AT</div>
+                      <div class="user-profile">
+                        <div class="user-name">Anmal Tulsyan</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        Trustworthy and Reliable centre for students who wish to
+                        get enrolled for ACCA Course. They provide both online
+                        and offline classes.
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">NP</div>
+                      <div class="user-profile">
+                        <div class="user-name">Neel Parekh</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        Dipan Sir is a hardworking guy and very much accessible
+                        even after class for doubt solving.Wish him all the
+                        success in his future endeavours
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">DS</div>
+                      <div class="user-profile">
+                        <div class="user-name">Danish Shaikh</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        I am grateful for all the learnings I have received from
+                        Sakshe Ma'am. It was an amazing experience to study
+                        Audit from her.
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">SV</div>
+                      <div class="user-profile">
+                        <div class="user-name">Sneha Vasa</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        it is great experience studying from career compass ,
+                        liked the way mentor give practical examples which help
+                        to relate the topic
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">AS</div>
+                      <div class="user-profile">
+                        <div class="user-name">Akshat Shah</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info-card">
+                  <div class="info-content">
+                    <div class="google-section">
+                      <img
+                        src="./assets/images/logo.png"
+                        alt="Career Compass"
+                        class="career-logo"
+                      />
+                      <div
+                        style="display: flex; align-items: center; gap: 10px"
+                      >
+                        <div class="teacher-rating">
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                          <img src="./assets/images/TestStar.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="info-text">
+                        It is provide very good education in ACCA. My starting
+                        time, I am thinking ACCA very hard but My sir very
+                        easily explain every concept.
+                      </p>
+                    </div>
+                    <div class="testimonial-profile">
+                      <div class="user-card">KV</div>
+                      <div class="user-profile">
+                        <div class="user-name">Keyur Vinchhi</div>
+                        <div class="user-role">Student</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Partners Section -->
       <section class="partners-section reveal delay-4">
         <div class="partners-container">
@@ -1225,318 +1467,196 @@
         </div>
       </section>
 
-      <!-- Testimonials -->
-      <section class="section-wrapper reveal-rotate delay-4">
-      <div class="section-subtitle-wrapper">
-        <h4 class="section-subtitle text-reveal">TESTIMONIALS</h4>
-        <span class="subtitle-line"></span>
-      </div>
+      <!-- CMA USA Exam Pattern Section -->
+      <section class="section-wrapper exam-pattern-section">
+        <p class="exam-pattern-subtitle">EXAM PATTERN</p>
 
-      <div class="section-header">
-        <div>
-          <h2 class="section-title text-reveal">Students love learning here</h2>
-          <p class="section-description text-reveal">
-            Feedback from students who've achieved their career goals
-          </p>
-        </div>
-      </div>
+        <h1 class="exam-pattern-title">CMA USA Exam Pattern</h1>
 
-      <div class="testimonial-wrapper">
-        <!-- Swiper Carousel -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      Dipen sir teaches in a very simple and easy-to-understand
-                      way. Classes are interactive and he always clears doubts
-                      patiently. Best place in Rajkot for ACCA prep!
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">DP</div>
-                    <div class="user-profile">
-                      <div class="user-name">Dhruv Pilojpara</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
+        <p class="exam-pattern-desc">
+          Complete exam structure and requirements
+        </p>
+        <div class="exam-card-container">
+          <div class="exam-pattern-cards">
+            <div class="exam-pattern-box">
+              <div class="exam-pattern-box-header">
+                <img
+                  src="assets/images/svg/openBook.svg"
+                  alt="Marks Structure Icon"
+                />
+                <h3>Marks Structure</h3>
+              </div>
+
+              <div class="exam-pattern-box-content">
+                <p>
+                  <span class="left left-part">Part 1</span>
+                  <span class="right">500 <span>Marks</span></span>
+                </p>
+                <p>
+                  <span class="left left-part">Part 2</span>
+                  <span class="right">500 <span>Marks</span></span>
+                </p>
+
+                <div class="exam-pattern-divider"></div>
+
+                <p class="exam-pattern-total">
+                  <span class="left">Total</span>
+                  <span class="right">1000 <span>Marks</span></span>
+                </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      Dipan sir is a good mentor and he teaches every tough
-                      things in ease manner. and I think that career compass is
-                      the perfect place for an ACCA aspirant.
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">DJ</div>
-                    <div class="user-profile">
-                      <div class="user-name">Devansh Joshi</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
+
+            <div class="exam-pattern-box">
+              <div class="exam-pattern-box-header">
+                <img
+                  src="assets/images/courses/progress.png"
+                  alt="Question Types Icon"
+                />
+                <h3>Question Types</h3>
+              </div>
+
+              <div class="exam-pattern-box-content">
+                <p>
+                  <span class="left-stacked">
+                    MCQ
+                    <span class="sub-detail">75% of exam</span>
+                  </span>
+                  <span class="right"
+                    >100 <br />
+                    <span class="question">Questions</span></span
+                  >
+                </p>
+
+                <p>
+                  <span class="left-stacked">
+                    Descriptive
+                    <span class="sub-detail">25% of exam</span>
+                  </span>
+                  <span class="right"
+                    >2 <br />
+                    <span class="question">Questions</span></span
+                  >
+                </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      Best place for Acca as Dipan Sir is really great. His
-                      teaching skills is really amazing. Doubts are solved
-                      within and outside the lectures sessions easily.
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">AT</div>
-                    <div class="user-profile">
-                      <div class="user-name">Anmal Tulsyan</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
+
+            <div class="exam-pattern-box">
+              <div class="exam-pattern-box-header">
+                <img
+                  src="assets/images/acca/clock.png"
+                  alt="Time Allocation Icon"
+                />
+                <h3>Time Allocation</h3>
+              </div>
+
+              <div class="exam-pattern-box-content">
+                <p>
+                  <span class="left">MCQ Section</span>
+                </p>
+                <span class="right highlight">3 hours</span>
+                <p>
+                  <span class="left">Descriptive Section</span>
+                </p>
+                <span class="right highlight">1 hour</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      Trustworthy and Reliable centre for students who wish to
-                      get enrolled for ACCA Course. They provide both online and
-                      offline classes.
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">NP</div>
-                    <div class="user-profile">
-                      <div class="user-name">Neel Parekh</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
+
+            <div class="exam-pattern-box">
+              <div class="exam-pattern-box-header">
+                <img
+                  src="assets/images/icons/badge.svg"
+                  alt="Passing Criteria Icon"
+                />
+                <h3>Passing Criteria</h3>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      Dipan Sir is a hardworking guy and very much accessible
-                      even after class for doubt solving.Wish him all the
-                      success in his future endeavours
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">DS</div>
-                    <div class="user-profile">
-                      <div class="user-name">Danish Shaikh</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      I am grateful for all the learnings I have received from
-                      Sakshe Ma'am. It was an amazing experience to study Audit
-                      from her.
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">SV</div>
-                    <div class="user-profile">
-                      <div class="user-name">Sneha Vasa</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      it is great experience studying from career compass ,
-                      liked the way mentor give practical examples which help to
-                      relate the topic
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">AS</div>
-                    <div class="user-profile">
-                      <div class="user-name">Akshat Shah</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="info-card">
-                <div class="info-content">
-                  <div class="google-section">
-                    <img
-                      src="./assets/images/logo.png"
-                      alt="Career Compass"
-                      class="career-logo"
-                    />
-                    <div style="display: flex; align-items: center; gap: 10px">
-                      <div class="teacher-rating">
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                        <img src="./assets/images/TestStar.png" />
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="info-text">
-                      It is provide very good education in ACCA. My starting
-                      time, I am thinking ACCA very hard but My sir very easily
-                      explain every concept.
-                    </p>
-                  </div>
-                  <div class="testimonial-profile">
-                    <div class="user-card">KV</div>
-                    <div class="user-profile">
-                      <div class="user-name">Keyur Vinchhi</div>
-                      <div class="user-role">Student</div>
-                    </div>
-                  </div>
-                </div>
+
+              <div class="exam-pattern-box-content center-content">
+                <p class="exam-pattern-small">Minimum Score Required</p>
+                <p class="exam-pattern-percentage prcnt">72%</p>
+                <p class="exam-pattern-marks-info">360 of 500 marks</p>
               </div>
             </div>
           </div>
+
+          <div class="exam-pattern-testing-window">
+            <div class="exam-pattern-testing-header">
+              <img
+                src="assets/images/calendar.png"
+                alt="Testing Windows Icon"
+              />
+              <h3>Testing Windows</h3>
+            </div>
+
+            <p class="exam-pattern-testing-desc">
+              Parts 1 and 2 are offered during three testing windows per year
+            </p>
+
+            <div class="exam-pattern-testing-grid">
+              <div class="exam-pattern-testing-box">January & February</div>
+              <div class="exam-pattern-testing-box">May & June</div>
+              <div class="exam-pattern-testing-box">September & October</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Career Opportunities After ACCA -->
+      <section class="career section-wrapper reveal delay-2">
+        <div class="career-container">
+          <!-- TOP HEADING -->
+          <p class="career-subtitle text-reveal">YOUR FUTURE STARTS HERE</p>
+
+          <h1 class="career-title text-reveal">
+            Career Opportunities After CFA
+          </h1>
+
+          <p class="career-desc">
+            Transform your CFA qualification into a thriving career.
+          </p>
+
+          <!-- GRID BOXES -->
+          <div class="career-grid">
+            <div class="career-box">
+              <img
+                src="assets/images/acca/dollar.png"
+                alt="Financial Accounting"
+              />
+              <span>Cost Accountant</span>
+            </div>
+
+            <div class="career-box">
+              <img src="assets/images/graph.png" alt="UK Taxation" />
+              <span>Financial Controller</span>
+            </div>
+
+            <div class="career-box">
+              <img
+                src="assets/images/courses/kaplan.png"
+                alt="Management Accountant"
+              />
+              <span>Management Accountant</span>
+            </div>
+
+            <div class="career-box">
+              <img src="assets/images/budget.png" alt="Forensic Audit" />
+              <span>Budget Analyst</span>
+            </div>
+
+            <div class="career-box">
+              <img src="assets/images/acca/growth.png" alt="Audit Assistant" />
+              <span>Financial Analyst</span>
+            </div>
+
+            <div class="career-box">
+              <img
+                src="assets/images/acca/risk-analyst.png"
+                alt="Transfer Pricing Analyst"
+              />
+              <span>Risk Manager</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Price Table-->
       <section class="section-wrapper reveal delay-3">
