@@ -391,30 +391,28 @@ if (seeAllLessonsBtn) {
   });
 }
 
-const counters = document.querySelectorAll(".count");
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".count");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
+  if (!counters.length) return; // if page has no counters, skip
 
-    const el = entry.target;
-    const targetValue = el.getAttribute("data-target");
-    const digitsWrapper = el.querySelector(".digits");
+  // Prepare each counter initially
+  counters.forEach((counter) => {
+    const target = counter.getAttribute("data-target");
+    const digitsWrapper = counter.querySelector(".digits");
 
-    // Split target into individual digits
-    const digits = targetValue.split("");
+    if (!digitsWrapper) return;
 
-    digitsWrapper.innerHTML = ""; // reset
+    digitsWrapper.innerHTML = ""; // reset to avoid duplicates
 
-    digits.forEach((digit, index) => {
-      // Container for each digit
+    target.split("").forEach((digit) => {
       const container = document.createElement("div");
       container.className = "digit-container";
 
-      // Scroll element holding numbers 0-9
       const scroll = document.createElement("div");
       scroll.className = "digit-scroll";
 
+      // Build digits 0–9
       for (let i = 0; i <= 9; i++) {
         const d = document.createElement("div");
         d.textContent = i;
@@ -423,16 +421,42 @@ const observer = new IntersectionObserver((entries) => {
 
       container.appendChild(scroll);
       digitsWrapper.appendChild(container);
-
-      // Animate with slight stagger for natural look
-      setTimeout(() => {
-        scroll.style.transform = `translateY(-${digit * 32}px)`; // height per digit
-      }, index * 200);
     });
-
-    observer.unobserve(el);
   });
-}, { threshold: 0.8 });
 
-counters.forEach((counter) => observer.observe(counter));
+  // Intersection Observer runs AFTER everything is ready
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = counter.getAttribute("data-target");
+        const digitContainers = counter.querySelectorAll(".digit-scroll");
+
+        // Prevent double run
+        if (counter.dataset.animated === "true") return;
+        counter.dataset.animated = "true";
+
+        // Animate each digit
+        target.split("").forEach((digit, index) => {
+          const element = digitContainers[index];
+
+          setTimeout(() => {
+            element.style.transform = `translateY(-${digit * 32}px)`;
+          }, index * 150);
+        });
+
+        observer.unobserve(counter);
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  // Observe after building digits
+  counters.forEach((counter) => observer.observe(counter));
+});
+
 
