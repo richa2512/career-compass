@@ -1,0 +1,306 @@
+/* --- Exam Pattern Heading & Description --- */
+.exam-pattern-subtitle {
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #14476d;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.exam-pattern-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #14476d;
+  display: inline-block;
+}
+
+.exam-pattern-title {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #14476d;
+}
+
+.exam-pattern-desc {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 40px;
+}
+.exam-card-container {
+  background-color: rgba(248, 250, 252, 1);
+  border-radius: 12px;
+  padding: 32px;
+}
+/* --- Cards Wrapper --- */
+.exam-pattern-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.exam-pattern-box {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid #e6eaef;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* --- Card Header --- */
+.exam-pattern-box-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #14476d;
+}
+
+.exam-pattern-box-header img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background: rgba(29, 88, 122, 0.15); /* ADDED */
+  padding: 8px; /* ADDED */
+  border-radius: 6px; /* ADDED */
+}
+
+.exam-pattern-box-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* --- Card Content General Flex Styling & GAP ADJUSTMENT --- */
+.exam-pattern-box-content p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* GAP ADJUSTMENT: Use padding on the right span to push content apart */
+.exam-pattern-box-content .left {
+  flex-grow: 1;
+  /* Add padding to the right of the left span for extra gap */
+  padding-right: 15px;
+}
+.exam-pattern-box-content .left-part {
+  font-weight: 700;
+}
+
+.exam-pattern-box-content .right {
+  font-weight: 700;
+  color: rgba(29, 88, 122, 1);
+  text-align: right;
+  flex-shrink: 0;
+  /* Ensure text doesn't wrap awkwardly */
+  white-space: nowrap;
+}
+
+.exam-pattern-box-content .right span {
+  color: #777;
+  font-weight: 500;
+}
+/* --- Card 2: Question Types (Adjusted for <br /> and stacked alignment) --- */
+.left-stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  line-height: 1;
+  font-weight: 700;
+  padding-right: 15px; /* Consistent gap */
+}
+
+.sub-detail {
+  font-size: 12px;
+  color: #777;
+  font-weight: normal;
+  margin-top: 7px;
+  line-height: 1.2; /* Allow sub-detail to wrap if needed */
+}
+
+.exam-pattern-box-content .right br {
+  display: block;
+  content: "";
+  line-height: 0.5; /* Reduce the line height created by <br> */
+}
+/* Ensure the right content in card 2 is flex-end aligned */
+.exam-pattern-box-content .right {
+  display: block; /* Override flex properties for the right span with <br> */
+  text-align: right;
+  line-height: 1.2; /* Set line height for stacked numbers/text */
+}
+/* Make the number itself slightly bigger for emphasis */
+.exam-pattern-box-content .right:first-child {
+  font-size: 16px;
+}
+
+/* --- Card 3: Time Allocation (Fixing misaligned HTML structure) --- */
+/* Your HTML has p > span.left followed by a sibling span.right. 
+   We wrap the two pairs in a dedicated flex container to fix the layout. */
+.exam-pattern-box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Targeting the correct elements for Time Allocation */
+.exam-pattern-box-content > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align to bottom since the right span is a sibling */
+  margin: 0; /* Remove default margin */
+}
+
+/* Applying the right-aligned highlight to the sibling span */
+.exam-pattern-box-content > .right.highlight {
+  position: relative;
+  top: 3px;
+  left: 2px; /* Pull it up to align with the p tag above */
+  margin-top: -10px; /* Adjust spacing */
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(29, 88, 122, 1);
+  text-align: right;
+  align-self: flex-start; /* Align itself to the end */
+}
+
+/* Divider */
+.exam-pattern-divider {
+  height: 1px;
+  background: #d8dde3;
+  margin: 18px 0;
+}
+
+/* Total Line */
+.exam-pattern-total {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.exam-pattern-total .right {
+  color: #0d4c92;
+}
+
+/* --- Card 4: Passing Criteria Card Specifics --- */
+.exam-pattern-box-content.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.exam-pattern-box-content.center-content p {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+.exam-pattern-box-content.center-content .prcnt {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: bold;
+  color: rgba(29, 88, 122, 1);
+}
+.exam-pattern-small {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px !important;
+}
+/* --- Changes for Card 2: Question Types (Using new nested <span> structure) --- */
+.exam-pattern-percentage {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0d4c92;
+  margin: 0 0 5px 0 !important;
+}
+
+.exam-pattern-marks-info {
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* --- Testing Windows --- */
+.exam-pattern-testing-window {
+  background: #f9fafc;
+  border: 1px solid #e6eaef;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.exam-pattern-testing-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #14476d;
+}
+
+.exam-pattern-testing-header img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.exam-pattern-testing-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.exam-pattern-testing-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.exam-pattern-testing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Apply the requested border-top to the testing boxes */
+.exam-pattern-testing-box {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  /* Original border kept for consistency */
+  border: 2px solid #d4e3e9;
+  color: #14476d;
+
+  /* NEW: Requested border-top */
+  border-top: 4px solid rgba(87, 167, 179, 1);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 1024px) {
+  .exam-pattern-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .exam-pattern-cards {
+    grid-template-columns: 1fr;
+  }
+  .exam-pattern-testing-grid {
+    grid-template-columns: 1fr;
+  }
+  .exam-pattern-title {
+    font-size: 32px;
+  }
+}
