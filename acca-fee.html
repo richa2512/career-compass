@@ -92,7 +92,7 @@
       <div class="hero-left">
         <div>
           <div class="google-rating">
-            <img src="assets/images/google.png" class="google-icon" alt="Google" />
+            <img src="assets/images/google.svg" class="google-icon" alt="Google" />
             <span class="rating-score">4.8</span>
 
             <div class="stars">
@@ -438,7 +438,7 @@
     // Function to create a course card
     function createCourseCard(course) {
       return `
-                <div class="course-card" data-category="${course.category}">
+                <div class="course-card" style="cursor:pointer;" data-category="${course.category}">
                     <div class="card-image" style="background-image: url('${course.backgroundImage}');">
                         <div class="professional-badge">
                             <img src="./assets/images/svg/trophy.svg" alt="" width="12" height="12"/>
@@ -589,7 +589,7 @@
         subtitles: "LEVEL COMBO",
         subtitle: "3 Papers - BT | MA | FA",
         coursesNum: "3+",
-        coursesLabel: "Courses",
+        coursesLabel: "Lifetime Access",
         durationNum: "24",
         durationLabel: "Months",
         studentsNum: "120+",
@@ -608,7 +608,7 @@
         subtitles: "LEVEL COMBO",
         subtitle: "4 Papers - PM | FR | FM | AA",
         coursesNum: "4+",
-        coursesLabel: "Courses",
+        coursesLabel: "Lifetime Access",
         durationNum: "24",
         durationLabel: "Months",
         studentsNum: "120+",
@@ -623,17 +623,36 @@
         accaLogo: "./assets/images/combos/acca.png"
       },
       {
-        title: "STRATEGIC",
+        title: "SKILL",
         subtitles: "LEVEL COMBO",
-        subtitle: "6 Papers - SBL | SBR | AFM | APM | ATX | AAA",
+        subtitle: "6 Papers - LW | PM | TX | FR | AA | FM",
         coursesNum: "6+",
-        coursesLabel: "Courses",
+        coursesLabel: "Lifetime Access",
         durationNum: "24",
         durationLabel: "Months",
         studentsNum: "120+",
         studentsLabel: "Students",
-        currentPrice: "₹89,900",
-        originalPrice: "₹1,15,900",
+        currentPrice: "₹59,900",
+        originalPrice: "99,000",
+        savePercent: "SAVE 30%",
+        isBestSeller: true,
+        // Add your image paths here:
+        backgroundImage: "./assets/images/combos/bg.png",
+        personImage: "./assets/images/combos/instructor.png",
+        accaLogo: "./assets/images/combos/acca.png"
+      },
+      {
+        title: "PROFESSIONAL",
+        subtitles: "LEVEL COMBO",
+        subtitle: "4 Papers - SBR | SBL | AFM | ATX",
+        coursesNum: "6+",
+        coursesLabel: "Lifetime Access",
+        durationNum: "24",
+        durationLabel: "Months",
+        studentsNum: "120+",
+        studentsLabel: "Students",
+        currentPrice: "₹59,900",
+        originalPrice: "₹75,500",
         savePercent: "SAVE 30%",
         isBestSeller: true,
         // Add your image paths here:
@@ -662,17 +681,12 @@
                   <p class="card-subtitle">${course.subtitle}</p>
                   
                   <div class="card-badges">
-                    <span class="badge-pill">
-                      <span class="badge-num">${course.coursesNum}</span>
+                    <span class="badge-access">
                       <span class="badge-label">${course.coursesLabel}</span>
                     </span>
                     <span class="badge-pill">
                       <span class="badge-num">${course.durationNum}</span>
                       <span class="badge-label">${course.durationLabel}</span>
-                    </span>
-                    <span class="badge-pill">
-                      <span class="badge-num">${course.studentsNum}</span>
-                      <span class="badge-label">${course.studentsLabel}</span>
                     </span>
                   </div>
                 </div>
