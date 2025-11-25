@@ -36,12 +36,49 @@
   margin: 0;
 }
 
+/* Google Rating - Single Row Display */
+.hero .google-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.hero .google-rating .google-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.hero .google-rating .rating-score {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFC107;
+  margin: 0;
+}
+
+.hero .google-rating .stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero .google-rating .stars img {
+  width: 16px;
+  height: 16px;
+}
+
 .hero .subtitle {
   font-size: 16px;
   color: #5e5e5e;
   line-height: 1.6;
   margin: 0;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
 }
 .hero-info {
     display: flex;
