@@ -6,9 +6,9 @@
     <title>Verification Code | Career Compass</title>
 
     <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
-     <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/login.css" />
-     <link rel="stylesheet" href="./assets/css/verification.css" />
+    <link rel="stylesheet" href="./assets/css/verification.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,21 +21,21 @@
     <div class="login-wrapper">
       <!-- LEFT QUOTE PANEL -->
       <div class="left-panel">
-        <div class="logo">
-          <img
-            src="./assets/images/asset.svg"
-            width="151"
-            height="42"
-            alt="Career Compass"
-          />
-        </div>
-
         <p class="loginFooter">©2025 CareerCompass</p>
       </div>
 
       <!-- RIGHT PANEL -->
       <div class="right-panel">
         <form class="login-box verify-box">
+          <div class="logo">
+            <img
+              src="./assets/images/asset.svg"
+              width="151"
+              height="42"
+              alt="Career Compass"
+            />
+          </div>
+
           <h2>Verification Code</h2>
           <div class="verify-subtext">
             Please enter the code we have sent to<br />
@@ -73,48 +73,48 @@
       });
     </script>
     <script>
-const otpInputs = document.querySelectorAll(".otp-input");
-const verifyBtn = document.querySelector(".btn-login"); // your verify button
+      const otpInputs = document.querySelectorAll(".otp-input");
+      const verifyBtn = document.querySelector(".btn-login"); // your verify button
 
-// Initially disable button
-verifyBtn.disabled = true;
-verifyBtn.style.opacity = "0.6";
-verifyBtn.style.cursor = "not-allowed";
+      // Initially disable button
+      verifyBtn.disabled = true;
+      verifyBtn.style.opacity = "0.6";
+      verifyBtn.style.cursor = "not-allowed";
 
-otpInputs.forEach((input, index) => {
-  
-  input.addEventListener("input", () => {
-    // Move to next box if a number is typed
-    if (input.value.length === 1 && index < otpInputs.length - 1) {
-      otpInputs[index + 1].focus();
-    }
+      otpInputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+          // Move to next box if a number is typed
+          if (input.value.length === 1 && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
 
-    checkOTPStatus();
-  });
+          checkOTPStatus();
+        });
 
-  input.addEventListener("keydown", (e) => {
-    // Backspace move to previous box
-    if (e.key === "Backspace" && !input.value && index > 0) {
-      otpInputs[index - 1].focus();
-    }
-  });
-});
+        input.addEventListener("keydown", (e) => {
+          // Backspace move to previous box
+          if (e.key === "Backspace" && !input.value && index > 0) {
+            otpInputs[index - 1].focus();
+          }
+        });
+      });
 
-function checkOTPStatus() {
-  // Check if all inputs have values
-  const allFilled = [...otpInputs].every(inp => inp.value.trim() !== "");
+      function checkOTPStatus() {
+        // Check if all inputs have values
+        const allFilled = [...otpInputs].every(
+          (inp) => inp.value.trim() !== ""
+        );
 
-  if (allFilled) {
-    verifyBtn.disabled = false;
-    verifyBtn.style.opacity = "1";
-    verifyBtn.style.cursor = "pointer";
-  } else {
-    verifyBtn.disabled = true;
-    verifyBtn.style.opacity = "0.6";
-    verifyBtn.style.cursor = "not-allowed";
-  }
-}
-</script>
-
+        if (allFilled) {
+          verifyBtn.disabled = false;
+          verifyBtn.style.opacity = "1";
+          verifyBtn.style.cursor = "pointer";
+        } else {
+          verifyBtn.disabled = true;
+          verifyBtn.style.opacity = "0.6";
+          verifyBtn.style.cursor = "not-allowed";
+        }
+      }
+    </script>
   </body>
 </html>
