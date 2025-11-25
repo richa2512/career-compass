@@ -38,6 +38,12 @@
   font-weight: 500;
 }
 
+.login-logo {
+  height: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 /* RIGHT PANEL */
 .right-panel {
   width: 65%;

@@ -467,42 +467,42 @@ const studentRankings = [
   {
     name: "Divyang Manglani",
     examInfo: "FR 83",
-    imageSrc: "assets/images/acca/divyang.png",
+    imageSrc: "assets/images/acca/divyang.svg",
   },
   {
     name: "Upadhyay Maharshi",
     examInfo: "LAW 81",
-    imageSrc: "assets/images/acca/upadhyay.png",
+    imageSrc: "assets/images/acca/upadhyay.svg",
   },
   {
     name: "Palak Ganatra",
     examInfo: "BT 80",
-    imageSrc: "assets/images/acca/palak.png",
+    imageSrc: "assets/images/acca/palak.svg",
   },
   {
     name: "Parth Mehta",
     examInfo: "TX 80",
-    imageSrc: "assets/images/acca/parth.png",
+    imageSrc: "assets/images/acca/parth.svg",
   },
   {
     name: "Mahesh Vira",
     examInfo: "FR 77",
-    imageSrc: "assets/images/acca/mahesh.png",
+    imageSrc: "assets/images/acca/mahesh.svg",
   },
   {
     name: "Viyati Kamdar",
     examInfo: "FM 76",
-    imageSrc: "assets/images/acca/viyati.png",
+    imageSrc: "assets/images/acca/viyati.svg",
   },
   {
     name: "Jay Bhandari",
     examInfo: "PM 75",
-    imageSrc: "assets/images/acca/jay.png",
+    imageSrc: "assets/images/acca/jay.svg",
   },
   {
     name: "Rohit Sharma",
     examInfo: "SBL 74",
-    imageSrc: "assets/images/acca/rohit.png",
+    imageSrc: "assets/images/acca/rohit.svg",
   },
   // Add more student objects here as needed!
 ];
@@ -526,22 +526,20 @@ function createStudentSlideHTML(student) {
 document.addEventListener("DOMContentLoaded", () => {
   const sliderContainer = document.getElementById("studentSlider");
 
-  // Only proceed if the container exists and there is data
+  // Number of duplicates for a smooth infinite loop
+  const duplicateCount = 4;
+
   if (sliderContainer && studentRankings.length > 0) {
     let allSlidesHTML = [];
 
-    // Loop 1: Generate the slides for the main view
-    studentRankings.forEach((student) => {
-      allSlidesHTML.push(createStudentSlideHTML(student));
-    });
+    // Repeat the whole set 'duplicateCount' times
+    for (let i = 0; i < duplicateCount; i++) {
+      studentRankings.forEach((student) => {
+        allSlidesHTML.push(createStudentSlideHTML(student));
+      });
+    }
 
-    // Loop 2: Repeat the slides for the seamless infinite scroll effect
-    // It's common practice to repeat the set once for a smooth loop.
-    studentRankings.forEach((student) => {
-      allSlidesHTML.push(createStudentSlideHTML(student));
-    });
-
-    // Inject all generated HTML into the container
+    // Insert all slides
     sliderContainer.innerHTML = allSlidesHTML.join("");
   }
 });
