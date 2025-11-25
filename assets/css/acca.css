@@ -340,9 +340,22 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  animation: infiniteScroll 24s linear infinite;
-  will-change: transform;
   height: 100%;
+}
+
+#studentSlider {
+  display: flex;
+  width: max-content;
+  animation: scroll 90s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Works when items are duplicated 4 times */
+  }
 }
 
 .slide {
