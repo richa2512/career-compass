@@ -23,9 +23,36 @@
   overflow: hidden;
 }
 
+.partners-left .section-title {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Ensure left section occupies full width on mobile */
+@media (max-width: 992px) {
+  .partners-left {
+    width: 100%;
+  }
+
+  .partners-left .section-title {
+    font-size: 26px;   /* adjust for tablet */
+    line-height: 1.3;
+  }
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  .partners-left .section-title {
+    font-size: 22px;  /* perfect for mobile */
+  }
+}
+
 @media (max-width: 992px) {
   .partners-container {
     flex-direction: column;
+    gap: 2rem;
   }
 }
 

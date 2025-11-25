@@ -95,9 +95,23 @@
 
       <div id="mobileMenu" class="mobile-menu hidden">
         <a href="index.html" class="nav-link nav-link-active">Home</a>
-        <a href="acca.html" class="nav-link">ACCA</a>
-        <a href="cfa.html" class="nav-link">CFA</a>
-        <a href="cma.html" class="nav-link">CMA</a>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Courses ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="acca.html">ACCA</a></li>
+            <li><a href="cma.html">CMA</a></li>
+            <li><a href="cfa.html">CFA</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Fees ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="acca-fee.html">ACCA</a></li>
+            <li><a href="cma-fee.html">US CMA</a></li>
+            <li><a href="cfa-fee.html">CFA</a></li>
+          </ul>
+        </li>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </div>
@@ -495,9 +509,6 @@
           <p class="section-description text-reveal">
             Our Dedicated Mentorship Team
           </p>
-        </div>
-        <div>
-          <a href="#" class="btn-primary">View More →</a>
         </div>
       </div>
 
@@ -1684,21 +1695,7 @@
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
-        loop: true,
-        autoplay: { delay: 3000 },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 2.5 },
-          1200: { slidesPerView: 3 },
-          1366: { slidesPerView: 3.5 },
-        },
-      });
-    </script>
-
-    <script>
-      var swiper = new Swiper(".user-mySwiper", {
-        slidesPerView: 3,
+        spaceBetween: 24,
         loop: true,
         autoplay: { delay: 3000 },
         breakpoints: {
@@ -1737,6 +1734,18 @@
     <script>
       const swiperWrapper = document.querySelector(".user-swiper-wrapper");
       swiperWrapper.innerHTML += swiperWrapper.innerHTML;
+    </script>
+    <script>
+      const blogCards = document.querySelectorAll(".blog-card");
+
+      blogCards.forEach((card, index) => {
+        card.style.cursor = "pointer"; // change cursor to clickable
+
+        card.addEventListener("click", () => {
+          // Redirect to blog details page
+          window.location.href = `blog-details.html?post=${index + 1}`;
+        });
+      });
     </script>
 
     <script src="./assets/js/main.js"></script>

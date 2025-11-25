@@ -1478,7 +1478,7 @@ p.text-reveal {
   align-items: center;
   justify-content: center;
 }
-.myswiper {
+.mySwiper {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
@@ -2562,7 +2562,6 @@ p.text-reveal {
   background-color: #fff;
   transition: all 0.3s ease;
   height: 100%;
-  cursor: pointer;
 }
 
 .certification-card:hover {

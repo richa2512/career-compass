@@ -352,7 +352,6 @@
   background-color: #fff;
   transition: all 0.3s ease;
   height: 100%;
-  cursor: pointer;
 }
 
 .certification-card:hover {
@@ -612,6 +611,7 @@
 
   .certification-name {
     font-size: 16px;
+    text-align: center;
   }
 
   .certification-stats {

@@ -101,12 +101,6 @@
   width: max-content; /* auto expanding based on content */
 }
 
-.user-mySwiper {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 10px;
-}
-
 .user-testimonial-card {
   background: #fff;
   border-radius: 16px;
