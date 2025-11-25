@@ -680,6 +680,26 @@
       // Duplicate cards for seamless infinite scroll
       carousel.innerHTML = cardsHTML + cardsHTML;
     }
+    
+    function renderCourses(filteredData = null) {
+  const grid = document.getElementById("coursesGrid");
+  const dataToRender = filteredData || coursesData;
+
+  grid.innerHTML = dataToRender
+    .map((course, index) => createCourseCard(course, index))
+    .join("");
+
+  // After rendering, attach click listeners
+  const cards = document.querySelectorAll(".course-card");
+
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      // Redirect with index or title as parameter
+      window.location.href = `course-detail-page.html?course=${index}`;
+    });
+  });
+}
+
 
     // Initialize hero carousel on page load
     document.addEventListener('DOMContentLoaded', function () {
