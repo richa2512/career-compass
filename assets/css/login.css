@@ -23,8 +23,7 @@
   padding: 40px 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  position: relative;
   /* ✅ Background Image */
   background-image: url("../images/login-bg.jpg");
   background-size: cover;
@@ -33,9 +32,9 @@
 }
 
 .loginFooter {
+  margin-top: auto;
   font-size: 12px;
   color: white;
-  margin-top: 20px;
   font-weight: 500;
 }
 

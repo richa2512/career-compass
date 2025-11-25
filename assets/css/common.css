@@ -600,6 +600,8 @@ p.text-reveal {
 
 .logo {
   height: 30px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .nav-menu {
@@ -696,13 +698,11 @@ p.text-reveal {
 .mobile-backdrop.show {
   opacity: 1;
   transform: translateX(0);
-
 }
 
 .mobile-backdrop.hidden {
   pointer-events: none;
   transform: translateX(-100%);
-
 }
 
 @media (min-width: 640px) {
