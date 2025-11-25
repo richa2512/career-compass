@@ -21,8 +21,8 @@
 </head>
 
 <body>
-  <!-- Header -->    
-    <div id="mobileBackdrop" class="mobile-backdrop hidden"></div>
+  <!-- Header -->
+  <div id="mobileBackdrop" class="mobile-backdrop hidden"></div>
   <header class="header">
     <div class="header-container">
       <a href="index.html" title="Career Compass - Home">
@@ -77,13 +77,13 @@
     </div>
 
     <div id="mobileMenu" class="mobile-menu hidden">
-        <a href="index.html" class="nav-link nav-link-active">Home</a>
-        <a href="acca.html" class="nav-link">ACCA</a>
-        <a href="cfa.html" class="nav-link">CFA</a>
-        <a href="cma.html" class="nav-link">CMA</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </div>
+      <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <a href="acca.html" class="nav-link">ACCA</a>
+      <a href="cfa.html" class="nav-link">CFA</a>
+      <a href="cma.html" class="nav-link">CMA</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </div>
   </header>
 
   <section class="hero reveal delay-1">
@@ -91,41 +91,24 @@
       <!-- Left Content -->
       <div class="hero-left">
         <div>
+          <div class="google-rating">
+            <img src="assets/images/google.png" class="google-icon" alt="Google" />
+            <span class="rating-score">4.8</span>
+
+            <div class="stars">
+              <img src="assets/images/TestStar.png" alt="star" />
+              <img src="assets/images/TestStar.png" alt="star" />
+              <img src="assets/images/TestStar.png" alt="star" />
+              <img src="assets/images/TestStar.png" alt="star" />
+              <img src="assets/images/TestStar.png" alt="star" />
+            </div>
+          </div>
+
           <h1 class="text-reveal">Best Selling Combos</h1>
           <p class="subtitle text-reveal">
-            Professional accounting courses designed by industry experts.<br />
+            Professional accounting courses designed by industry experts
             From knowledge level to professional certification.
           </p>
-        </div>
-
-        <div class="hero-info">
-          <div class="info reveal delay-1">
-            <div>
-              <img src="./assets/images/combos/clock.png" alt="" width="24" height="24" />6-12 Months
-            </div>
-            <div>
-              <img src="./assets/images/combos/video.png" alt="" width="24" height="24" />
-              560+ Video Lectures
-            </div>
-            <div>
-              <img src="./assets/images/combos/book.png" alt="" width="24" height="24" />
-              13 Courses
-            </div>
-            <div>
-              <img src="./assets/images/combos/users.png" alt="" width="24" height="24" />5,000+ Students
-            </div>
-          </div>
-
-          <div class="rating">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-            <span>4.9 (1,234 reviews)</span>
-          </div>
         </div>
 
       </div>
@@ -725,6 +708,26 @@
       // Duplicate cards for seamless infinite scroll
       carousel.innerHTML = cardsHTML + cardsHTML;
     }
+    
+    function renderCourses(filteredData = null) {
+  const grid = document.getElementById("coursesGrid");
+  const dataToRender = filteredData || coursesData;
+
+  grid.innerHTML = dataToRender
+    .map((course, index) => createCourseCard(course, index))
+    .join("");
+
+  // After rendering, attach click listeners
+  const cards = document.querySelectorAll(".course-card");
+
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      // Redirect with index or title as parameter
+      window.location.href = `course-detail-page.html?course=${index}`;
+    });
+  });
+}
+
 
     // Initialize hero carousel on page load
     document.addEventListener('DOMContentLoaded', function () {
